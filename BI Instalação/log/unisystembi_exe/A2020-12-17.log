@@ -1,0 +1,26 @@
+UniSystemBI.exe: 000016C0: 07:51:05 []:>--------------------------------------------------------------<
+UniSystemBI.exe: 000016C0: 07:51:05 [TUniServerModule]:Server First Init.
+UniSystemBI.exe: 000016C0: 07:51:06 [TUniServerModule]:Starting HTTP Server on Port: 8070...
+UniSystemBI.exe: 000016C0: 07:51:06 [TUniServerModule]:HTTP Server Started on Port: 8070
+UniSystemBI.exe: 0000162C: 10:06:53 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 00001B58: 10:07:47 [10.1.1.14]:EDatabaseError : query_7179_3: Cannot perform this operation on a closed dataset : Addr: $0069F29E
+UniSystemBI.exe: 00001B58: 10:07:47 [10.1.1.14]:Exception : Config Option: O377->style:"border:none;"<br/>is refering a previous request,<br/>it's not allowed in AJAX request or JS handler.<br/>Use equivalent Public Property or Method instead. : Addr: $0076F27A
+UniSystemBI.exe: 000018D4: 10:07:59 [10.1.1.14]:Exception : Config Option: O387->style:"border:none;"<br/>is refering a previous request,<br/>it's not allowed in AJAX request or JS handler.<br/>Use equivalent Public Property or Method instead. : Addr: $0076F27A
+UniSystemBI.exe: 000018D4: 10:07:59 [10.1.1.14]:Exception : Config Option: O38F->style:"border:none;"<br/>is refering a previous request,<br/>it's not allowed in AJAX request or JS handler.<br/>Use equivalent Public Property or Method instead. : Addr: $0076F27A
+UniSystemBI.exe: 0000071C: 10:17:18 [10.1.1.14]:EDatabaseError : query_7179_3: Cannot perform this operation on a closed dataset : Addr: $0069F29E
+UniSystemBI.exe: 0000071C: 10:17:18 [10.1.1.14]:Exception : Config Option: O100F->style:"border:none;"<br/>is refering a previous request,<br/>it's not allowed in AJAX request or JS handler.<br/>Use equivalent Public Property or Method instead. : Addr: $0076F27A
+UniSystemBI.exe: 00001EC8: 10:18:44 [10.1.1.14]:Exception : Config Option: O101F->style:"border:none;"<br/>is refering a previous request,<br/>it's not allowed in AJAX request or JS handler.<br/>Use equivalent Public Property or Method instead. : Addr: $0076F27A
+UniSystemBI.exe: 00001EC8: 10:18:48 [10.1.1.14]:Exception : Config Option: O1027->style:"border:none;"<br/>is refering a previous request,<br/>it's not allowed in AJAX request or JS handler.<br/>Use equivalent Public Property or Method instead. : Addr: $0076F27A
+UniSystemBI.exe: 000012C0: 10:19:41 [10.1.1.14]:Exception : Config Option: OEC7->style:"border:none;"<br/>is refering a previous request,<br/>it's not allowed in AJAX request or JS handler.<br/>Use equivalent Public Property or Method instead. : Addr: $0076F27A
+UniSystemBI.exe: 0000162C: 10:19:43 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 000018C0: 10:31:30 [10.1.1.14]:Exception : Erro na rotina de filtros: '[FireDAC][Phys][Ora] ORA-00904: "DATA": identificador inválido' : Addr: $00A90F6D
+UniSystemBI.exe: 0000162C: 11:38:24 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 00001A30: 13:06:04 [10.1.1.14]:EUniSessionException : Invalid session or session Timeout. (Session not found: kZi8Tz56SF1075909E1 ) : Addr: $007D255A
+UniSystemBI.exe: 00001A30: 13:06:06 [10.1.1.14]:EUniSessionException : Invalid session or session Timeout. (Session not found: kZi8Tz56SF1075909E1 ) : Addr: $007D255A
+UniSystemBI.exe: 0000162C: 14:09:20 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 00000A90: 14:10:57 [10.1.1.14]:EUniSessionException : Invalid session or session Timeout. (Session not found: Cjt56I9euT1075936FC ) : Addr: $007D255A
+UniSystemBI.exe: 000008EC: 14:10:58 [10.1.1.14]:EUniSessionException : Invalid session or session Timeout. (Session not found: Cjt56I9euT1075936FC ) : Addr: $007D255A
+UniSystemBI.exe: 00000A90: 14:10:58 [10.1.1.14]:EUniSessionException : Invalid session or session Timeout. (Session not found: Cjt56I9euT1075936FC ) : Addr: $007D255A
+UniSystemBI.exe: 00001B84: 14:13:05 [Erro ao abrir query do filtro: '[FireDAC][Phys][Ora] ORA-00942: a tabela ou view não existe'-10.1.1.14]:Exception : Erro ao abrir query do filtro: '[FireDAC][Phys][Ora] ORA-00942: a tabela ou view não existe' : Addr: $00A8D685
+UniSystemBI.exe: 0000162C: 17:34:21 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 000016C0: 17:37:04 [Exit]:Unexpected attempt to terminate server application with Exit Code: 0

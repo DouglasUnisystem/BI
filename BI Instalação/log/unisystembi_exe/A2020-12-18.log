@@ -1,0 +1,52 @@
+UniSystemBI.exe: 000013C0: 08:00:33 []:>--------------------------------------------------------------<
+UniSystemBI.exe: 000013C0: 08:00:33 [TUniServerModule]:Server First Init.
+UniSystemBI.exe: 000013C0: 08:00:33 [TUniServerModule]:Global Cache Folder Erased. <20> Files deleted.
+UniSystemBI.exe: 000013C0: 08:00:34 [TUniServerModule]:Starting HTTP Server on Port: 8070...
+UniSystemBI.exe: 000013C0: 08:00:34 [TUniServerModule]:HTTP Server Started on Port: 8070
+UniSystemBI.exe: 00000D54: 09:18:53 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 000016C0: 09:30:13 [10.1.1.14]:EConvertError : '' is not a valid integer value : Addr: $0042B96A
+UniSystemBI.exe: 00001868: 09:30:14 [10.1.1.14]:EConvertError : '' is not a valid integer value : Addr: $0042B96A
+UniSystemBI.exe: 00001868: 09:30:19 [10.1.1.14]:EConvertError : '' is not a valid integer value : Addr: $0042B96A
+UniSystemBI.exe: 000016C0: 09:30:20 [10.1.1.14]:EConvertError : '' is not a valid integer value : Addr: $0042B96A
+UniSystemBI.exe: 00001AF4: 09:30:23 [10.1.1.14]:EConvertError : '' is not a valid integer value : Addr: $0042B96A
+UniSystemBI.exe: 00001AF4: 09:30:24 [10.1.1.14]:EConvertError : '' is not a valid integer value : Addr: $0042B96A
+UniSystemBI.exe: 00001284: 09:30:25 [10.1.1.14]:EConvertError : '' is not a valid integer value : Addr: $0042B96A
+UniSystemBI.exe: 00001284: 09:30:28 [10.1.1.14]:EConvertError : '' is not a valid integer value : Addr: $0042B96A
+UniSystemBI.exe: 00001534: 09:32:29 [10.1.1.14]:EConvertError : '' is not a valid integer value : Addr: $0042B96A
+UniSystemBI.exe: 0000167C: 09:32:30 [10.1.1.14]:EConvertError : '' is not a valid integer value : Addr: $0042B96A
+UniSystemBI.exe: 0000167C: 09:32:33 [10.1.1.14]:EConvertError : '' is not a valid integer value : Addr: $0042B96A
+UniSystemBI.exe: 0000167C: 09:32:35 [10.1.1.14]:EConvertError : '' is not a valid integer value : Addr: $0042B96A
+UniSystemBI.exe: 000012BC: 09:32:36 [10.1.1.14]:EConvertError : '' is not a valid integer value : Addr: $0042B96A
+UniSystemBI.exe: 0000167C: 09:32:37 [10.1.1.14]:EConvertError : '' is not a valid integer value : Addr: $0042B96A
+UniSystemBI.exe: 000012BC: 09:32:38 [10.1.1.14]:EConvertError : '' is not a valid integer value : Addr: $0042B96A
+UniSystemBI.exe: 0000167C: 09:32:39 [10.1.1.14]:EConvertError : '' is not a valid integer value : Addr: $0042B96A
+UniSystemBI.exe: 000012BC: 09:32:40 [10.1.1.14]:EConvertError : '' is not a valid integer value : Addr: $0042B96A
+UniSystemBI.exe: 0000167C: 09:32:41 [10.1.1.14]:EConvertError : '' is not a valid integer value : Addr: $0042B96A
+UniSystemBI.exe: 000012BC: 09:32:43 [10.1.1.14]:EConvertError : '' is not a valid integer value : Addr: $0042B96A
+UniSystemBI.exe: 0000167C: 09:32:44 [10.1.1.14]:EConvertError : '' is not a valid integer value : Addr: $0042B96A
+UniSystemBI.exe: 000012BC: 09:32:45 [10.1.1.14]:EConvertError : '' is not a valid integer value : Addr: $0042B96A
+UniSystemBI.exe: 0000167C: 09:32:46 [10.1.1.14]:EConvertError : '' is not a valid integer value : Addr: $0042B96A
+UniSystemBI.exe: 000012BC: 09:32:47 [10.1.1.14]:EConvertError : '' is not a valid integer value : Addr: $0042B96A
+UniSystemBI.exe: 0000167C: 09:32:48 [10.1.1.14]:EConvertError : '' is not a valid integer value : Addr: $0042B96A
+UniSystemBI.exe: 000012BC: 09:32:49 [10.1.1.14]:EConvertError : '' is not a valid integer value : Addr: $0042B96A
+UniSystemBI.exe: 0000167C: 09:32:50 [10.1.1.14]:EConvertError : '' is not a valid integer value : Addr: $0042B96A
+UniSystemBI.exe: 000012BC: 09:32:51 [10.1.1.14]:EConvertError : '' is not a valid integer value : Addr: $0042B96A
+UniSystemBI.exe: 0000167C: 09:32:52 [10.1.1.14]:EConvertError : '' is not a valid integer value : Addr: $0042B96A
+UniSystemBI.exe: 000012BC: 09:32:53 [10.1.1.14]:EConvertError : '' is not a valid integer value : Addr: $0042B96A
+UniSystemBI.exe: 0000167C: 09:32:54 [10.1.1.14]:EConvertError : '' is not a valid integer value : Addr: $0042B96A
+UniSystemBI.exe: 000012BC: 09:32:55 [10.1.1.14]:EConvertError : '' is not a valid integer value : Addr: $0042B96A
+UniSystemBI.exe: 0000167C: 09:32:56 [10.1.1.14]:EConvertError : '' is not a valid integer value : Addr: $0042B96A
+UniSystemBI.exe: 000012BC: 09:32:57 [10.1.1.14]:EConvertError : '' is not a valid integer value : Addr: $0042B96A
+UniSystemBI.exe: 000012BC: 09:32:58 [10.1.1.14]:EConvertError : '' is not a valid integer value : Addr: $0042B96A
+UniSystemBI.exe: 000012BC: 09:32:59 [10.1.1.14]:EConvertError : '' is not a valid integer value : Addr: $0042B96A
+UniSystemBI.exe: 000012BC: 09:33:00 [10.1.1.14]:EConvertError : '' is not a valid integer value : Addr: $0042B96A
+UniSystemBI.exe: 000012BC: 09:33:07 [10.1.1.14]:EConvertError : '' is not a valid integer value : Addr: $0042B96A
+UniSystemBI.exe: 00001D48: 09:33:08 [10.1.1.14]:EConvertError : '' is not a valid integer value : Addr: $0042B96A
+UniSystemBI.exe: 0000161C: 09:33:12 [10.1.1.14]:EConvertError : '' is not a valid integer value : Addr: $0042B96A
+UniSystemBI.exe: 00001EDC: 09:33:29 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 00001EDC: 09:47:04 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 00001EDC: 09:52:54 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 00001EDC: 10:04:34 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 00001EDC: 10:54:10 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 00001C78: 11:00:27 [10.1.1.14]:EUniSessionException : Invalid session or session Timeout. (Session not found: gTVeciUQTQ1075A8C4B ) : Addr: $007D255A
+UniSystemBI.exe: 00001C78: 11:00:27 [10.1.1.14]:EUniSessionException : Invalid session or session Timeout. (Session not found: gTVeciUQTQ1075A8C4B ) : Addr: $007D255A

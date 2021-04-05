@@ -1,0 +1,19 @@
+UniSystemBI21.exe: 000019A8: 14:18:39 []:>--------------------------------------------------------------<
+UniSystemBI21.exe: 000019A8: 14:18:39 [TUniServerModule]:Server First Init.
+UniSystemBI21.exe: 000019A8: 14:19:02 [TUniServerModule]:Starting HTTP Server on Port: 8070...
+UniSystemBI21.exe: 000019A8: 14:19:02 [TUniServerModule]:HTTP Server Started on Port: 8070
+UniSystemBI21.exe: 000009D0: 14:19:31 [HandleFileRequest[127.0.0.1]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI21.exe: 00002438: 14:19:35 [HandleFileRequest[127.0.0.1]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI21.exe: 00001BB0: 14:19:41 [TUniThreadTimer.OnTimer]:EFDException : [FireDAC][Comp][Clnt]-512. Connection is not defined for [qNotificaUser]. Possible reason: Connection and ConnectionName property values are both empty : Addr: $00819B3C
+UniSystemBI21.exe: 000027D0: 14:21:35 [Argument out of range-127.0.0.1]:EArgumentOutOfRangeException : Argument out of range : Addr: $004C28C6
+UniSystemBI21.exe: 000027D0: 14:21:35 [List index out of bounds (0)-127.0.0.1]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI21.exe: 00002394: 14:26:19 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI21.exe: 00001490: 14:26:19 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI21.exe: 00002480: 14:26:19 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI21.exe: 000019BC: 14:26:20 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI21.exe: 0000278C: 14:26:36 [HandleFileRequest[10.1.1.107]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI21.exe: 00001E30: 14:26:36 [HandleFileRequest[10.1.1.107]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI21.exe: 00000CF0: 14:26:40 [TUniThreadTimer.OnTimer]:EFDException : [FireDAC][Comp][Clnt]-512. Connection is not defined for [qNotificaUser]. Possible reason: Connection and ConnectionName property values are both empty : Addr: $00819B3C
+UniSystemBI21.exe: 000027D0: 15:01:45 [Argument out of range-10.1.1.107]:EArgumentOutOfRangeException : Argument out of range : Addr: $004C28C6
+UniSystemBI21.exe: 000027D0: 15:01:45 [List index out of bounds (0)-10.1.1.107]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI21.exe: 000019A8: 17:33:16 [Exit]:Unexpected attempt to terminate server application with Exit Code: 0

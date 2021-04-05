@@ -1,0 +1,50 @@
+UniSystemBI.exe: 00001A6C: 07:58:11 []:>--------------------------------------------------------------<
+UniSystemBI.exe: 00001A6C: 07:58:11 [TUniServerModule]:Server First Init.
+UniSystemBI.exe: 00001A6C: 07:58:18 [TUniServerModule]:Starting HTTP Server on Port: 8070...
+UniSystemBI.exe: 00001A6C: 07:58:18 [TUniServerModule]:HTTP Server Started on Port: 8070
+UniSystemBI.exe: 00001E00: 07:59:01 [TUniThreadTimer.OnTimer]:EDatabaseError : Field 'ID' not found : Addr: $0069F20F
+UniSystemBI.exe: 000015A8: 08:08:24 []:>--------------------------------------------------------------<
+UniSystemBI.exe: 000015A8: 08:08:24 [TUniServerModule]:Server First Init.
+UniSystemBI.exe: 000015A8: 08:08:25 [TUniServerModule]:Global Cache Folder Erased. <1> Files deleted.
+UniSystemBI.exe: 000015A8: 08:08:26 [TUniServerModule]:Starting HTTP Server on Port: 8070...
+UniSystemBI.exe: 000015A8: 08:08:26 [TUniServerModule]:HTTP Server Started on Port: 8070
+UniSystemBI.exe: 0000153C: 08:09:15 [TUniThreadTimer.OnTimer]:EDatabaseError : Field 'ID' not found : Addr: $0069F20F
+UniSystemBI.exe: 00001CA8: 08:09:44 [OnBrowserClose-127.0.0.1]:EDatabaseError : qSessionControl: Cannot perform this operation on a closed dataset : Addr: $0069F1FA
+UniSystemBI.exe: 00000F30: 08:09:44 [TUniGUIServerModule.AppHandleException-]:EAccessViolation : Access violation at address 008067D4 in module 'UniSystemBI.exe'. Read of address 00000064 : Addr: $008067D4
+UniSystemBI.exe: 00000F30: 08:11:19 [TUniGUIServerModule.AppHandleException-]:EAccessViolation : Access violation at address 008067D4 in module 'UniSystemBI.exe'. Read of address 00000064 : Addr: $008067D4
+UniSystemBI.exe: 00000458: 08:12:08 [OnBrowserClose-127.0.0.1]:EDatabaseError : qSessionControl: Cannot perform this operation on a closed dataset : Addr: $0069F1FA
+UniSystemBI.exe: 00000F30: 08:12:10 [TUniGUIServerModule.AppHandleException-]:EAccessViolation : Access violation at address 008067D4 in module 'UniSystemBI.exe'. Read of address 00000064 : Addr: $008067D4
+UniSystemBI.exe: 00001BD0: 08:12:30 [OnBrowserClose-127.0.0.1]:EDatabaseError : qSessionControl: Cannot perform this operation on a closed dataset : Addr: $0069F1FA
+UniSystemBI.exe: 00000F30: 08:12:35 [TUniGUIServerModule.AppHandleException-]:EAccessViolation : Access violation at address 008067D4 in module 'UniSystemBI.exe'. Read of address 00000064 : Addr: $008067D4
+UniSystemBI.exe: 000002A8: 08:17:25 [OnBrowserClose-10.1.1.14]:EDatabaseError : qSessionControl: Cannot perform this operation on a closed dataset : Addr: $0069F1FA
+UniSystemBI.exe: 00000F30: 08:17:30 [TUniGUIServerModule.AppHandleException-]:EAccessViolation : Access violation at address 008067D4 in module 'UniSystemBI.exe'. Read of address 00000064 : Addr: $008067D4
+UniSystemBI.exe: 000018D0: 08:18:43 [OnBrowserClose-10.1.1.14]:EDatabaseError : qSessionControl: Cannot perform this operation on a closed dataset : Addr: $0069F1FA
+UniSystemBI.exe: 00000F30: 08:18:45 [TUniGUIServerModule.AppHandleException-]:EAccessViolation : Access violation at address 008067D4 in module 'UniSystemBI.exe'. Read of address 00000064 : Addr: $008067D4
+UniSystemBI.exe: 00000528: 13:20:07 [OnBrowserClose-127.0.0.1]:EDatabaseError : qSessionControl: Cannot perform this operation on a closed dataset : Addr: $0069F1FA
+UniSystemBI.exe: 00000F30: 13:20:10 [TUniGUIServerModule.AppHandleException-]:EAccessViolation : Access violation at address 008067D4 in module 'UniSystemBI.exe'. Read of address 00000064 : Addr: $008067D4
+UniSystemBI.exe: 00000F30: 13:21:05 [TUniGUIServerModule.AppHandleException-]:EAccessViolation : Access violation at address 008067D4 in module 'UniSystemBI.exe'. Read of address 00000064 : Addr: $008067D4
+UniSystemBI.exe: 00000F30: 13:21:20 [TUniGUIServerModule.AppHandleException-]:EAccessViolation : Access violation at address 008067D4 in module 'UniSystemBI.exe'. Read of address 00000064 : Addr: $008067D4
+UniSystemBI.exe: 000015A8: 13:21:38 [TUniServerModule]:Shutting Down Server.
+UniSystemBI.exe: 000015A8: 13:21:38 [TUniServerModule]:Stopping HTTP Server.
+UniSystemBI.exe: 000015A8: 13:21:39 [TUniServerModule]:HTTP Server Stopped.
+UniSystemBI.exe: 000015A8: 13:21:39 [TUniGUISessionManager]:Terminating Session manager.
+UniSystemBI.exe: 000015A8: 13:21:39 [TUniGUISessionManager]:Stopping Cache Eraser...
+UniSystemBI.exe: 000015A8: 13:21:39 [TUniGUISessionManager]:Cache Eraser Stopped.
+UniSystemBI.exe: 000015A8: 13:21:39 [TUniGUIServerModule.AppHandleException-]:EAccessViolation : Access violation at address 008067D4 in module 'UniSystemBI.exe'. Read of address 00000064 : Addr: $008067D4
+UniSystemBI.exe: 000015A8: 13:21:39 [TUniGUISessionManager]:Destroying Worker Threads.
+UniSystemBI.exe: 000015A8: 13:21:39 [TUniGUISessionManager]:Session manager terminated.
+UniSystemBI.exe: 000015A8: 13:21:39 [TUniServerModule]:Server Shutdown Completed.
+UniSystemBI.exe: 000015A8: 13:21:39 []:<-------------------------------------------------------------->
+UniSystemBI.exe: 000015A8: 13:21:39 [Terminated]:Exit Code: 0
+UniSystemBI.exe: 00001AC4: 13:21:51 []:>--------------------------------------------------------------<
+UniSystemBI.exe: 00001AC4: 13:21:51 [TUniServerModule]:Server First Init.
+UniSystemBI.exe: 00001AC4: 13:21:54 [TUniServerModule]:Starting HTTP Server on Port: 8070...
+UniSystemBI.exe: 00001AC4: 13:21:54 [TUniServerModule]:HTTP Server Started on Port: 8070
+UniSystemBI.exe: 00000E64: 13:22:41 [TUniThreadTimer.OnTimer]:EDatabaseError : Field 'ID' not found : Addr: $0069F20F
+UniSystemBI.exe: 000003C0: 13:27:31 [TUniGUIServerModule.AppHandleException-]:EAccessViolation : Access violation at address 008067D4 in module 'UniSystemBI.exe'. Read of address 00000064 : Addr: $008067D4
+UniSystemBI.exe: 00001EC0: 13:28:16 [OnBrowserClose-127.0.0.1]:EDatabaseError : qSessionControl: Cannot perform this operation on a closed dataset : Addr: $0069F1FA
+UniSystemBI.exe: 000003C0: 13:28:16 [TUniGUIServerModule.AppHandleException-]:EAccessViolation : Access violation at address 008067D4 in module 'UniSystemBI.exe'. Read of address 00000064 : Addr: $008067D4
+UniSystemBI.exe: 000003C0: 14:01:07 [TUniGUIServerModule.AppHandleException-]:EAccessViolation : Access violation at address 008067D4 in module 'UniSystemBI.exe'. Read of address 00000064 : Addr: $008067D4
+UniSystemBI.exe: 00000358: 14:02:05 [OnBrowserClose-127.0.0.1]:EDatabaseError : qSessionControl: Cannot perform this operation on a closed dataset : Addr: $0069F1FA
+UniSystemBI.exe: 000003C0: 14:02:07 [TUniGUIServerModule.AppHandleException-]:EAccessViolation : Access violation at address 008067D4 in module 'UniSystemBI.exe'. Read of address 00000064 : Addr: $008067D4
+UniSystemBI.exe: 00001AC4: 17:32:54 [Exit]:Unexpected attempt to terminate server application with Exit Code: 0

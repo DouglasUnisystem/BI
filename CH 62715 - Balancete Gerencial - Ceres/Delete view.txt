@@ -1,0 +1,5 @@
+drop view VW_SALDO_BALANCETE;
+
+Caso seja view materalizada
+
+drop view materialized VW_SALDO_BALANCETE

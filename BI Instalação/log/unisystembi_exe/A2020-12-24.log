@@ -1,0 +1,53 @@
+UniSystemBI.exe: 000014F0: 07:59:30 []:>--------------------------------------------------------------<
+UniSystemBI.exe: 000014F0: 07:59:30 [TUniServerModule]:Server First Init.
+UniSystemBI.exe: 000014F0: 07:59:31 [TUniServerModule]:Global Cache Folder Erased. <41> Files deleted.
+UniSystemBI.exe: 000014F0: 07:59:34 [TUniServerModule]:Starting HTTP Server on Port: 8070...
+UniSystemBI.exe: 000014F0: 07:59:34 [TUniServerModule]:HTTP Server Started on Port: 8070
+UniSystemBI.exe: 00001A3C: 08:08:06 [10.1.1.133]:EUniSessionException : Invalid session or session Timeout. (Session not found: 9mZQMUUeBs10762836C ) : Addr: $007D255A
+UniSystemBI.exe: 00001A3C: 08:08:12 [10.1.1.133]:EUniSessionException : Invalid session or session Timeout. (Session not found: 9mZQMUUeBs10762836C ) : Addr: $007D255A
+UniSystemBI.exe: 00000F90: 08:08:13 [10.1.1.133]:EUniSessionException : Invalid session or session Timeout. (Session not found: 9mZQMUUeBs10762836C ) : Addr: $007D255A
+UniSystemBI.exe: 00000F90: 08:08:13 [10.1.1.133]:EUniSessionException : Invalid session or session Timeout. (Session not found: 9mZQMUUeBs10762836C ) : Addr: $007D255A
+UniSystemBI.exe: 00000F90: 08:08:13 [10.1.1.133]:EUniSessionException : Invalid session or session Timeout. (Session not found: 9mZQMUUeBs10762836C ) : Addr: $007D255A
+UniSystemBI.exe: 00001988: 08:08:14 [10.1.1.133]:EUniSessionException : Invalid session or session Timeout. (Session not found: 9mZQMUUeBs10762836C ) : Addr: $007D255A
+UniSystemBI.exe: 00000F90: 08:08:14 [10.1.1.133]:EUniSessionException : Invalid session or session Timeout. (Session not found: 9mZQMUUeBs10762836C ) : Addr: $007D255A
+UniSystemBI.exe: 00001988: 08:08:14 [10.1.1.133]:EUniSessionException : Invalid session or session Timeout. (Session not found: 9mZQMUUeBs10762836C ) : Addr: $007D255A
+UniSystemBI.exe: 00001CD4: 09:21:37 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 00001CD4: 09:23:32 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 00001CD4: 09:53:02 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 00001CD4: 10:03:12 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 00000BF0: 10:30:44 [10.1.1.14]:EUniSessionException : Invalid session or session Timeout. (Session not found: PrQKHszaLv10763A8FA ) : Addr: $007D255A
+UniSystemBI.exe: 00000BF0: 10:30:44 [10.1.1.14]:EUniSessionException : Invalid session or session Timeout. (Session not found: PrQKHszaLv10763A8FA ) : Addr: $007D255A
+UniSystemBI.exe: 000014F0: 10:50:40 [TUniServerModule]:Shutting Down Server.
+UniSystemBI.exe: 000014F0: 10:50:40 [TUniServerModule]:Stopping HTTP Server.
+UniSystemBI.exe: 000014F0: 10:50:41 [TUniServerModule]:HTTP Server Stopped.
+UniSystemBI.exe: 000014F0: 10:50:41 [TUniGUISessionManager]:Terminating Session manager.
+UniSystemBI.exe: 000014F0: 10:50:41 [TUniGUISessionManager]:Stopping Cache Eraser...
+UniSystemBI.exe: 000014F0: 10:50:41 [TUniGUISessionManager]:Cache Eraser Stopped.
+UniSystemBI.exe: 000014F0: 10:50:41 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 000014F0: 10:50:41 [List index out of bounds (0)-10.1.1.133]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 000014F0: 10:50:41 [TUniGUISessionManager]:Destroying Worker Threads.
+UniSystemBI.exe: 000014F0: 10:50:41 [TUniGUISessionManager]:Session manager terminated.
+UniSystemBI.exe: 000014F0: 10:50:41 [TUniServerModule]:Server Shutdown Completed.
+UniSystemBI.exe: 000014F0: 10:50:41 []:<-------------------------------------------------------------->
+UniSystemBI.exe: 000014F0: 10:50:41 [Terminated]:Exit Code: 0
+UniSystemBI.exe: 00001984: 10:51:28 []:>--------------------------------------------------------------<
+UniSystemBI.exe: 00001984: 10:51:28 [TUniServerModule]:Server First Init.
+UniSystemBI.exe: 00001984: 10:51:29 [TUniServerModule]:Starting HTTP Server on Port: 8070...
+UniSystemBI.exe: 00001984: 10:51:29 [TUniServerModule]:HTTP Server Started on Port: 8070
+UniSystemBI.exe: 00000380: 10:51:34 [10.1.1.14]:EUniSessionException : Invalid session or session Timeout. (Session not found: nyiiynyfyO10763BB39 ) : Addr: $007D255A
+UniSystemBI.exe: 00001C94: 10:51:35 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI.exe: 00000380: 10:51:36 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI.exe: 00000FC0: 10:54:32 [10.1.1.133]:EUniSessionException : Invalid session or session Timeout. (Session not found: yPiYubKmZH107639490 ) : Addr: $007D255A
+UniSystemBI.exe: 00000FC0: 10:54:33 [10.1.1.133]:EUniSessionException : Invalid session or session Timeout. (Session not found: yPiYubKmZH107639490 ) : Addr: $007D255A
+UniSystemBI.exe: 00001C44: 10:54:34 [HandleFileRequest[10.1.1.133]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI.exe: 00001E28: 10:54:34 [HandleFileRequest[10.1.1.133]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI.exe: 00001B60: 11:21:56 [10.1.1.14]:EComponentError : A component named panel_filtro_Período_Final already exists : Addr: $004D9B5A
+UniSystemBI.exe: 00000A20: 11:26:49 [10.1.1.14]:EComponentError : A component named panel_filtro_Período_Final already exists : Addr: $004D9B5A
+UniSystemBI.exe: 00001C88: 11:37:34 [10.1.1.14]:EComponentError : A component named panel_filtro_Período_Final already exists : Addr: $004D9B5A
+UniSystemBI.exe: 000016F4: 11:38:27 [10.1.1.14]:EComponentError : A component named panel_filtro_Período_Final already exists : Addr: $004D9B5A
+UniSystemBI.exe: 00001C38: 11:50:38 [10.1.1.133]:EOCINativeException : [FireDAC][Phys][Ora] ORA-06553: PLS-306: número incorreto de tipos de argumentos na chamada para 'FRETORNA_SALDO_INICIAL_FLUXO' : Addr: $0090FB71
+UniSystemBI.exe: 00001AF0: 11:55:39 [10.1.1.133]:EOCINativeException : [FireDAC][Phys][Ora] ORA-01003: não há instrução analisada : Addr: $0090FB71
+UniSystemBI.exe: 00001980: 11:56:36 [10.1.1.14]:EDatabaseError : query_11277_2: Field 'SALDO_DIA' not found : Addr: $0069F29E
+UniSystemBI.exe: 00000FD8: 11:56:38 [10.1.1.14]:EDatabaseError : query_11277_2: Field 'SALDO_DIA' not found : Addr: $0069F29E
+UniSystemBI.exe: 000018EC: 12:10:19 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 00001984: 12:10:45 [Exit]:Unexpected attempt to terminate server application with Exit Code: 0

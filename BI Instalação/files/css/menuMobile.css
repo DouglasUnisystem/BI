@@ -1,0 +1,57 @@
+/* TREELIST */
+/* #077a41;   verde LOGO*/
+/* #2c3845    cinza menu LOGO*/
+/* #FCD002  *AMARELO LOGO*/
+
+body.x-border-layout-ct, div.x-border-layout-ct {
+    background-color: #077a41;
+}
+
+.menuMobile .x-treelist-item .x-treelistitem .x-treelist-item-with-icon .x-treelist-item-expandable .x-treelist-item-selected .x-treelist-item-collapsed {
+	background-color: #077a41 !important;
+}
+
+.menuMobile .x-treelist-nav .x-treelist-item-selected, .menuMobile .x-treelist-item-tool { /*side menu cor*/
+    color: #fff !important;
+    background-color: #077a41 !important;
+}
+
+.menuMobile .x-treelist-nav .x-treelist-item-selected > .x-treelist-row:before {
+    background-color: #FCD002  !important; 
+}
+
+.menuMobile .x-treelist-nav, .menuMobile .x-treelist-row-over:before {
+    background-color: #077a41 !important;
+}
+
+.menuMobile .x-treelist-nav .x-treelist-item-text {
+	line-height: 60px;
+    font-size: 16px;
+	color: #fff !important;
+}
+
+.menuMobile .x-treelist-nav .x-treelist-item-icon {
+     color: #fff !important; /* verde */
+	 font-size: 22px;	 
+}
+.menuMobile .x-treelist-nav .x-treelist-item-icon:before, .menuMobile .x-treelist-nav .x-treelist-item-tool:before, .menuMobile .x-treelist-nav .x-treelist-item-expander {
+     line-height: 60px;
+}
+
+.menuMobile .x-treelist-nav .x-treelist-item-expander {
+    color: #fff !important;
+    font-size: 16px;
+    width: 24px;
+}
+
+.menuMobile .x-treelist-item {
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #2c3845;
+	border-style: solid;
+    border-width: 0px 0px 1px 0px; /* 25px top, 10px right, 4px bottom and 35px left */
+	border-color: #077a41;
+}

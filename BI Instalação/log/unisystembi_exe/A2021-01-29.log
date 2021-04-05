@@ -1,0 +1,16 @@
+UniSystemBI.exe: 00001F58: 13:14:56 []:>--------------------------------------------------------------<
+UniSystemBI.exe: 00001F58: 13:14:56 [TUniServerModule]:Server First Init.
+UniSystemBI.exe: 00001F58: 13:14:57 [TUniServerModule]:Global Cache Folder Erased. <11> Files deleted.
+UniSystemBI.exe: 00001F58: 13:14:57 [TUniServerModule]:Starting HTTP Server on Port: 8070...
+UniSystemBI.exe: 00001F58: 13:14:57 [InitWebServer]:EIdCouldNotBindSocket : Could not bind socket. : Addr: $007031C1
+UniSystemBI.exe: 00001F58: 13:16:36 [TUniServerModule]:Shutting Down Server.
+UniSystemBI.exe: 00001F58: 13:16:36 [TUniServerModule]:Stopping HTTP Server.
+UniSystemBI.exe: 00001F58: 13:16:36 [TUniServerModule]:HTTP Server Stopped.
+UniSystemBI.exe: 00001F58: 13:16:36 [TUniGUISessionManager]:Terminating Session manager.
+UniSystemBI.exe: 00001F58: 13:16:36 [TUniGUISessionManager]:Stopping Cache Eraser...
+UniSystemBI.exe: 00001F58: 13:16:36 [TUniGUISessionManager]:Cache Eraser Stopped.
+UniSystemBI.exe: 00001F58: 13:16:36 [TUniGUISessionManager]:Destroying Worker Threads.
+UniSystemBI.exe: 00001F58: 13:16:36 [TUniGUISessionManager]:Session manager terminated.
+UniSystemBI.exe: 00001F58: 13:16:36 [TUniServerModule]:Server Shutdown Completed.
+UniSystemBI.exe: 00001F58: 13:16:36 []:<-------------------------------------------------------------->
+UniSystemBI.exe: 00001F58: 13:16:36 [Terminated]:Exit Code: 0

@@ -1,0 +1,27 @@
+UniSystemBI21.exe: 000026C4: 14:38:46 []:>--------------------------------------------------------------<
+UniSystemBI21.exe: 000026C4: 14:38:46 [TUniServerModule]:Server First Init.
+UniSystemBI21.exe: 000026C4: 14:38:46 [TUniServerModule]:Global Cache Folder Erased. <16> Files deleted.
+UniSystemBI21.exe: 000026C4: 14:38:49 [TUniServerModule]:Starting HTTP Server on Port: 8070...
+UniSystemBI21.exe: 000026C4: 14:38:49 [TUniServerModule]:HTTP Server Started on Port: 8070
+UniSystemBI21.exe: 00001CA4: 14:41:28 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI21.exe: 00002724: 14:41:30 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI21.exe: 00000A18: 14:41:38 [TUniThreadTimer.OnTimer]:EFDException : [FireDAC][Comp][Clnt]-512. Connection is not defined for [qNotificaUser]. Possible reason: Connection and ConnectionName property values are both empty : Addr: $00819B3C
+UniSystemBI21.exe: 00002660: 15:15:52 [Argument out of range-10.1.1.14]:EArgumentOutOfRangeException : Argument out of range : Addr: $004C28C6
+UniSystemBI21.exe: 00002660: 15:15:52 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI21.exe: 00001C54: 15:54:14 [10.1.1.14]:EUniSessionException : Invalid session or session Timeout. (Session not found: bJFyVIg1sN1079659D9 ) : Addr: $007D255A
+UniSystemBI21.exe: 00001C54: 15:54:15 [10.1.1.14]:EUniSessionException : Invalid session or session Timeout. (Session not found: bJFyVIg1sN1079659D9 ) : Addr: $007D255A
+UniSystemBI21.exe: 00001C54: 15:54:15 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI21.exe: 00001C70: 15:54:18 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI21.exe: 00001854: 15:54:23 [TUniThreadTimer.OnTimer]:EFDException : [FireDAC][Comp][Clnt]-512. Connection is not defined for [qNotificaUser]. Possible reason: Connection and ConnectionName property values are both empty : Addr: $00819B3C
+UniSystemBI21.exe: 00002660: 16:31:47 [Argument out of range-10.1.1.14]:EArgumentOutOfRangeException : Argument out of range : Addr: $004C28C6
+UniSystemBI21.exe: 00002660: 16:31:47 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI21.exe: 00002214: 16:59:26 [10.1.1.14]:EUniSessionException : Invalid session or session Timeout. (Session not found: zpgaAvN35k107966D9B ) : Addr: $007D255A
+UniSystemBI21.exe: 00001A44: 16:59:26 [10.1.1.14]:EUniSessionException : Invalid session or session Timeout. (Session not found: zpgaAvN35k107966D9B ) : Addr: $007D255A
+UniSystemBI21.exe: 00001A44: 16:59:26 [10.1.1.14]:EUniSessionException : Invalid session or session Timeout. (Session not found: zpgaAvN35k107966D9B ) : Addr: $007D255A
+UniSystemBI21.exe: 00001A44: 16:59:27 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI21.exe: 00002214: 16:59:30 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI21.exe: 00002304: 16:59:34 [TUniThreadTimer.OnTimer]:EFDException : [FireDAC][Comp][Clnt]-512. Connection is not defined for [qNotificaUser]. Possible reason: Connection and ConnectionName property values are both empty : Addr: $00819B3C
+UniSystemBI21.exe: 00002670: 17:18:04 [Erro ao abrir query do filtro: '[FireDAC][Phys][Ora] ORA-00942: a tabela ou view não existe'-10.1.1.14]:Exception : Erro ao abrir query do filtro: '[FireDAC][Phys][Ora] ORA-00942: a tabela ou view não existe' : Addr: $00A91461
+UniSystemBI21.exe: 00002660: 17:37:24 [Argument out of range-10.1.1.14]:EArgumentOutOfRangeException : Argument out of range : Addr: $004C28C6
+UniSystemBI21.exe: 00002660: 17:37:24 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI21.exe: 000026C4: 17:37:52 [Exit]:Unexpected attempt to terminate server application with Exit Code: 0

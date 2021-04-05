@@ -1,0 +1,64 @@
+CREATE OR REPLACE VIEW VW_MESES_CRED_DEB AS
+SELECT "MES","ANO","MES_ANO","ID_MES","MES_NUM"
+  FROM (SELECT CASE EXTRACT(MONTH FROM TO_DATE(CR.DATA_VCTO,'DD/MM/YYYY'))
+                 WHEN 1 THEN 'Janeiro'
+                 WHEN 2 THEN 'Fevereiro'
+                 WHEN 3 THEN 'Março'
+                 WHEN 4 THEN 'Abril'
+                 WHEN 5 THEN 'Maio'
+                 WHEN 6 THEN 'Junho'
+                 WHEN 7 THEN 'Julho'
+                 WHEN 8 THEN 'Agosto'
+                 WHEN 9 THEN 'Setembro'
+                 WHEN 10 THEN 'Outubro'
+                 WHEN 11 THEN 'Novembro'
+                 WHEN 12 THEN 'Dezembro'
+               END AS MES,
+               EXTRACT(YEAR FROM TO_DATE(CR.DATA_VCTO,'DD/MM/YYYY')) AS ANO,
+               TO_CHAR(CR.DATA_VCTO, 'YYYY/MM', 'NLS_DATE_LANGUAGE=''BRAZILIAN PORTUGUESE''') AS MES_ANO,
+               CONCAT(TO_CHAR(CR.DATA_VCTO, 'YYYY', 'NLS_DATE_LANGUAGE=''BRAZILIAN PORTUGUESE'''),TO_CHAR(CR.DATA_VCTO, 'MM', 'NLS_DATE_LANGUAGE=''BRAZILIAN PORTUGUESE''')) AS ID_MES,
+               EXTRACT(MONTH FROM TO_DATE(CR.DATA_VCTO,'DD/MM/YYYY')) AS MES_NUM
+          FROM CERES.CONTAS_RECEBER     CR,
+               CERES.FIN_HISTORICOS     FH,
+               CERES.CTB_PLANO_CONTAS   PC
+         WHERE 1 = 1
+           AND CR.SEQ_PLA_FIN_HIST  = FH.SEQ_PLA_FIN_HIST
+           AND FH.CTB_TABELA        = PC.CTB_TABELA
+           AND FH.CTB_CONTA         = PC.CTB_CONTA
+        GROUP BY EXTRACT(MONTH FROM TO_DATE(CR.DATA_VCTO,'DD/MM/YYYY')),
+               EXTRACT(YEAR FROM TO_DATE(CR.DATA_VCTO,'DD/MM/YYYY')),
+               TO_CHAR(CR.DATA_VCTO, 'YYYY/MM', 'NLS_DATE_LANGUAGE=''BRAZILIAN PORTUGUESE'''),
+               CONCAT(TO_CHAR(CR.DATA_VCTO, 'YYYY', 'NLS_DATE_LANGUAGE=''BRAZILIAN PORTUGUESE'''),TO_CHAR(CR.DATA_VCTO, 'MM', 'NLS_DATE_LANGUAGE=''BRAZILIAN PORTUGUESE''')),
+               EXTRACT(MONTH FROM TO_DATE(CR.DATA_VCTO,'DD/MM/YYYY'))
+        UNION
+        SELECT CASE EXTRACT(MONTH FROM TO_DATE(CR.DATA_VCTO,'DD/MM/YYYY'))
+                 WHEN 1 THEN 'Janeiro'
+                 WHEN 2 THEN 'Fevereiro'
+                 WHEN 3 THEN 'Março'
+                 WHEN 4 THEN 'Abril'
+                 WHEN 5 THEN 'Maio'
+                 WHEN 6 THEN 'Junho'
+                 WHEN 7 THEN 'Julho'
+                 WHEN 8 THEN 'Agosto'
+                 WHEN 9 THEN 'Setembro'
+                 WHEN 10 THEN 'Outubro'
+                 WHEN 11 THEN 'Novembro'
+                 WHEN 12 THEN 'Dezembro'
+               END AS MES,
+               EXTRACT(YEAR FROM TO_DATE(CR.DATA_VCTO,'DD/MM/YYYY')) AS ANO,
+               TO_CHAR(CR.DATA_VCTO, 'YYYY/MM', 'NLS_DATE_LANGUAGE=''BRAZILIAN PORTUGUESE''') AS MES_ANO,
+               CONCAT(TO_CHAR(CR.DATA_VCTO, 'YYYY', 'NLS_DATE_LANGUAGE=''BRAZILIAN PORTUGUESE'''),TO_CHAR(CR.DATA_VCTO, 'MM', 'NLS_DATE_LANGUAGE=''BRAZILIAN PORTUGUESE''')) AS ID_MES,
+               EXTRACT(MONTH FROM TO_DATE(CR.DATA_VCTO,'DD/MM/YYYY')) AS MES_NUM
+          FROM CERES.CONTAS_PAGAR     CR,
+               CERES.FIN_HISTORICOS   FH,
+               CERES.CTB_PLANO_CONTAS PC
+         WHERE 1 = 1
+           AND CR.SEQ_PLA_FIN_HIST  = FH.SEQ_PLA_FIN_HIST
+           AND FH.CTB_TABELA        = PC.CTB_TABELA
+           AND FH.CTB_CONTA         = PC.CTB_CONTA
+        GROUP BY EXTRACT(MONTH FROM TO_DATE(CR.DATA_VCTO,'DD/MM/YYYY')),
+               EXTRACT(YEAR FROM TO_DATE(CR.DATA_VCTO,'DD/MM/YYYY')),
+               TO_CHAR(CR.DATA_VCTO, 'YYYY/MM', 'NLS_DATE_LANGUAGE=''BRAZILIAN PORTUGUESE'''),
+               CONCAT(TO_CHAR(CR.DATA_VCTO, 'YYYY', 'NLS_DATE_LANGUAGE=''BRAZILIAN PORTUGUESE'''),TO_CHAR(CR.DATA_VCTO, 'MM', 'NLS_DATE_LANGUAGE=''BRAZILIAN PORTUGUESE''')),
+               EXTRACT(MONTH FROM TO_DATE(CR.DATA_VCTO,'DD/MM/YYYY'))
+      );

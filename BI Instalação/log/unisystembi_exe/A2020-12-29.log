@@ -1,0 +1,44 @@
+UniSystemBI.exe: 000016E8: 08:00:01 []:>--------------------------------------------------------------<
+UniSystemBI.exe: 000016E8: 08:00:01 [TUniServerModule]:Server First Init.
+UniSystemBI.exe: 000016E8: 08:00:01 [TUniServerModule]:Global Cache Folder Erased. <19> Files deleted.
+UniSystemBI.exe: 000016E8: 08:00:03 [TUniServerModule]:Starting HTTP Server on Port: 8070...
+UniSystemBI.exe: 000016E8: 08:00:03 [TUniServerModule]:HTTP Server Started on Port: 8070
+UniSystemBI.exe: 000015D8: 08:00:39 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI.exe: 000011F4: 08:00:43 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI.exe: 00001470: 08:51:41 [HandleFileRequest[10.1.1.235]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI.exe: 00001FE0: 08:51:46 [HandleFileRequest[10.1.1.235]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI.exe: 00001164: 08:54:26 [List index out of bounds (0)-10.1.1.235]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 000009E4: 09:01:24 [HandleFileRequest[10.1.1.235]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI.exe: 00001C00: 09:01:26 [HandleFileRequest[10.1.1.235]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI.exe: 000016E8: 10:12:54 [TUniServerModule]:Shutting Down Server.
+UniSystemBI.exe: 000016E8: 10:12:54 [TUniServerModule]:Stopping HTTP Server.
+UniSystemBI.exe: 000016E8: 10:12:55 [TUniServerModule]:HTTP Server Stopped.
+UniSystemBI.exe: 000016E8: 10:12:55 [TUniGUISessionManager]:Terminating Session manager.
+UniSystemBI.exe: 000016E8: 10:12:55 [TUniGUISessionManager]:Stopping Cache Eraser...
+UniSystemBI.exe: 000016E8: 10:12:55 [TUniGUISessionManager]:Cache Eraser Stopped.
+UniSystemBI.exe: 000016E8: 10:12:55 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 000016E8: 10:12:55 [TUniGUISessionManager]:Destroying Worker Threads.
+UniSystemBI.exe: 000016E8: 10:12:55 [TUniGUISessionManager]:Session manager terminated.
+UniSystemBI.exe: 000016E8: 10:12:56 [TUniServerModule]:Server Shutdown Completed.
+UniSystemBI.exe: 000016E8: 10:12:56 []:<-------------------------------------------------------------->
+UniSystemBI.exe: 000016E8: 10:12:56 [Terminated]:Exit Code: 0
+UniSystemBI.exe: 00000564: 10:14:29 []:>--------------------------------------------------------------<
+UniSystemBI.exe: 00000564: 10:14:29 [TUniServerModule]:Server First Init.
+UniSystemBI.exe: 00000564: 10:14:30 [TUniServerModule]:Starting HTTP Server on Port: 8070...
+UniSystemBI.exe: 00000564: 10:14:30 [TUniServerModule]:HTTP Server Started on Port: 8070
+UniSystemBI.exe: 00001248: 10:14:37 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI.exe: 00000A74: 10:14:44 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI.exe: 00000650: 11:28:15 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 00001F78: 13:41:05 [10.1.1.14]:EUniSessionException : Invalid session or session Timeout. (Session not found: dWl3VN8hq51076B57F6 ) : Addr: $007D255A
+UniSystemBI.exe: 000018A0: 13:41:05 [10.1.1.14]:EUniSessionException : Invalid session or session Timeout. (Session not found: dWl3VN8hq51076B57F6 ) : Addr: $007D255A
+UniSystemBI.exe: 000018A0: 13:41:08 [10.1.1.14]:EUniSessionException : Invalid session or session Timeout. (Session not found: dWl3VN8hq51076B57F6 ) : Addr: $007D255A
+UniSystemBI.exe: 000018A0: 13:41:09 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI.exe: 00001F78: 13:41:14 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI.exe: 00001B70: 14:01:30 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 00001B70: 14:01:30 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI.exe: 00001D34: 14:01:34 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI.exe: 00000650: 14:05:16 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 00001B08: 14:18:24 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI.exe: 00001AF8: 14:18:26 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI.exe: 00000650: 14:41:42 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 00000564: 17:32:45 [Exit]:Unexpected attempt to terminate server application with Exit Code: 0

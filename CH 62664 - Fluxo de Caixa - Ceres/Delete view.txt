@@ -1,0 +1,35 @@
+drop view VW_SALDO_CONTA_BANCARIA;
+drop view VW_SALDO_CONTA_BANCARIA_CAIXA;
+drop view VW_VALOR_MES_CRED_FUT_DETALHE;
+drop view VW_VALOR_MES_CREDITO;
+drop view VW_VALOR_MES_CREDITO_DEBITO;
+drop view VW_VALOR_MES_CREDITO_DETALHE;
+drop view VW_VALOR_MES_CREDITO_FUTURO;
+drop view VW_VALOR_MES_DEB_FUT_DETALHE;
+drop view VW_VALOR_MES_DEBITO;
+drop view VW_VALOR_MES_DEBITO_DETALHE;
+drop view VW_VALOR_MES_DEBITO_FUTURO;
+drop view VW_SALDO_CAIXA;
+drop view VW_VALOR_CREDITO_CR;
+drop view VW_VALOR_DEBITO_CP;
+drop view VW_VLR_SLD_CONTA_BANCO;
+drop view VW_MESES_CRED_DEB;
+
+Caso seja view materalizada
+
+drop view materialized VW_SALDO_CONTA_BANCARIA;
+drop view materialized VW_SALDO_CONTA_BANCARIA_CAIXA;
+drop view materialized VW_VALOR_MES_CRED_FUT_DETALHE;
+drop view materialized VW_VALOR_MES_CREDITO;
+drop view materialized VW_VALOR_MES_CREDITO_DEBITO;
+drop view materialized VW_VALOR_MES_CREDITO_DETALHE;
+drop view materialized VW_VALOR_MES_CREDITO_FUTURO;
+drop view materialized VW_VALOR_MES_DEB_FUT_DETALHE;
+drop view materialized VW_VALOR_MES_DEBITO;
+drop view materialized VW_VALOR_MES_DEBITO_DETALHE;
+drop view materialized VW_VALOR_MES_DEBITO_FUTURO;
+drop view materialized VW_SALDO_CAIXA;
+drop view materialized VW_VALOR_CREDITO_CR;
+drop view materialized VW_VALOR_DEBITO_CP;
+drop view materialized VW_VLR_SLD_CONTA_BANCO;
+drop view materialized VW_MESES_CRED_DEB;

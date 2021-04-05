@@ -1,0 +1,189 @@
+CREATE MATERIALIZED VIEW VW_CUSTO_TALHAO_CULTURA
+REFRESH FORCE ON DEMAND
+START WITH TO_DATE('05-04-2021 09:46:48', 'DD-MM-YYYY HH24:MI:SS') NEXT SYSDATE + 10/24/60 
+AS
+SELECT RE.COD_EMPRESA,
+               RE.COD_FILIAL,
+               RE.COD_SAFRA,
+               TL.SEQ_PLA_TALHAO,
+               TL.DESC_TALHAO,
+               TS.SEQ_PLA_TIPO_CULT,
+               TC.DESC_CULTURA,
+               SG.DESC_SUB_GRUPO,
+               TL.SEQ_PLA_FAZENDA,
+               SUM(DECODE(RE.ENTRADA_SAIDA ,'E',0,TS.QTDE_HA)) as QTDE_HA,
+               (DECODE(SUM((CASE WHEN RE.SEQ_PLA_TALHAO_SAFRA IS NULL THEN
+                                      ((DECODE(RE.ENTRADA_SAIDA,'E',0,RP.QUANTIDADE)*TS.QTDE_HA)/TL.QTDE_HA) -
+                                      ((DECODE(RE.ENTRADA_SAIDA,'E',RP.QUANTIDADE,0)*TS.QTDE_HA)/TL.QTDE_HA)
+                                   ELSE DECODE(RE.ENTRADA_SAIDA,'E',0,RP.QUANTIDADE) - DECODE(RE.ENTRADA_SAIDA,'E',RP.QUANTIDADE,0)
+                            END)),0,0,
+               (SUM(CASE WHEN RE.SEQ_PLA_TALHAO_SAFRA IS NULL THEN
+                              ((DECODE(RE.ENTRADA_SAIDA,'E',0,RP.QUANTIDADE)*TS.QTDE_HA)/TL.QTDE_HA) -
+                              ((DECODE(RE.ENTRADA_SAIDA,'E',RP.QUANTIDADE,0)*TS.QTDE_HA)/TL.QTDE_HA)
+                           ELSE DECODE(RE.ENTRADA_SAIDA,'E',0,RP.QUANTIDADE) - DECODE(RE.ENTRADA_SAIDA,'E',RP.QUANTIDADE,0)
+                    END *
+               (rp.custo_total/rp.quantidade) ))/
+               SUM(CASE WHEN RE.SEQ_PLA_TALHAO_SAFRA IS NULL THEN
+                              ((DECODE(RE.ENTRADA_SAIDA,'E',0,RP.QUANTIDADE)*TS.QTDE_HA)/TL.QTDE_HA) -
+                              ((DECODE(RE.ENTRADA_SAIDA,'E',RP.QUANTIDADE,0)*TS.QTDE_HA)/TL.QTDE_HA)
+                           ELSE DECODE(RE.ENTRADA_SAIDA,'E',0,RP.QUANTIDADE) - DECODE(RE.ENTRADA_SAIDA,'E',RP.QUANTIDADE,0)
+               END ))) AS CUSTO_MEDIO
+
+          FROM AGRICOLA.ALM_REQUISICAO      RE,
+               AGRICOLA.ALM_REQUIS_PRODUTOS RP,
+               AGRICOLA.TALHOES_SAFRA       TS,
+               AGRICOLA.TALHOES             TL,
+               AGRICOLA.PRODUTOS            PR,
+               AGRICOLA.SUB_GRUPO           SG,
+               AGRICOLA.GRUPO               GP,
+               AGRICOLA.UNIDADE_PRODUTO     UN,
+               AGRICOLA.CICLO_APLICACAO     CA,
+               AGRICOLA.TIPO_CULTURA        TC
+        WHERE RE.SEQ_PLA_REQUIS       = RP.SEQ_PLA_REQUIS(+)
+          AND RE.SEQ_PLA_TALHAO_SAFRA = TS.SEQ_PLA_TALHAO_SAFRA
+          AND TS.SEQ_PLA_TALHAO       = TL.SEQ_PLA_TALHAO(+)
+          AND RP.SEQ_PLA_PRODUTO      = PR.SEQ_PLA_PRODUTO(+)
+          AND PR.SEQ_PLA_SUB_GRUPO    = SG.SEQ_PLA_SUB_GRUPO(+)
+          AND SG.SEQ_PLA_GRUPO        = GP.SEQ_PLA_GRUPO(+)
+          AND RP.SEQ_PLA_UNIDADE      = UN.SEQ_PLA_UNIDADE(+)
+          AND RP.SEQ_PLA_CICLO_APLICACAO=CA.SEQ_PLANILHA(+)
+          AND TS.SEQ_PLA_TIPO_CULT    = TC.SEQ_PLA_TIPO_CULT(+)
+          AND (CASE WHEN RE.SEQ_PLA_TALHAO_SAFRA IS NULL THEN
+                      (((DECODE(RE.ENTRADA_SAIDA,'E',0,RP.QUANTIDADE)*TS.QTDE_HA)/TL.QTDE_HA) -
+                       ((DECODE(RE.ENTRADA_SAIDA,'E',RP.QUANTIDADE,0)*TS.QTDE_HA)/TL.QTDE_HA))
+                    ELSE   (DECODE(RE.ENTRADA_SAIDA,'E',0,RP.QUANTIDADE) - DECODE(RE.ENTRADA_SAIDA,'E',RP.QUANTIDADE,0))
+               END *
+         (rp.custo_total/rp.quantidade) )>0
+        GROUP BY RE.COD_EMPRESA,
+              RE.COD_FILIAL,
+              RE.COD_SAFRA,
+              TL.SEQ_PLA_TALHAO,
+              TL.DESC_TALHAO,
+              TS.SEQ_PLA_TIPO_CULT,
+              TC.DESC_CULTURA,
+              SG.DESC_SUB_GRUPO,
+              TL.SEQ_PLA_FAZENDA
+
+        UNION ALL
+
+       SELECT RE.COD_EMPRESA,
+              RE.COD_FILIAL,
+              RE.COD_SAFRA,
+              TL.SEQ_PLA_TALHAO,
+              TL.DESC_TALHAO,
+              TS.SEQ_PLA_TIPO_CULT,
+              TC.DESC_CULTURA,
+              SG.DESC_SUB_GRUPO,
+              TL.SEQ_PLA_FAZENDA,
+              SUM(DECODE(RE.ENTRADA_SAIDA ,'E',0,TS.QTDE_HA)) as QTDE_HA,
+              (DECODE(SUM((CASE WHEN RE.SEQ_PLA_TALHAO_SAFRA IS NULL THEN
+                                     ((DECODE(RE.ENTRADA_SAIDA,'E',0,RP.QUANTIDADE)*TS.QTDE_HA)/TL.QTDE_HA) -
+                                     ((DECODE(RE.ENTRADA_SAIDA,'E',RP.QUANTIDADE,0)*TS.QTDE_HA)/TL.QTDE_HA)
+                                  ELSE DECODE(RE.ENTRADA_SAIDA,'E',0,RP.QUANTIDADE) - DECODE(RE.ENTRADA_SAIDA,'E',RP.QUANTIDADE,0)
+                           END)),0,0,
+              (SUM(CASE WHEN RE.SEQ_PLA_TALHAO_SAFRA IS NULL THEN
+                             ((DECODE(RE.ENTRADA_SAIDA,'E',0,RP.QUANTIDADE)*TS.QTDE_HA)/TL.QTDE_HA) -
+                             ((DECODE(RE.ENTRADA_SAIDA,'E',RP.QUANTIDADE,0)*TS.QTDE_HA)/TL.QTDE_HA)
+                          ELSE DECODE(RE.ENTRADA_SAIDA,'E',0,RP.QUANTIDADE) - DECODE(RE.ENTRADA_SAIDA,'E',RP.QUANTIDADE,0)
+                   END *
+              (rp.custo_total/rp.quantidade) ))/
+              SUM(CASE WHEN RE.SEQ_PLA_TALHAO_SAFRA IS NULL THEN
+                             ((DECODE(RE.ENTRADA_SAIDA,'E',0,RP.QUANTIDADE)*TS.QTDE_HA)/TL.QTDE_HA) -
+                             ((DECODE(RE.ENTRADA_SAIDA,'E',RP.QUANTIDADE,0)*TS.QTDE_HA)/TL.QTDE_HA)
+                          ELSE DECODE(RE.ENTRADA_SAIDA,'E',0,RP.QUANTIDADE) - DECODE(RE.ENTRADA_SAIDA,'E',RP.QUANTIDADE,0)
+              END ))) AS CUSTO_MEDIO
+
+         FROM AGRICOLA.ALM_REQUISICAO      RE,
+              AGRICOLA.ALM_REQUIS_PRODUTOS RP,
+              AGRICOLA.TALHOES_SAFRA       TS,
+              AGRICOLA.TALHOES             TL,
+              AGRICOLA.PRODUTOS            PR,
+              AGRICOLA.SUB_GRUPO           SG,
+              AGRICOLA.GRUPO               GP,
+              AGRICOLA.UNIDADE_PRODUTO     UN,
+              AGRICOLA.CICLO_APLICACAO     CA,
+              AGRICOLA.TIPO_CULTURA        TC
+        WHERE RE.SEQ_PLA_REQUIS         = RP.SEQ_PLA_REQUIS(+)
+          AND RE.SEQ_PLA_TALHAO         = TL.SEQ_PLA_TALHAO
+          AND TS.SEQ_PLA_TALHAO         = TL.SEQ_PLA_TALHAO(+)
+          AND RP.SEQ_PLA_PRODUTO        = PR.SEQ_PLA_PRODUTO(+)
+          AND PR.SEQ_PLA_SUB_GRUPO      = SG.SEQ_PLA_SUB_GRUPO(+)
+          AND SG.SEQ_PLA_GRUPO          = GP.SEQ_PLA_GRUPO(+)
+          AND RP.SEQ_PLA_UNIDADE        = UN.SEQ_PLA_UNIDADE(+)
+          AND RP.SEQ_PLA_CICLO_APLICACAO= CA.SEQ_PLANILHA(+)
+          AND TS.SEQ_PLA_TIPO_CULT      = TC.SEQ_PLA_TIPO_CULT(+)
+          AND RE.SEQ_PLA_TALHAO_SAFRA IS NULL
+          AND NVL(TS.SAFRINHA,'N') = 'N'
+          AND (CASE WHEN RE.SEQ_PLA_TALHAO_SAFRA IS NULL THEN
+                      (((DECODE(RE.ENTRADA_SAIDA,'E',0,RP.QUANTIDADE)*TS.QTDE_HA)/TL.QTDE_HA) -
+                       ((DECODE(RE.ENTRADA_SAIDA,'E',RP.QUANTIDADE,0)*TS.QTDE_HA)/TL.QTDE_HA))
+                    ELSE   (DECODE(RE.ENTRADA_SAIDA,'E',0,RP.QUANTIDADE) - DECODE(RE.ENTRADA_SAIDA,'E',RP.QUANTIDADE,0))
+               END *
+              (rp.custo_total/rp.quantidade) )>0
+        GROUP BY RE.COD_EMPRESA,
+              RE.COD_FILIAL,
+              RE.COD_SAFRA,
+              TL.SEQ_PLA_TALHAO,
+              TL.DESC_TALHAO,
+              TS.SEQ_PLA_TIPO_CULT,
+              TC.DESC_CULTURA,
+              SG.DESC_SUB_GRUPO,
+              TL.SEQ_PLA_FAZENDA
+
+        UNION ALL
+
+       SELECT RE.COD_EMPRESA,
+              RE.COD_FILIAL,
+              RE.COD_SAFRA,
+              TL.SEQ_PLA_TALHAO,
+              TL.DESC_TALHAO,
+              '' SEQ_PLA_TIPO_CULT,
+              'VARIAS' DESC_CULTURA,
+              SG.DESC_SUB_GRUPO,
+              TL.SEQ_PLA_FAZENDA,
+              SUM(DECODE(RE.ENTRADA_SAIDA ,'E',0,TL.QTDE_HA)) as QTDE_HA,
+              (DECODE(SUM((CASE WHEN RE.SEQ_PLA_TALHAO_SAFRA IS NULL THEN
+                                     ((DECODE(RE.ENTRADA_SAIDA,'E',0,RP.QUANTIDADE)*TL.QTDE_HA)/TL.QTDE_HA) -
+                                     ((DECODE(RE.ENTRADA_SAIDA,'E',RP.QUANTIDADE,0)*TL.QTDE_HA)/TL.QTDE_HA)
+                                 ELSE DECODE(RE.ENTRADA_SAIDA,'E',0,RP.QUANTIDADE) - DECODE(RE.ENTRADA_SAIDA,'E',RP.QUANTIDADE,0)
+                          END)),0,0,
+              (SUM(CASE WHEN RE.SEQ_PLA_TALHAO_SAFRA IS NULL THEN
+                            ((DECODE(RE.ENTRADA_SAIDA,'E',0,RP.QUANTIDADE)*TL.QTDE_HA)/TL.QTDE_HA) -
+                            ((DECODE(RE.ENTRADA_SAIDA,'E',RP.QUANTIDADE,0)*TL.QTDE_HA)/TL.QTDE_HA)
+                         ELSE DECODE(RE.ENTRADA_SAIDA,'E',0,RP.QUANTIDADE) - DECODE(RE.ENTRADA_SAIDA,'E',RP.QUANTIDADE,0)
+                  END *
+              (rp.custo_total/rp.quantidade) ))/
+              SUM(CASE WHEN RE.SEQ_PLA_TALHAO_SAFRA IS NULL THEN
+                            ((DECODE(RE.ENTRADA_SAIDA,'E',0,RP.QUANTIDADE)*TL.QTDE_HA)/TL.QTDE_HA) -
+                            ((DECODE(RE.ENTRADA_SAIDA,'E',RP.QUANTIDADE,0)*TL.QTDE_HA)/TL.QTDE_HA)
+                         ELSE DECODE(RE.ENTRADA_SAIDA,'E',0,RP.QUANTIDADE) - DECODE(RE.ENTRADA_SAIDA,'E',RP.QUANTIDADE,0)
+              END ))) AS CUSTO_MEDIO
+
+         FROM AGRICOLA.ALM_REQUISICAO      RE,
+              AGRICOLA.ALM_REQUIS_PRODUTOS RP,
+              AGRICOLA.TALHOES             TL,
+              AGRICOLA.PRODUTOS            PR,
+              AGRICOLA.SUB_GRUPO           SG,
+              AGRICOLA.GRUPO               GP,
+              AGRICOLA.UNIDADE_PRODUTO     UN,
+              AGRICOLA.CICLO_APLICACAO     CA
+        WHERE RE.SEQ_PLA_REQUIS         = RP.SEQ_PLA_REQUIS(+)
+          AND RE.SEQ_PLA_TALHAO         = TL.SEQ_PLA_TALHAO
+          AND RP.SEQ_PLA_PRODUTO        = PR.SEQ_PLA_PRODUTO(+)
+          AND PR.SEQ_PLA_SUB_GRUPO      = SG.SEQ_PLA_SUB_GRUPO(+)
+          AND SG.SEQ_PLA_GRUPO          = GP.SEQ_PLA_GRUPO(+)
+          AND RP.SEQ_PLA_UNIDADE        = UN.SEQ_PLA_UNIDADE(+)
+          AND RP.SEQ_PLA_CICLO_APLICACAO= CA.SEQ_PLANILHA(+)
+          AND RE.SEQ_PLA_TALHAO_SAFRA IS NULL
+          AND RE.SEQ_PLA_TALHAO NOT IN (SELECT SEQ_PLA_TALHAO FROM AGRICOLA.TALHOES_SAFRA TS WHERE TS.COD_SAFRA = RE.COD_SAFRA)
+          AND (CASE WHEN RE.SEQ_PLA_TALHAO_SAFRA IS NULL THEN (((DECODE(RE.ENTRADA_SAIDA,'E',0,RP.QUANTIDADE)*TL.QTDE_HA)/TL.QTDE_HA) - ((DECODE(RE.ENTRADA_SAIDA,'E',RP.QUANTIDADE,0)*TL.QTDE_HA)/TL.QTDE_HA))
+                                                         ELSE   (DECODE(RE.ENTRADA_SAIDA,'E',0,RP.QUANTIDADE) - DECODE(RE.ENTRADA_SAIDA,'E',RP.QUANTIDADE,0))
+               END *
+         (rp.custo_total/rp.quantidade) )>0
+        GROUP BY RE.COD_EMPRESA,
+               RE.COD_FILIAL,
+               RE.COD_SAFRA,
+               TL.SEQ_PLA_TALHAO,
+               TL.DESC_TALHAO,
+               SG.DESC_SUB_GRUPO,
+               TL.SEQ_PLA_FAZENDA

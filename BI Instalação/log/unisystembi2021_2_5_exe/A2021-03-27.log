@@ -1,0 +1,145 @@
+UniSystemBI2021.2.5.exe: 00002BCC: 09:26:08 []:>--------------------------------------------------------------<
+UniSystemBI2021.2.5.exe: 00002BCC: 09:26:08 [TUniServerModule]:Server First Init.
+UniSystemBI2021.2.5.exe: 00002BCC: 09:26:09 [TUniServerModule]:Global Cache Folder Erased. <67> Files deleted.
+UniSystemBI2021.2.5.exe: 00002BCC: 09:26:10 [TUniServerModule]:Starting HTTP Server on Port: 8070...
+UniSystemBI2021.2.5.exe: 00002BCC: 09:26:10 [TUniServerModule]:HTTP Server Started on Port: 8070
+UniSystemBI2021.2.5.exe: 00002B0C: 09:26:16 [Requested Theme File not found:]:\\10.1.1.252\Atendimento\uni\css\uni-xtheme-classic.css
+UniSystemBI2021.2.5.exe: 00002B0C: 09:26:16 []:TUniThemeProps: File not found: \\10.1.1.252\Atendimento\uni\css\uni-xtheme-classic.css
+UniSystemBI2021.2.5.exe: 00002B0C: 09:26:16 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\css\uni-ext.css
+UniSystemBI2021.2.5.exe: 00002C94: 09:26:16 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\ext-7.0.0\build\classic\theme-classic\resources\theme-classic-all.css
+UniSystemBI2021.2.5.exe: 0000172C: 09:26:16 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\ext-7.0.0\build\packages\font-awesome-4.7.0\resources\font-awesome-all.css
+UniSystemBI2021.2.5.exe: 00002FA4: 09:26:16 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\ext-7.0.0\build\packages\font-pictos\resources\font-pictos-all.css
+UniSystemBI2021.2.5.exe: 00000738: 09:26:16 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\fenix\fenix.css
+UniSystemBI2021.2.5.exe: 00003478: 09:26:16 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\ext-7.0.0\build\packages\font-awesome\resources\font-awesome-all.css
+UniSystemBI2021.2.5.exe: 00003490: 09:26:16 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\SweetAlert2\sweetalert2.min.css
+UniSystemBI2021.2.5.exe: 00000A18: 09:26:16 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\HoldOn\HoldOn.min.css
+UniSystemBI2021.2.5.exe: 0000230C: 09:26:16 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\select2\css\select2.min.css
+UniSystemBI2021.2.5.exe: 00002554: 09:26:17 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\HoldOn\HoldOn.min.css
+UniSystemBI2021.2.5.exe: 000030E4: 09:26:17 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\ext-7.0.0\build\packages\charts\classic\classic\resources\charts-all.css
+UniSystemBI2021.2.5.exe: 0000122C: 09:26:17 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\font-awesome\css\all.min.css
+UniSystemBI2021.2.5.exe: 000001B4: 09:26:17 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\iGrowl\css\igrowl.min.css
+UniSystemBI2021.2.5.exe: 0000137C: 09:26:17 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\Animate\animate.min.css
+UniSystemBI2021.2.5.exe: 00001D34: 09:26:17 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\codemirror-0.8\css\csscolors.css
+UniSystemBI2021.2.5.exe: 00000C44: 09:26:17 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\ext-7.0.0\ext-addons\packages\pivot\build\classic\classic\resources\pivot-all.css
+UniSystemBI2021.2.5.exe: 00002EA0: 09:26:17 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\font-awesome\css\all.min.css
+UniSystemBI2021.2.5.exe: 000029C4: 09:26:17 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\css\uni-xtheme-common.css
+UniSystemBI2021.2.5.exe: 00003574: 09:26:17 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\ext-7.0.0\build\ext-all.js
+UniSystemBI2021.2.5.exe: 00001554: 09:26:17 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\ext-7.0.0\build\classic\theme-classic\theme-classic.js
+UniSystemBI2021.2.5.exe: 00001ABC: 09:26:17 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\ext-unicommon-min.js
+UniSystemBI2021.2.5.exe: 00002D4C: 09:26:17 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\ext-sync-min.js
+UniSystemBI2021.2.5.exe: 00002D30: 09:26:17 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\ext-7.0.0\build\classic\locale\locale-pt.js
+UniSystemBI2021.2.5.exe: 00000960: 09:26:17 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\jQuery\jquery-1.11.2.min.js
+UniSystemBI2021.2.5.exe: 00000C68: 09:26:17 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\jQuery\MaskedInput\jquery.inputmask.min.js
+UniSystemBI2021.2.5.exe: 0000109C: 09:26:17 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\ext-7.0.0\build\packages\font-awesome-4.7.0\resources\font-awesome-all.css
+UniSystemBI2021.2.5.exe: 00003384: 09:26:18 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\ext-7.0.0\build\packages\font-pictos\resources\font-pictos-all.css
+UniSystemBI2021.2.5.exe: 00000B20: 09:26:18 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\ext-7.0.0\build\packages\font-awesome\resources\font-awesome-all.css
+UniSystemBI2021.2.5.exe: 00001CF0: 09:26:18 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\jQuery\autoNumeric\autoNumeric-1.9.35.js
+UniSystemBI2021.2.5.exe: 00001F30: 09:26:18 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\HighCharts\highcharts.js
+UniSystemBI2021.2.5.exe: 00000CD4: 09:26:18 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\HighCharts\highcharts-3d.js
+UniSystemBI2021.2.5.exe: 00002860: 09:26:18 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\HighCharts\highcharts-more.js
+UniSystemBI2021.2.5.exe: 0000133C: 09:26:18 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\HighCharts\modules\exporting.js
+UniSystemBI2021.2.5.exe: 00002DAC: 09:26:18 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\fenix\fenix.css
+UniSystemBI2021.2.5.exe: 00002AE8: 09:26:18 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\SweetAlert2\promise.min.js
+UniSystemBI2021.2.5.exe: 00000C0C: 09:26:18 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\SweetAlert2\sweetalert2.min.css
+UniSystemBI2021.2.5.exe: 000034DC: 09:26:18 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\SweetAlert2\sweetalert2.min.js
+UniSystemBI2021.2.5.exe: 000017D8: 09:26:18 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\HoldOn\HoldOn.min.css
+UniSystemBI2021.2.5.exe: 000015C4: 09:26:18 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\HoldOn\HoldOn.min.js
+UniSystemBI2021.2.5.exe: 000027D8: 09:26:18 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\select2\css\select2.min.css
+UniSystemBI2021.2.5.exe: 0000023C: 09:26:18 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\select2\js\select2.full.min.js
+UniSystemBI2021.2.5.exe: 000009E8: 09:26:18 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\HoldOn\HoldOn.min.css
+UniSystemBI2021.2.5.exe: 0000193C: 09:26:18 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\HoldOn\HoldOn.min.js
+UniSystemBI2021.2.5.exe: 00003200: 09:26:18 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\Badge\BadgeText.js
+UniSystemBI2021.2.5.exe: 000037C8: 09:26:19 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\ext-treenode-plugin.js
+UniSystemBI2021.2.5.exe: 000011C0: 09:26:19 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\ext-7.0.0\build\packages\charts\classic\classic\resources\charts-all.css
+UniSystemBI2021.2.5.exe: 00002088: 09:26:19 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\ext-7.0.0\build\packages\charts\classic\charts.js
+UniSystemBI2021.2.5.exe: 0000194C: 09:26:19 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\ext-7.0.0\build\packages\ux\classic\ux.js
+UniSystemBI2021.2.5.exe: 0000076C: 09:26:19 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\font-awesome\css\all.min.css
+UniSystemBI2021.2.5.exe: 000003A4: 09:26:19 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\iGrowl\css\igrowl.min.css
+UniSystemBI2021.2.5.exe: 000025F0: 09:26:19 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\iGrowl\js\igrowl.min.js
+UniSystemBI2021.2.5.exe: 00002CBC: 09:26:19 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\Animate\animate.min.css
+UniSystemBI2021.2.5.exe: 00002078: 09:26:19 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\ext-7.0.0\ext-addons\packages\exporter\build\classic\exporter.js
+UniSystemBI2021.2.5.exe: 00001CC8: 09:26:19 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\codemirror-0.8\js\codemirror.js
+UniSystemBI2021.2.5.exe: 000021B4: 09:26:19 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\codemirror-0.8\css\csscolors.css
+UniSystemBI2021.2.5.exe: 00003288: 09:26:19 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\codemirror-0.8\js\Ext.ux.CodeMirror.js
+UniSystemBI2021.2.5.exe: 00001E00: 09:26:19 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\ext-7.0.0\ext-addons\packages\pivot\build\classic\classic\resources\pivot-all.css
+UniSystemBI2021.2.5.exe: 000032B8: 09:26:19 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\ext-7.0.0\ext-addons\packages\pivot\build\classic\pivot.js
+UniSystemBI2021.2.5.exe: 00001ED0: 09:26:19 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\font-awesome\css\all.min.css
+UniSystemBI2021.2.5.exe: 00003184: 09:26:19 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\css\uni-xtheme-common.css
+UniSystemBI2021.2.5.exe: 00002BF4: 09:26:19 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\ext-unigui-min.js
+UniSystemBI2021.2.5.exe: 000019B4: 09:26:20 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\BI\Paineis\BI\files\js\BadgeText.js
+UniSystemBI2021.2.5.exe: 00002030: 09:26:20 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\BI\Paineis\BI\files\js\BadgeText.js
+UniSystemBI2021.2.5.exe: 00000888: 09:26:39 [Requested Theme File not found:]:\\10.1.1.252\Atendimento\uni\css\uni-xtheme-classic.css
+UniSystemBI2021.2.5.exe: 00000888: 09:26:39 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\css\uni-ext.css
+UniSystemBI2021.2.5.exe: 00003114: 09:26:39 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\ext-7.0.0\build\classic\theme-classic\resources\theme-classic-all.css
+UniSystemBI2021.2.5.exe: 000019F4: 09:26:39 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\ext-7.0.0\build\packages\font-awesome-4.7.0\resources\font-awesome-all.css
+UniSystemBI2021.2.5.exe: 0000130C: 09:26:39 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\ext-7.0.0\build\packages\font-awesome\resources\font-awesome-all.css
+UniSystemBI2021.2.5.exe: 00001BD0: 09:26:39 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\fenix\fenix.css
+UniSystemBI2021.2.5.exe: 00001E3C: 09:26:39 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\ext-7.0.0\build\packages\font-pictos\resources\font-pictos-all.css
+UniSystemBI2021.2.5.exe: 00002F98: 09:26:39 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\SweetAlert2\sweetalert2.min.css
+UniSystemBI2021.2.5.exe: 000036CC: 09:26:39 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\HoldOn\HoldOn.min.css
+UniSystemBI2021.2.5.exe: 000018BC: 09:26:39 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\select2\css\select2.min.css
+UniSystemBI2021.2.5.exe: 00001848: 09:26:40 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\HoldOn\HoldOn.min.css
+UniSystemBI2021.2.5.exe: 00000D50: 09:26:40 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\ext-7.0.0\build\packages\charts\classic\classic\resources\charts-all.css
+UniSystemBI2021.2.5.exe: 00002CF0: 09:26:40 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\font-awesome\css\all.min.css
+UniSystemBI2021.2.5.exe: 000016C0: 09:26:40 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\iGrowl\css\igrowl.min.css
+UniSystemBI2021.2.5.exe: 00001E9C: 09:26:40 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\Animate\animate.min.css
+UniSystemBI2021.2.5.exe: 00000334: 09:26:40 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\codemirror-0.8\css\csscolors.css
+UniSystemBI2021.2.5.exe: 0000299C: 09:26:40 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\ext-7.0.0\ext-addons\packages\pivot\build\classic\classic\resources\pivot-all.css
+UniSystemBI2021.2.5.exe: 000017E4: 09:26:40 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\font-awesome\css\all.min.css
+UniSystemBI2021.2.5.exe: 00001620: 09:26:40 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\css\uni-xtheme-common.css
+UniSystemBI2021.2.5.exe: 00000700: 09:26:40 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\ext-7.0.0\build\ext-all.js
+UniSystemBI2021.2.5.exe: 00000870: 09:26:40 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\ext-7.0.0\build\classic\theme-classic\theme-classic.js
+UniSystemBI2021.2.5.exe: 000032F8: 09:26:40 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\ext-unicommon-min.js
+UniSystemBI2021.2.5.exe: 00002360: 09:26:40 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\ext-sync-min.js
+UniSystemBI2021.2.5.exe: 00002618: 09:26:40 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\ext-7.0.0\build\classic\locale\locale-pt.js
+UniSystemBI2021.2.5.exe: 00000A68: 09:26:40 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\jQuery\jquery-1.11.2.min.js
+UniSystemBI2021.2.5.exe: 000024A0: 09:26:40 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\ext-7.0.0\build\packages\font-awesome-4.7.0\resources\font-awesome-all.css
+UniSystemBI2021.2.5.exe: 00000978: 09:26:40 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\ext-7.0.0\build\packages\font-pictos\resources\font-pictos-all.css
+UniSystemBI2021.2.5.exe: 000006CC: 09:26:40 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\ext-7.0.0\build\packages\font-awesome\resources\font-awesome-all.css
+UniSystemBI2021.2.5.exe: 00001508: 09:26:41 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\jQuery\MaskedInput\jquery.inputmask.min.js
+UniSystemBI2021.2.5.exe: 00000964: 09:26:41 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\jQuery\autoNumeric\autoNumeric-1.9.35.js
+UniSystemBI2021.2.5.exe: 00000758: 09:26:41 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\HighCharts\highcharts.js
+UniSystemBI2021.2.5.exe: 00003704: 09:26:41 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\HighCharts\highcharts-3d.js
+UniSystemBI2021.2.5.exe: 0000007C: 09:26:41 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\HighCharts\highcharts-more.js
+UniSystemBI2021.2.5.exe: 00001D6C: 09:26:41 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\HighCharts\modules\exporting.js
+UniSystemBI2021.2.5.exe: 000020C0: 09:26:41 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\fenix\fenix.css
+UniSystemBI2021.2.5.exe: 00001218: 09:26:41 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\SweetAlert2\promise.min.js
+UniSystemBI2021.2.5.exe: 00002D8C: 09:26:41 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\SweetAlert2\sweetalert2.min.css
+UniSystemBI2021.2.5.exe: 00000F94: 09:26:41 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\SweetAlert2\sweetalert2.min.js
+UniSystemBI2021.2.5.exe: 000032C4: 09:26:41 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\HoldOn\HoldOn.min.css
+UniSystemBI2021.2.5.exe: 000019E0: 09:26:41 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\HoldOn\HoldOn.min.js
+UniSystemBI2021.2.5.exe: 00000D64: 09:26:41 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\select2\css\select2.min.css
+UniSystemBI2021.2.5.exe: 000028E8: 09:26:41 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\select2\js\select2.full.min.js
+UniSystemBI2021.2.5.exe: 0000351C: 09:26:41 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\HoldOn\HoldOn.min.css
+UniSystemBI2021.2.5.exe: 0000319C: 09:26:41 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\HoldOn\HoldOn.min.js
+UniSystemBI2021.2.5.exe: 00000A94: 09:26:41 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\Badge\BadgeText.js
+UniSystemBI2021.2.5.exe: 0000174C: 09:26:41 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\ext-treenode-plugin.js
+UniSystemBI2021.2.5.exe: 0000315C: 09:26:42 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\ext-7.0.0\build\packages\charts\classic\classic\resources\charts-all.css
+UniSystemBI2021.2.5.exe: 00002C14: 09:26:42 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\ext-7.0.0\build\packages\charts\classic\charts.js
+UniSystemBI2021.2.5.exe: 000027BC: 09:26:42 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\ext-7.0.0\build\packages\ux\classic\ux.js
+UniSystemBI2021.2.5.exe: 00001420: 09:26:42 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\font-awesome\css\all.min.css
+UniSystemBI2021.2.5.exe: 00001FD4: 09:26:42 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\iGrowl\css\igrowl.min.css
+UniSystemBI2021.2.5.exe: 00002568: 09:26:42 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\iGrowl\js\igrowl.min.js
+UniSystemBI2021.2.5.exe: 00001940: 09:26:42 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\Animate\animate.min.css
+UniSystemBI2021.2.5.exe: 0000150C: 09:26:42 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\ext-7.0.0\ext-addons\packages\exporter\build\classic\exporter.js
+UniSystemBI2021.2.5.exe: 00002B3C: 09:26:42 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\codemirror-0.8\js\codemirror.js
+UniSystemBI2021.2.5.exe: 00001320: 09:26:42 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\codemirror-0.8\css\csscolors.css
+UniSystemBI2021.2.5.exe: 0000290C: 09:26:42 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\codemirror-0.8\js\Ext.ux.CodeMirror.js
+UniSystemBI2021.2.5.exe: 00001D04: 09:26:42 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\ext-7.0.0\ext-addons\packages\pivot\build\classic\classic\resources\pivot-all.css
+UniSystemBI2021.2.5.exe: 00003700: 09:26:42 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\ext-7.0.0\ext-addons\packages\pivot\build\classic\pivot.js
+UniSystemBI2021.2.5.exe: 00001D14: 09:26:42 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\uniSFJS\font-awesome\css\all.min.css
+UniSystemBI2021.2.5.exe: 00003238: 09:26:42 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\css\uni-xtheme-common.css
+UniSystemBI2021.2.5.exe: 00002880: 09:26:43 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\BI\Paineis\BI\files\js\BadgeText.js
+UniSystemBI2021.2.5.exe: 00000D18: 09:26:43 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\uni\ext-unigui-min.js
+UniSystemBI2021.2.5.exe: 00000A60: 09:26:43 [HandleFileRequest[127.0.0.1]]:File not found: \\10.1.1.252\Atendimento\BI\Paineis\BI\files\js\BadgeText.js
+UniSystemBI2021.2.5.exe: 00002BCC: 09:32:10 [TUniServerModule]:Shutting Down Server.
+UniSystemBI2021.2.5.exe: 00002BCC: 09:32:10 [TUniServerModule]:Stopping HTTP Server.
+UniSystemBI2021.2.5.exe: 00002BCC: 09:32:11 [TUniServerModule]:HTTP Server Stopped.
+UniSystemBI2021.2.5.exe: 00002BCC: 09:32:11 [TUniGUISessionManager]:Terminating Session manager.
+UniSystemBI2021.2.5.exe: 00002BCC: 09:32:11 [TUniGUISessionManager]:Stopping Cache Eraser...
+UniSystemBI2021.2.5.exe: 00002BCC: 09:32:11 [TUniGUISessionManager]:Cache Eraser Stopped.
+UniSystemBI2021.2.5.exe: 00002BCC: 09:32:11 [TUniGUISessionManager]:Destroying Worker Threads.
+UniSystemBI2021.2.5.exe: 00002BCC: 09:32:11 [TUniGUISessionManager]:Session manager terminated.
+UniSystemBI2021.2.5.exe: 00002BCC: 09:32:11 [TUniServerModule]:Server Shutdown Completed.
+UniSystemBI2021.2.5.exe: 00002BCC: 09:32:11 []:<-------------------------------------------------------------->
+UniSystemBI2021.2.5.exe: 00002BCC: 09:32:11 [Terminated]:Exit Code: 0

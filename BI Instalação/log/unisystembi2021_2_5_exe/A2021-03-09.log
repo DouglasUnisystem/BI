@@ -1,0 +1,51 @@
+UniSystemBI2021.2.5.exe: 00001328: 08:41:45 []:>--------------------------------------------------------------<
+UniSystemBI2021.2.5.exe: 00001328: 08:41:45 [TUniServerModule]:Server First Init.
+UniSystemBI2021.2.5.exe: 00001328: 08:41:45 [TUniServerModule]:Global Cache Folder Erased. <20> Files deleted.
+UniSystemBI2021.2.5.exe: 00001328: 08:41:49 [TUniServerModule]:Starting HTTP Server on Port: 8070...
+UniSystemBI2021.2.5.exe: 00001328: 08:41:49 [TUniServerModule]:HTTP Server Started on Port: 8070
+UniSystemBI2021.2.5.exe: 00000380: 13:22:37 [HandleFileRequest[10.1.1.235]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI2021.2.5.exe: 00001418: 13:22:37 [HandleFileRequest[10.1.1.235]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI2021.2.5.exe: 00000CB8: 13:23:00 [TUniThreadTimer.OnTimer]:EFDException : [FireDAC][Comp][Clnt]-512. Connection is not defined for [qNotificaUser]. Possible reason: Connection and ConnectionName property values are both empty : Addr: $00819B3C
+UniSystemBI2021.2.5.exe: 00001E54: 14:04:01 [Argument out of range-10.1.1.235]:EArgumentOutOfRangeException : Argument out of range : Addr: $004C28C6
+UniSystemBI2021.2.5.exe: 00001E54: 14:04:01 [List index out of bounds (0)-10.1.1.235]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI2021.2.5.exe: 00001D30: 14:37:46 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI2021.2.5.exe: 00000B14: 14:37:48 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI2021.2.5.exe: 0000178C: 14:37:59 [TUniThreadTimer.OnTimer]:EFDException : [FireDAC][Comp][Clnt]-512. Connection is not defined for [qNotificaUser]. Possible reason: Connection and ConnectionName property values are both empty : Addr: $00819B3C
+UniSystemBI2021.2.5.exe: 00001F10: 14:56:15 [Erro ao abrir query do filtro: '[FireDAC][Phys][Ora] ORA-00942: table or view does not exist'-10.1.1.14]:Exception : Erro ao abrir query do filtro: '[FireDAC][Phys][Ora] ORA-00942: table or view does not exist' : Addr: $00A9152A
+UniSystemBI2021.2.5.exe: 00001144: 15:04:04 [10.1.1.14]:Exception : Erro na rotina de filtros: '[FireDAC][Phys][Ora] ORA-00907: missing right parenthesis' : Addr: $00A94EC6
+UniSystemBI2021.2.5.exe: 00001E00: 15:04:17 [10.1.1.14]:Exception : Erro na rotina de filtros: '[FireDAC][Phys][Ora] ORA-00904: "S"."SEQ_PLA_FAZENDA": invalid identifier' : Addr: $00A94EC6
+UniSystemBI2021.2.5.exe: 00000594: 15:28:56 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI2021.2.5.exe: 00001E54: 15:28:57 [Argument out of range-10.1.1.14]:EArgumentOutOfRangeException : Argument out of range : Addr: $004C28C6
+UniSystemBI2021.2.5.exe: 00001E54: 15:28:57 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI2021.2.5.exe: 00000420: 15:28:58 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI2021.2.5.exe: 00001CFC: 15:29:02 [TUniThreadTimer.OnTimer]:EFDException : [FireDAC][Comp][Clnt]-512. Connection is not defined for [qNotificaUser]. Possible reason: Connection and ConnectionName property values are both empty : Addr: $00819B3C
+UniSystemBI2021.2.5.exe: 000010E4: 15:48:49 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI2021.2.5.exe: 00000B38: 15:48:51 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI2021.2.5.exe: 00001E54: 15:48:53 [Argument out of range-10.1.1.14]:EArgumentOutOfRangeException : Argument out of range : Addr: $004C28C6
+UniSystemBI2021.2.5.exe: 00001E54: 15:48:53 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI2021.2.5.exe: 000019C8: 15:48:56 [TUniThreadTimer.OnTimer]:EFDException : [FireDAC][Comp][Clnt]-512. Connection is not defined for [qNotificaUser]. Possible reason: Connection and ConnectionName property values are both empty : Addr: $00819B3C
+UniSystemBI2021.2.5.exe: 00000430: 16:10:22 [10.1.1.14]:EStringListError : List index out of bounds (-1) : Addr: $004C4CBF
+UniSystemBI2021.2.5.exe: 000014B0: 16:10:22 [10.1.1.14]:EStringListError : List index out of bounds (-1) : Addr: $004C4CBF
+UniSystemBI2021.2.5.exe: 0000071C: 16:28:53 [10.1.1.14]:EStringListError : List index out of bounds (-1) : Addr: $004C4CBF
+UniSystemBI2021.2.5.exe: 00001F98: 16:29:21 [10.1.1.14]:EStringListError : List index out of bounds (-1) : Addr: $004C4CBF
+UniSystemBI2021.2.5.exe: 00001F98: 16:29:21 [10.1.1.14]:EStringListError : List index out of bounds (-1) : Addr: $004C4CBF
+UniSystemBI2021.2.5.exe: 00001F98: 16:29:21 [10.1.1.14]:EStringListError : List index out of bounds (-1) : Addr: $004C4CBF
+UniSystemBI2021.2.5.exe: 00001F98: 16:29:22 [10.1.1.14]:EStringListError : List index out of bounds (-1) : Addr: $004C4CBF
+UniSystemBI2021.2.5.exe: 00001160: 16:29:23 [10.1.1.14]:EStringListError : List index out of bounds (-1) : Addr: $004C4CBF
+UniSystemBI2021.2.5.exe: 000018E0: 16:29:23 [10.1.1.14]:EStringListError : List index out of bounds (-1) : Addr: $004C4CBF
+UniSystemBI2021.2.5.exe: 000018E0: 16:29:25 [10.1.1.14]:EStringListError : List index out of bounds (-1) : Addr: $004C4CBF
+UniSystemBI2021.2.5.exe: 00000A88: 16:29:43 [10.1.1.14]:EStringListError : List index out of bounds (-1) : Addr: $004C4CBF
+UniSystemBI2021.2.5.exe: 00000A88: 16:29:46 [10.1.1.14]:EStringListError : List index out of bounds (-1) : Addr: $004C4CBF
+UniSystemBI2021.2.5.exe: 00001860: 16:29:51 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI2021.2.5.exe: 0000160C: 16:29:53 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI2021.2.5.exe: 000012E0: 16:29:59 [TUniThreadTimer.OnTimer]:EFDException : [FireDAC][Comp][Clnt]-512. Connection is not defined for [qNotificaUser]. Possible reason: Connection and ConnectionName property values are both empty : Addr: $00819B3C
+UniSystemBI2021.2.5.exe: 00001E54: 16:30:03 [Argument out of range-10.1.1.14]:EArgumentOutOfRangeException : Argument out of range : Addr: $004C28C6
+UniSystemBI2021.2.5.exe: 00001E54: 16:30:03 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI2021.2.5.exe: 00001C48: 16:49:17 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI2021.2.5.exe: 00000538: 16:49:18 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI2021.2.5.exe: 00001E54: 16:50:33 [Argument out of range-10.1.1.14]:EArgumentOutOfRangeException : Argument out of range : Addr: $004C28C6
+UniSystemBI2021.2.5.exe: 00001E54: 16:50:33 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI2021.2.5.exe: 00001984: 16:51:02 [TUniThreadTimer.OnTimer]:EFDException : [FireDAC][Comp][Clnt]-512. Connection is not defined for [qNotificaUser]. Possible reason: Connection and ConnectionName property values are both empty : Addr: $00819B3C
+UniSystemBI2021.2.5.exe: 00001E54: 17:36:14 [Argument out of range-10.1.1.14]:EArgumentOutOfRangeException : Argument out of range : Addr: $004C28C6
+UniSystemBI2021.2.5.exe: 00001E54: 17:36:14 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI2021.2.5.exe: 00001328: 17:36:29 [Exit]:Unexpected attempt to terminate server application with Exit Code: 0

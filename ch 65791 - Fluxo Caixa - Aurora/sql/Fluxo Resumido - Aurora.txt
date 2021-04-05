@@ -1,0 +1,78 @@
+SELECT MES,
+       ano_mes,
+       MES_ID,
+       VALOR_DEBITO,
+       VALOR_CREDITO,
+       SLD_MES SALDO,       
+       (SUM(SLD) OVER(ORDER BY ano_mes)) AS SALDO_GERAL_FINAL
+FROM(       
+SELECT TT.MES,
+       ano_mes,
+       TT.MES_ID,
+       VALOR_DEBITO,
+       VALOR_CREDITO,
+       VALOR_DEBITO - VALOR_CREDITO SLD_MES,
+       CASE (linha)
+        WHEN 1 THEN ((TT.SLD) +  FSALDO_BANCOS( NVL(:COD_EMPRESA_STRING,'0') , NVL(:COD_FILIAL_STRING,'0'), TO_DATE( :DATAB_DATA ,'DD/MM/RRRR'), TO_DATE( :DATAB_DATA ,'DD/MM/RRRR') ))
+               ELSE (TT.SLD) END AS SLD
+  FROM (SELECT VALOR_DEBITO,
+               VALOR_CREDITO,
+               VALOR_DEBITO - VALOR_CREDITO AS SLD,
+               MES,
+               ano_mes,
+               MES_ID,
+               ROWNUM AS LINHA   
+          FROM (SELECT SUM(A.VALOR_DEBITO)  AS VALOR_DEBITO,                       
+                       SUM(A.VALOR_CREDITO) AS VALOR_CREDITO,
+                       CASE EXTRACT(MONTH FROM TO_DATE(A.DATA_LCTO,'DD/MM/RRRR'))
+                         WHEN 1 THEN 'Jan'
+                         WHEN 2 THEN 'Fev'
+                         WHEN 3 THEN 'Mar'
+                         WHEN 4 THEN 'Abr'
+                         WHEN 5 THEN 'Mai'
+                         WHEN 6 THEN 'Jun'
+                         WHEN 7 THEN 'Jul'
+                         WHEN 8 THEN 'Ago'
+                         WHEN 9 THEN 'Set'
+                         WHEN 10 THEN 'Out'
+                         WHEN 11 THEN 'Nov'
+                         WHEN 12 THEN 'Dez'
+                       END AS MES,
+                       TO_NUMBER(SUBSTR((EXTRACT(YEAR FROM TO_DATE(A.DATA_LCTO,'DD/MM/RRRR'))),3,2)||LPAD(EXTRACT(MONTH FROM TO_DATE(A.DATA_LCTO,'DD/MM/RRRR')),2,0)) ano_mes,
+                       EXTRACT(MONTH FROM TO_DATE(A.DATA_LCTO,'DD/MM/RRRR')) MES_ID
+
+                  FROM (SELECT --ROUND((FL.VALOR_DEBITO) - NVL((FSOMA_PAGO(FL.SEQ_PLANILHA,TO_DATE(:DATAB_DATA,'DD/MM/RRRR'))),0),2)  AS VALOR_DEBITO,                       
+                               ROUND(NVL(FL.VALOR_DEBITO,0) - NVL(FL.VLR_DEBITO_PG,0),2)  AS VALOR_DEBITO,
+                               0 AS VALOR_CREDITO,
+                               TO_DATE(FL.DATA_LCTO,'DD/MM/RRRR') AS DATA_LCTO
+                          FROM VW_FLUXO_CAIXA_RESUMIDO  FL
+                         WHERE (FL.VALOR_DEBITO) <> 0
+                           AND TO_CHAR(COD_EMPRESA) LIKE TO_CHAR(DECODE( NVL(:COD_EMPRESA_STRING,'0') ,'0','%', :COD_EMPRESA_STRING )) --PARAM
+                           AND TO_CHAR(COD_FILIAL)  LIKE TO_CHAR(DECODE( NVL(:COD_FILIAL_STRING,'0')  ,'0','%', :COD_FILIAL_STRING  ))  --PARAM
+                           AND TO_CHAR(COD_SAFRA)   LIKE TO_CHAR(DECODE( NVL(:COD_SAFRA_STRING,'0')   ,'0','%', :COD_SAFRA_STRING   ))  --PARAM
+                           AND TO_DATE(TRUNC(DATA_LCTO),'DD/MM/RRRR') >= TO_DATE(:DATAI_DATA,'DD/MM/RRRR')--PARAM
+                           AND TO_DATE(TRUNC(DATA_LCTO),'DD/MM/RRRR') <= TO_DATE(:DATAF_DATA,'DD/MM/RRRR')--PARAM                         
+                         
+                         UNION ALL
+
+                         SELECT 0  AS VALOR_DEBITO,                       
+                               --ROUND(NVL(FL.VALOR_CREDITO,0) - NVL(FSOMA_RECEBIDO(FL.SEQ_PLANILHA,TO_DATE(:DATAB_DATA,'DD/MM/RRRR')),0),2) AS VALOR_CREDITO,
+                               ROUND(NVL(FL.VALOR_CREDITO,0) - NVL(FL.VLR_CREDITO_RE,0),2) AS VALOR_CREDITO,
+                               TO_DATE(FL.DATA_LCTO,'DD/MM/RRRR') AS DATA_LCTO
+                          FROM VW_FLUXO_CAIXA_RESUMIDO  FL
+                         WHERE (FL.VALOR_CREDITO) <> 0
+                           AND TO_CHAR(COD_EMPRESA) LIKE TO_CHAR(DECODE( NVL(:COD_EMPRESA_STRING,'0') ,'0','%', :COD_EMPRESA_STRING )) --PARAM
+                           AND TO_CHAR(COD_FILIAL)  LIKE TO_CHAR(DECODE( NVL(:COD_FILIAL_STRING,'0')  ,'0','%', :COD_FILIAL_STRING  ))  --PARAM
+                           AND TO_CHAR(COD_SAFRA)   LIKE TO_CHAR(DECODE( NVL(:COD_SAFRA_STRING,'0')   ,'0','%', :COD_SAFRA_STRING   ))  --PARAM
+                           AND TO_DATE(TRUNC(DATA_LCTO),'DD/MM/RRRR') >= TO_DATE(:DATAI_DATA,'DD/MM/RRRR')--PARAM
+                           AND TO_DATE(TRUNC(DATA_LCTO),'DD/MM/RRRR') <= TO_DATE(:DATAF_DATA,'DD/MM/RRRR')--PARAM
+                         )A
+                         
+                 WHERE (A.VALOR_DEBITO - A.VALOR_CREDITO) <> 0
+                 GROUP BY EXTRACT(MONTH FROM TO_DATE(A.DATA_LCTO,'DD/MM/RRRR')), TO_NUMBER(SUBSTR((EXTRACT(YEAR FROM TO_DATE(A.DATA_LCTO,'DD/MM/RRRR'))),3,2)||LPAD(EXTRACT(MONTH FROM TO_DATE(A.DATA_LCTO,'DD/MM/RRRR')),2,0))
+                 ORDER BY TO_NUMBER(SUBSTR((EXTRACT(YEAR FROM TO_DATE(A.DATA_LCTO,'DD/MM/RRRR'))),3,2)||LPAD(EXTRACT(MONTH FROM TO_DATE(A.DATA_LCTO,'DD/MM/RRRR')),2,0)) --orderna por ano/mes
+        )
+   ORDER BY ANO_MES
+   ) TT   
+ ORDER BY TT.ANO_MES  
+)

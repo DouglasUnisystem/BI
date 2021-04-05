@@ -1,0 +1,15 @@
+UniSystemBI.exe: 0000043C: 08:18:57 []:>--------------------------------------------------------------<
+UniSystemBI.exe: 0000043C: 08:18:57 [TUniServerModule]:Server First Init.
+UniSystemBI.exe: 0000043C: 08:18:57 [TUniServerModule]:Global Cache Folder Erased. <34> Files deleted.
+UniSystemBI.exe: 0000043C: 08:18:59 [TUniServerModule]:Starting HTTP Server on Port: 8070...
+UniSystemBI.exe: 0000043C: 08:18:59 [TUniServerModule]:HTTP Server Started on Port: 8070
+UniSystemBI.exe: 00001FC0: 08:45:52 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI.exe: 00000BE4: 08:45:56 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI.exe: 00001838: 09:15:08 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI.exe: 00001E10: 09:15:13 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI.exe: 000004D4: 09:15:33 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 00001FA8: 10:41:33 [10.1.1.14]:Exception : "uniDBGrid.OnMultiColumnSort" event must be handled when "uniDBGrid.Grouping" is enabled. : Addr: $0099D5F9
+UniSystemBI.exe: 000008F8: 10:41:44 [10.1.1.14]:Exception : "uniDBGrid.OnMultiColumnSort" event must be handled when "uniDBGrid.Grouping" is enabled. : Addr: $0099D5F9
+UniSystemBI.exe: 00001A14: 16:01:13 [10.1.1.14]:Exception : "uniDBGrid.OnMultiColumnSort" event must be handled when "uniDBGrid.Grouping" is enabled. : Addr: $0099D5F9
+UniSystemBI.exe: 000004D4: 17:23:31 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 0000043C: 17:35:00 [Exit]:Unexpected attempt to terminate server application with Exit Code: 0

@@ -1,0 +1,115 @@
+CREATE MATERIALIZED VIEW VW_RESUMO_ORCADO_REALIZADO REFRESH FORCE ON DEMAND START WITH SYSDATE NEXT SYSDATE + 10/24/60 AS
+SELECT C.COD_EMPRESA,
+       C.COD_SAFRA,
+       TRUNC(C.DATA_CONTRATO)     DATA_CONTRATO,
+       COUNT(C.SEQ_PLA_PED_VENDA) QTD_CONTRATO,
+       SUM(C.ABAIXO_ORCADO)       QTD_ABAIXO_ORCADO,
+       SUM(C.DENTRO_ORCADO)       QTD_DENTRO_ORCADO,
+       SUM(C.ACIMA_ORCADO)        QTD_ACIMA_ORCADO,
+       ROUND((SUM(C.ABAIXO_ORCADO) * 100)/ COUNT(C.SEQ_PLA_PED_VENDA),2) PORC_ABAIXO_ORCADO,
+       ROUND((SUM(C.DENTRO_ORCADO) * 100)/ COUNT(C.SEQ_PLA_PED_VENDA),2) PORC_DENTRO_ORCADO,
+       ROUND((SUM(C.ACIMA_ORCADO)  * 100)/ COUNT(C.SEQ_PLA_PED_VENDA),2) PORC_ACIMA_ORCADO
+
+FROM (SELECT CS.COD_EMPRESA,
+             CS.COD_SAFRA,
+             TRUNC(CS.DATA_CONTRATO) AS DATA_CONTRATO,
+             CS.SEQ_PLA_PED_VENDA,
+             ROUND((SUM(DISTINCT(NVL(CS.QUANTIDADE,0))) * SUM(DISTINCT(NVL(CS.VALOR_FRETE,0))))/1000,2) AS VLR_FRETE_ORCADO,
+             SUM(DISTINCT(NVL(CA.VALOR_DOCUM,0))) + SUM(DISTINCT(NVL(FDEV.VALOR_FRETE_DEV,0)))          AS VLR_FRETE_REALIZADO,
+             ROUND((SUM(DISTINCT(NVL(CS.QUANTIDADE,0))) * SUM(DISTINCT(NVL(CS.VALOR_FRETE,0))))/1000,2) - (SUM(DISTINCT(NVL(CA.VALOR_DOCUM,0))) + SUM(DISTINCT(NVL(FDEV.VALOR_FRETE_DEV,0)))) AS DESVIO_FRETE,
+             CASE WHEN (ROUND((SUM(DISTINCT(NVL(CS.QUANTIDADE,0))) * SUM(DISTINCT(NVL(CS.VALOR_FRETE,0))))/1000,2) - (SUM(DISTINCT(NVL(CA.VALOR_DOCUM,0))) + SUM(DISTINCT(NVL(FDEV.VALOR_FRETE_DEV,0))))) > 0 then 1 else 0 end ABAIXO_ORCADO,
+             CASE WHEN (ROUND((SUM(DISTINCT(NVL(CS.QUANTIDADE,0))) * SUM(DISTINCT(NVL(CS.VALOR_FRETE,0))))/1000,2) - (SUM(DISTINCT(NVL(CA.VALOR_DOCUM,0))) + SUM(DISTINCT(NVL(FDEV.VALOR_FRETE_DEV,0))))) = 0 then 1 else 0 end DENTRO_ORCADO,
+             CASE WHEN (ROUND((SUM(DISTINCT(NVL(CS.QUANTIDADE,0))) * SUM(DISTINCT(NVL(CS.VALOR_FRETE,0))))/1000,2) - (SUM(DISTINCT(NVL(CA.VALOR_DOCUM,0))) + SUM(DISTINCT(NVL(FDEV.VALOR_FRETE_DEV,0))))) < 0 then 1 else 0 end ACIMA_ORCADO
+        FROM AGRICOLA.CONTRATO_SAIDA          CS,
+             AGRICOLA.CONTRATO_DESMEMBRAMENTO CD,
+             AGRICOLA.EST_SAIDAS              ES,
+             AGRICOLA.EST_SAIDAS_ITENS        EI,
+             AGRICOLA.EST_LIGA_FRETE_ROMANEIO LG,
+             AGRICOLA.EST_FRETE_ROMANEIO      EF,
+             AGRICOLA.EMPRESAS                EM,
+             AGRICOLA.CLIENTES                CL,
+             AGRICOLA.CLIENTES_ENDERECOS      CE,
+             AGRICOLA.CONTAS_PAGAR            CA,
+             AGRICOLA.PRODUTOS                PR,
+             (SELECT SUM(QUANTIDADE) AS QUANTIDADE,
+                     SEQ_PLA_ORIGEM
+                FROM (SELECT CD.SEQ_PLA_PED_VENDA as SEQ_PLA_ORIGEM,
+                             SUM(ESI.QUANTIDADE) QUANTIDADE
+                        FROM AGRICOLA.CONTRATO_DESMEMBRAMENTO CD,
+                             AGRICOLA.EST_SAIDAS              ES,
+                             AGRICOLA.EST_SAIDAS_ITENS        ESI
+                       WHERE CD.SEQ_PLA_CONT_DES    = ES.SEQ_PLA_CONT_DES
+                         AND ES.SEQ_PLA_SAIDA       = ESI.SEQ_PLA_SAIDA
+                         AND NVL(ES.CANCELADO,'N')= 'N'
+                       GROUP BY CD.SEQ_PLA_PED_VENDA
+                      UNION
+                      SELECT DECODE(EE.SEQ_PLA_ORIGEM,'', CD.SEQ_PLA_PED_VENDA) AS SEQ_PLA_ORIGEM,
+                             SUM(NVL(EI.QUANTIDADE, 0))*-1 QUANTIDADE
+                        FROM AGRICOLA.EST_ENTRADAS            EE,
+                             AGRICOLA.EST_ENTRADAS_ITENS      EI,
+                             AGRICOLA.CONTRATO_DESMEMBRAMENTO CD
+                       WHERE EE.SEQ_PLA_ENTRADA    = EI.SEQ_PLA_ENTRADA
+                        AND (EE.SEQ_PLA_CTR_RETORNO  IN (SELECT CDD.SEQ_PLA_CONT_DES
+                                                           FROM AGRICOLA.CONTRATO_DESMEMBRAMENTO CDD
+                                                          WHERE CDD.SEQ_PLA_PED_VENDA = EE.SEQ_PLA_ORIGEM
+                                                             OR CDD.SEQ_PLA_PED_VENDA = CD.SEQ_PLA_PED_VENDA)
+                        AND CD.SEQ_PLA_CONT_DES = EE.SEQ_PLA_CTR_RETORNO)
+                        AND NVL(EE.CANCELADO,'N') = 'N'
+                      GROUP BY EE.SEQ_PLA_ORIGEM, CD.SEQ_PLA_PED_VENDA
+                      UNION
+                      SELECT ES.SEQ_PLA_ORIGEM,
+                             SUM(ESI.QUANTIDADE) QUANTIDADE
+                        FROM AGRICOLA.EST_SAIDAS              ES,
+                             AGRICOLA.EST_SAIDAS_ITENS        ESI,
+                             AGRICOLA.EST_SAIDAS_ROM          ER,
+                             (SELECT LR.SEQ_PLA_SAI_ITEM,
+                                     EE.NR_DOCUMENTO
+                                FROM AGRICOLA.EST_ENTRADAS          EE,
+                                     AGRICOLA.EST_ENTRADAS_ITENS    EI,
+                                     AGRICOLA.LIGA_NF_RETORNO       LR
+                               WHERE EE.SEQ_PLA_ENTRADA  = EI.SEQ_PLA_ENTRADA
+                                 AND LR.SEQ_PLA_ENT_ITEM = EI.SEQ_PLA_ENT_ITEM) DV
+                       WHERE ES.SEQ_PLA_SAIDA      = ESI.SEQ_PLA_SAIDA
+                         AND ES.SEQ_PLA_SAIDA      = ER.SEQ_PLA_SAIDA   (+)
+                         AND ESI.SEQ_PLA_SAI_ITEM  = DV.SEQ_PLA_SAI_ITEM(+)
+                         AND NVL(ES.CANCELADO,'N') = 'N'
+                       GROUP BY ES.SEQ_PLA_ORIGEM )
+               GROUP BY SEQ_PLA_ORIGEM) AA,
+             (SELECT DECODE(EEF.SEQ_PLA_ORIGEM,'', CDF.SEQ_PLA_PED_VENDA) AS SEQ_PLA_ORIGEM,
+                     SUM(NVL(CAF.VALOR_DOCUM,0)) AS VALOR_FRETE_DEV
+                FROM AGRICOLA.EST_ENTRADAS            EEF,
+                     AGRICOLA.EST_ENTRADAS_ITENS      EIF,
+                     AGRICOLA.CONTRATO_DESMEMBRAMENTO CDF,
+                     AGRICOLA.EST_LIGA_FRETE_ROMANEIO LGF,
+                     AGRICOLA.EST_FRETE_ROMANEIO      EFF,
+                     AGRICOLA.CONTAS_PAGAR            CAF
+               WHERE EEF.SEQ_PLA_ENTRADA    = EIF.SEQ_PLA_ENTRADA
+                 AND EEF.SEQ_PLA_ENTRADA    = LGF.SEQ_PLA_ENTRADA
+                 AND LGF.SEQ_PLA_FRETE      = EFF.SEQ_PLA_FRETE    (+)
+                 AND EFF.SEQ_PLA_PAGAR      = CAF.SEQ_PLA_PAGAR    (+)
+                 AND (EEF.SEQ_PLA_CTR_RETORNO  IN (SELECT CDD2.SEQ_PLA_CONT_DES
+                                                    FROM AGRICOLA.CONTRATO_DESMEMBRAMENTO CDD2
+                                                   WHERE CDD2.SEQ_PLA_PED_VENDA = EEF.SEQ_PLA_ORIGEM
+                                                      OR CDD2.SEQ_PLA_PED_VENDA = CDF.SEQ_PLA_PED_VENDA)
+                 AND CDF.SEQ_PLA_CONT_DES   = EEF.SEQ_PLA_CTR_RETORNO)
+                 AND NVL(EEF.CANCELADO,'N') = 'N'
+               GROUP BY EEF.SEQ_PLA_ORIGEM, CDF.SEQ_PLA_PED_VENDA) FDEV
+       WHERE CS.SEQ_PLA_PED_VENDA   = CD.SEQ_PLA_PED_VENDA
+         AND CD.SEQ_PLA_CONT_DES    = ES.SEQ_PLA_CONT_DES (+)
+         AND ES.SEQ_PLA_SAIDA       = EI.SEQ_PLA_SAIDA    (+)
+         AND ES.SEQ_PLA_SAIDA       = LG.SEQ_PLA_SAIDA    (+)
+         AND LG.SEQ_PLA_FRETE       = EF.SEQ_PLA_FRETE    (+)
+         AND CS.COD_EMPRESA         = EM.COD_EMPRESA
+         AND CS.SEQ_PLA_END_ENTREGA = CE.SEQ_PLA_ENDERECO (+)
+         AND CE.SEQ_PLA_CLIENTE     = CL.SEQ_PLA_CLIENTE  (+)
+         AND EF.SEQ_PLA_PAGAR       = CA.SEQ_PLA_PAGAR    (+)
+         AND CS.SEQ_PLA_PED_VENDA   = AA.SEQ_PLA_ORIGEM   (+)
+         AND CS.SEQ_PLA_PED_VENDA   = FDEV.SEQ_PLA_ORIGEM (+)
+         AND CS.SEQ_PLA_PRODUTO     = PR.SEQ_PLA_PRODUTO  (+)
+         AND NVL(CS.TIPO_FRETE,'E') = 'E'
+         AND NVL(ES.CANCELADO, 'N') = 'N'
+         AND TO_CHAR(TRUNC(CS.DATA_CONTRATO),'YYYYMM')    >= '200001'
+       GROUP BY CS.COD_EMPRESA, CS.COD_SAFRA, CS.SEQ_PLA_PED_VENDA, TRUNC(CS.DATA_CONTRATO)
+HAVING SUM(DISTINCT(NVL(CA.VALOR_DOCUM,0))) + SUM(DISTINCT(NVL(FDEV.VALOR_FRETE_DEV,0))) <> 0       
+     ) C
+ GROUP BY C.COD_EMPRESA, C.COD_SAFRA, TRUNC(C.DATA_CONTRATO);

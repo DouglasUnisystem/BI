@@ -1,0 +1,9 @@
+UniSystemBI2021.2.5.exe: 00001BE0: 07:53:28 []:>--------------------------------------------------------------<
+UniSystemBI2021.2.5.exe: 00001BE0: 07:53:28 [TUniServerModule]:Server First Init.
+UniSystemBI2021.2.5.exe: 00001BE0: 07:53:28 [TUniServerModule]:Global Cache Folder Erased. <21> Files deleted.
+UniSystemBI2021.2.5.exe: 00001BE0: 07:53:29 [TUniServerModule]:Starting HTTP Server on Port: 8070...
+UniSystemBI2021.2.5.exe: 00001BE0: 07:53:29 [TUniServerModule]:HTTP Server Started on Port: 8070
+UniSystemBI2021.2.5.exe: 00001CF0: 07:53:59 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI2021.2.5.exe: 00001A2C: 07:54:01 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI2021.2.5.exe: 00001278: 07:54:08 [TUniThreadTimer.OnTimer]:EFDException : [FireDAC][Comp][Clnt]-512. Connection is not defined for [qNotificaUser]. Possible reason: Connection and ConnectionName property values are both empty : Addr: $00819B3C
+UniSystemBI2021.2.5.exe: 00001BE0: 17:32:53 [Exit]:Unexpected attempt to terminate server application with Exit Code: 0

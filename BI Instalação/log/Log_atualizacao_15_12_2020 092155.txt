@@ -1,0 +1,11 @@
+[FireDAC][Phys][Ora]
+ORA-02443:
+Não
+é
+possível
+eliminar
+restrição
+-
+restrição
+não
+existe

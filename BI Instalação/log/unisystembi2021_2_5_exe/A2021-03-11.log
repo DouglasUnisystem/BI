@@ -1,0 +1,27 @@
+UniSystemBI2021.2.5.exe: 00001E60: 08:06:37 []:>--------------------------------------------------------------<
+UniSystemBI2021.2.5.exe: 00001E60: 08:06:37 [TUniServerModule]:Server First Init.
+UniSystemBI2021.2.5.exe: 00001E60: 08:06:38 [TUniServerModule]:Global Cache Folder Erased. <12> Files deleted.
+UniSystemBI2021.2.5.exe: 00001E60: 08:06:43 [TUniServerModule]:Starting HTTP Server on Port: 8070...
+UniSystemBI2021.2.5.exe: 00001E60: 08:06:43 [TUniServerModule]:HTTP Server Started on Port: 8070
+UniSystemBI2021.2.5.exe: 00001CD0: 08:23:40 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI2021.2.5.exe: 000005E8: 08:23:59 [TUniThreadTimer.OnTimer]:EFDException : [FireDAC][Comp][Clnt]-512. Connection is not defined for [qNotificaUser]. Possible reason: Connection and ConnectionName property values are both empty : Addr: $00819B3C
+UniSystemBI2021.2.5.exe: 00001E00: 09:13:30 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI2021.2.5.exe: 000011C8: 09:13:32 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI2021.2.5.exe: 000011CC: 09:13:33 [Argument out of range-10.1.1.14]:EArgumentOutOfRangeException : Argument out of range : Addr: $004C28C6
+UniSystemBI2021.2.5.exe: 000011CC: 09:13:33 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI2021.2.5.exe: 00001F10: 09:13:38 [TUniThreadTimer.OnTimer]:EFDException : [FireDAC][Comp][Clnt]-512. Connection is not defined for [qNotificaUser]. Possible reason: Connection and ConnectionName property values are both empty : Addr: $00819B3C
+UniSystemBI2021.2.5.exe: 000011CC: 13:27:56 [Argument out of range-10.1.1.14]:EArgumentOutOfRangeException : Argument out of range : Addr: $004C28C6
+UniSystemBI2021.2.5.exe: 000011CC: 13:28:06 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI2021.2.5.exe: 000015B4: 14:37:12 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI2021.2.5.exe: 0000192C: 14:37:13 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI2021.2.5.exe: 00001B04: 14:37:47 [TUniThreadTimer.OnTimer]:EFDException : [FireDAC][Comp][Clnt]-512. Connection is not defined for [qNotificaUser]. Possible reason: Connection and ConnectionName property values are both empty : Addr: $00819B3C
+UniSystemBI2021.2.5.exe: 000011CC: 15:26:08 [Argument out of range-10.1.1.14]:EArgumentOutOfRangeException : Argument out of range : Addr: $004C28C6
+UniSystemBI2021.2.5.exe: 000011CC: 15:26:08 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI2021.2.5.exe: 000012C4: 15:36:07 [10.1.1.14]:EUniSessionException : Invalid session or session Timeout. (Session not found: uEknT2iYw3107D97C34 ) : Addr: $007D255A
+UniSystemBI2021.2.5.exe: 000012C4: 15:36:07 [10.1.1.14]:EUniSessionException : Invalid session or session Timeout. (Session not found: uEknT2iYw3107D97C34 ) : Addr: $007D255A
+UniSystemBI2021.2.5.exe: 000012C4: 15:36:08 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI2021.2.5.exe: 0000136C: 15:36:10 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI2021.2.5.exe: 00001D5C: 15:43:17 [TUniThreadTimer.OnTimer]:EFDException : [FireDAC][Comp][Clnt]-512. Connection is not defined for [qNotificaUser]. Possible reason: Connection and ConnectionName property values are both empty : Addr: $00819B3C
+UniSystemBI2021.2.5.exe: 000011CC: 17:34:29 [Argument out of range-10.1.1.14]:EArgumentOutOfRangeException : Argument out of range : Addr: $004C28C6
+UniSystemBI2021.2.5.exe: 000011CC: 17:34:30 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI2021.2.5.exe: 00001E60: 17:34:48 [Exit]:Unexpected attempt to terminate server application with Exit Code: 0

@@ -1,0 +1,20 @@
+UniSystemBI.exe: 000019B0: 07:48:38 []:>--------------------------------------------------------------<
+UniSystemBI.exe: 000019B0: 07:48:38 [TUniServerModule]:Server First Init.
+UniSystemBI.exe: 000019B0: 07:48:38 [TUniServerModule]:Global Cache Folder Erased. <20> Files deleted.
+UniSystemBI.exe: 000019B0: 07:48:43 [TUniServerModule]:Starting HTTP Server on Port: 8070...
+UniSystemBI.exe: 000019B0: 07:48:43 [TUniServerModule]:HTTP Server Started on Port: 8070
+UniSystemBI.exe: 00001A00: 08:05:48 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 00001A00: 08:08:53 [List index out of bounds (0)-10.1.1.133]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 00001F94: 08:12:26 [10.1.1.14]:EDatabaseError : QueryFiltro_9016_SAFRA: Field 'VALOR_DEBITO_REAL' not found : Addr: $0069F29E
+UniSystemBI.exe: 00001230: 08:29:00 [10.1.1.14]:EDatabaseError : QueryFiltro_9016_SAFRA: Field 'VALOR_DEBITO_REAL' not found : Addr: $0069F29E
+UniSystemBI.exe: 00000304: 08:34:26 [10.1.1.14]:EDatabaseError : QueryFiltro_9016_SAFRA: Field 'VALOR_DEBITO_REAL' not found : Addr: $0069F29E
+UniSystemBI.exe: 00001A00: 08:39:48 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 00001734: 08:43:33 [10.1.1.14]:EDatabaseError : QueryFiltro_9016_SAFRA: Field 'VALOR_DEBITO_REAL' not found : Addr: $0069F29E
+UniSystemBI.exe: 00001A00: 08:58:34 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 00001940: 09:04:08 [10.1.1.14]:EDatabaseError : QueryFiltro_9016_SAFRA: Field 'VALOR_DEBITO_REAL' not found : Addr: $0069F29E
+UniSystemBI.exe: 00001AE4: 09:06:36 [10.1.1.14]:EDatabaseError : QueryFiltro_9016_SAFRA: Field 'VALOR_DEBITO_REAL' not found : Addr: $0069F29E
+UniSystemBI.exe: 00001014: 09:19:17 [10.1.1.14]:EDatabaseError : QueryFiltro_9016_SAFRA: Field 'VALOR_DEBITO_REAL' not found : Addr: $0069F29E
+UniSystemBI.exe: 00001A00: 13:31:40 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 00001A00: 15:21:25 [List index out of bounds (0)-10.1.1.133]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 00001A00: 17:36:06 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 000019B0: 17:36:20 [Exit]:Unexpected attempt to terminate server application with Exit Code: 0

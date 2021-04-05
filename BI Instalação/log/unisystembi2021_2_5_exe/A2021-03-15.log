@@ -1,0 +1,14 @@
+UniSystemBI2021.2.5.exe: 0000198C: 07:45:20 []:>--------------------------------------------------------------<
+UniSystemBI2021.2.5.exe: 0000198C: 07:45:20 [TUniServerModule]:Server First Init.
+UniSystemBI2021.2.5.exe: 0000198C: 07:45:20 [TUniServerModule]:Global Cache Folder Erased. <1> Files deleted.
+UniSystemBI2021.2.5.exe: 0000198C: 07:45:38 [TUniServerModule]:Starting HTTP Server on Port: 8070...
+UniSystemBI2021.2.5.exe: 0000198C: 07:45:38 [TUniServerModule]:HTTP Server Started on Port: 8070
+UniSystemBI2021.2.5.exe: 00001B88: 09:07:19 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI2021.2.5.exe: 00000C6C: 09:07:21 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI2021.2.5.exe: 00000A08: 09:09:52 [TUniThreadTimer.OnTimer]:EFDException : [FireDAC][Comp][Clnt]-512. Connection is not defined for [qNotificaUser]. Possible reason: Connection and ConnectionName property values are both empty : Addr: $00819B3C
+UniSystemBI2021.2.5.exe: 000010C4: 09:50:11 [10.1.1.14]:EOCINativeException : [FireDAC][Phys][Ora] ORA-00904: "MO"."FERTILIZANTES": invalid identifier : Addr: $0090FB71
+UniSystemBI2021.2.5.exe: 00001F18: 17:31:08 [Argument out of range-10.1.1.14]:EArgumentOutOfRangeException : Argument out of range : Addr: $004C28C6
+UniSystemBI2021.2.5.exe: 00001F18: 17:31:09 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI2021.2.5.exe: 00000EEC: 17:32:46 [10.1.1.14]:EUniSessionException : Invalid session or session Timeout. (Session not found: Nd7kcdHJMU107DF3D36 ) : Addr: $007D255A
+UniSystemBI2021.2.5.exe: 00000EEC: 17:32:47 [10.1.1.14]:EUniSessionException : Invalid session or session Timeout. (Session not found: Nd7kcdHJMU107DF3D36 ) : Addr: $007D255A
+UniSystemBI2021.2.5.exe: 0000198C: 17:33:46 [Exit]:Unexpected attempt to terminate server application with Exit Code: 0

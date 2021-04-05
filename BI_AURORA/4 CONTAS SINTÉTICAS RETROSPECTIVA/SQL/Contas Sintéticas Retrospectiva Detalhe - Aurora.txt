@@ -1,0 +1,65 @@
+SELECT GO.COD_CONTA,
+       GO.NOME_CONTA,
+       GO.DEBITO_CREDITO,
+       SUM(NVL(GO.TOTAL_ANO,0)) AS TOTAL_ANO,
+       SUM(NVL(GO.TOTAL_ANO_ORC,0)) AS TOTAL_ANO_ORC
+  FROM AGRICOLA.GER_PLANO_CONTAS GP,
+       (SELECT DISTINCT
+               TRIM(RPAD(SUBSTR(PC.Cod_Conta,1,PC.TAMANHO),8,' ')) AS Cod_Conta,
+               PC.NOME_CONTA,
+               PC.DEBITO_CREDITO,
+               PC.COD_TABELA,
+               PR.TOTAL_ANO,
+               0 AS TOTAL_ANO_ORC
+          FROM AGRICOLA.GER_PLANO_CONTAS PC,
+               (SELECT GP.*
+                  FROM VW_CONS_RETROSP_GP GP
+                 WHERE 1 = 1
+                   AND TO_CHAR(COD_EMPRESA) LIKE TO_CHAR(DECODE( NVL(:COD_EMPRESA_STRING,'0') ,'0','%', :COD_EMPRESA_STRING )) --PARAM
+                   AND TO_CHAR(COD_SAFRA)   LIKE TO_CHAR(DECODE( NVL(:COD_SAFRA_STRING  ,'0') ,'0','%', :COD_SAFRA_STRING   )) --PARAM
+               ) GP,
+               (SELECT *
+                  FROM VW_CONS_RETROSP_PR PR
+                  WHERE 1 = 1
+                   AND TO_CHAR(COD_EMPRESA) LIKE TO_CHAR(DECODE( NVL(:COD_EMPRESA_STRING,'0') ,'0','%', :COD_EMPRESA_STRING )) --PARAM
+                   AND TO_CHAR(COD_SAFRA)   LIKE TO_CHAR(DECODE( NVL(:COD_SAFRA_STRING  ,'0') ,'0','%', :COD_SAFRA_STRING   )) --PARAM
+                   And TO_DATE(TRUNC(PR.Data_Mvto),'DD/MM/RRRR') >= TO_DATE(:DATAI_DATA,'DD/MM/RRRR')
+                   And TO_DATE(TRUNC(PR.Data_Mvto),'DD/MM/RRRR') <= TO_DATE(:DATAF_DATA,'DD/MM/RRRR')
+               ) PR
+         WHERE PC.COD_TABELA                     = PR.COD_TABELA(+)
+           AND SUBSTR(PC.Cod_Conta,1,PC.TAMANHO) = PR.Cod_Conta(+)
+           AND PC.Cod_Tabela                     = GP.Cod_Tabela(+)
+           AND PC.Cod_Conta                      = GP.Cod_Conta(+)
+           AND (ABS(NVL(PR.TOTAL_ANO,0)) + ABS(NVL(GP.TOTAL_ANO,0))) <> 0
+           AND PC.COD_TABELA IN (SELECT EM.COD_TABELA_GERENCIAL FROM AGRICOLA.EMPRESAS EM WHERE TO_CHAR(COD_EMPRESA) LIKE TO_CHAR(DECODE( NVL(:COD_EMPRESA_STRING,'0') ,'0','%', :COD_EMPRESA_STRING )) )
+           And PC.Grau <= '5'
+         UNION ALL
+        --PREVISAO=ORÇADO
+        SELECT
+               TRIM(RPAD(SUBSTR(PC.Cod_Conta,1,PC.TAMANHO),8,' ')) AS COD_CONTA,
+               PC.NOME_CONTA,
+               PC.DEBITO_CREDITO,
+               PC.COD_TABELA,
+               0 AS TOTAL_ANO,
+               (NVL(PR.TOTAL_JAN,0)+NVL(PR.TOTAL_FEV,0)+NVL(PR.TOTAL_MAR,0)+NVL(PR.TOTAL_ABR,0)+NVL(PR.TOTAL_MAI,0)+NVL(PR.TOTAL_JUN,0)+
+                NVL(PR.TOTAL_JUL,0)+NVL(PR.TOTAL_AGO,0)+NVL(PR.TOTAL_SET,0)+NVL(PR.TOTAL_OUT,0)+NVL(PR.TOTAL_NOV,0)+NVL(PR.TOTAL_DEZ,0)) TOTAL_ANO_ORC
+          FROM AGRICOLA.GER_PLANO_CONTAS PC,
+               (SELECT GM.*
+                  FROM AGRICOLA.VW_CONS_RETROSP_PR_ORCADO GM
+                 WHERE 1 = 1
+                   AND TO_CHAR(COD_EMPRESA) LIKE TO_CHAR(DECODE( NVL(:COD_EMPRESA_STRING,'0') ,'0','%', :COD_EMPRESA_STRING )) --PARAM
+                   AND TO_CHAR(COD_SAFRA)   LIKE TO_CHAR(DECODE( NVL(:COD_SAFRA_STRING  ,'0') ,'0','%', :COD_SAFRA_STRING   )) --PARAM
+               ) PR
+         WHERE PC.COD_TABELA                     = PR.COD_TABELA(+)
+           AND SUBSTR(PC.Cod_Conta,1,PC.TAMANHO) = PR.Cod_Conta(+)
+           AND (NVL(PR.TOTAL_ANO,0)<>0)
+           And PC.Grau <= '5'
+       ) GO
+ WHERE SUBSTR(GO.COD_CONTA,1,5) = GP.COD_CONTA
+   AND GO.COD_TABELA            = GP.COD_TABELA
+   AND LENGTH(GO.COD_CONTA) = 8
+   AND GP.NOME_CONTA           LIKE :NOME_CONTA
+ GROUP BY GO.Cod_Conta,
+          GO.NOME_CONTA,
+          GO.DEBITO_CREDITO
+ ORDER BY 1,2

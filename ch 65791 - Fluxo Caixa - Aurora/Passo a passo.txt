@@ -1,0 +1,2 @@
+1º Executar todas as views/function que estão dentro da pasta 'view'
+2º Importar primeiro o arquivo 'FINANCEIRO - FLUXO DE CAIXA - AURORA', pois é nesse painel que foram criadas as sql das consultas utilizadas nos 2 dashboard.

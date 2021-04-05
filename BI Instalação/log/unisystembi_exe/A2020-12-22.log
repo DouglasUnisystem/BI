@@ -1,0 +1,15 @@
+UniSystemBI.exe: 000020E4: 16:51:54 []:>--------------------------------------------------------------<
+UniSystemBI.exe: 000020E4: 16:51:54 [TUniServerModule]:Server First Init.
+UniSystemBI.exe: 000020E4: 16:51:54 [TUniServerModule]:Global Cache Folder Erased. <20> Files deleted.
+UniSystemBI.exe: 000020E4: 16:51:55 [TUniServerModule]:Starting HTTP Server on Port: 8070...
+UniSystemBI.exe: 000020E4: 16:51:55 [TUniServerModule]:HTTP Server Started on Port: 8070
+UniSystemBI.exe: 000017A4: 17:07:48 [10.1.1.14]:EDatabaseError : query_22_4: Cannot perform this operation on a closed dataset : Addr: $0069F29E
+UniSystemBI.exe: 000017A4: 17:07:48 [10.1.1.14]:Exception : Config Option: O13CB->style:"border:none;"<br/>is refering a previous request,<br/>it's not allowed in AJAX request or JS handler.<br/>Use equivalent Public Property or Method instead. : Addr: $0076F27A
+UniSystemBI.exe: 00000D24: 17:07:53 [10.1.1.14]:Exception : Config Option: O13D3->style:"border:none;"<br/>is refering a previous request,<br/>it's not allowed in AJAX request or JS handler.<br/>Use equivalent Public Property or Method instead. : Addr: $0076F27A
+UniSystemBI.exe: 00000D24: 17:07:53 [10.1.1.14]:Exception : Config Option: O1406->style:"border:none;"<br/>is refering a previous request,<br/>it's not allowed in AJAX request or JS handler.<br/>Use equivalent Public Property or Method instead. : Addr: $0076F27A
+UniSystemBI.exe: 00000D24: 17:07:53 [10.1.1.14]:Exception : Config Option: O1421->style:"border:none;"<br/>is refering a previous request,<br/>it's not allowed in AJAX request or JS handler.<br/>Use equivalent Public Property or Method instead. : Addr: $0076F27A
+UniSystemBI.exe: 0000268C: 17:08:15 [10.1.1.14]:EDatabaseError : QueryFiltro_9016_SAFRA: Field 'VALOR_DEBITO_REAL' not found : Addr: $0069F29E
+UniSystemBI.exe: 00002768: 17:09:31 [10.1.1.14]:EDatabaseError : QueryFiltro_9016_SAFRA: Field 'VALOR_DEBITO_REAL' not found : Addr: $0069F29E
+UniSystemBI.exe: 00002674: 17:22:02 [10.1.1.14]:EDatabaseError : QueryFiltro_9016_SAFRA: Field 'VALOR_DEBITO_REAL' not found : Addr: $0069F29E
+UniSystemBI.exe: 00001EC8: 17:23:59 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 000020E4: 17:24:57 [Exit]:Unexpected attempt to terminate server application with Exit Code: 0

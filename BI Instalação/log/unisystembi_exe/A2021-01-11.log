@@ -1,0 +1,13 @@
+UniSystemBI.exe: 00000D20: 07:48:31 []:>--------------------------------------------------------------<
+UniSystemBI.exe: 00000D20: 07:48:31 [TUniServerModule]:Server First Init.
+UniSystemBI.exe: 00000D20: 07:48:31 [TUniServerModule]:Global Cache Folder Erased. <38> Files deleted.
+UniSystemBI.exe: 00000D20: 07:48:34 [TUniServerModule]:Starting HTTP Server on Port: 8070...
+UniSystemBI.exe: 00000D20: 07:48:34 [TUniServerModule]:HTTP Server Started on Port: 8070
+UniSystemBI.exe: 00000318: 07:50:05 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI.exe: 00001E48: 07:50:13 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI.exe: 0000101C: 08:36:39 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 00001830: 08:38:00 [10.1.1.14]:EUniSessionException : Invalid session or session Timeout. (Session not found: Rh2UewH66S1077F06E5 ) : Addr: $007D255A
+UniSystemBI.exe: 00001830: 08:38:01 [10.1.1.14]:EUniSessionException : Invalid session or session Timeout. (Session not found: Rh2UewH66S1077F06E5 ) : Addr: $007D255A
+UniSystemBI.exe: 00001830: 08:38:02 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI.exe: 0000194C: 08:38:04 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI.exe: 00000D20: 17:36:22 [Exit]:Unexpected attempt to terminate server application with Exit Code: 0

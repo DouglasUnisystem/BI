@@ -1,0 +1,180 @@
+CREATE OR REPLACE VIEW VW_OSPLANTIO AS
+SELECT
+X."NR_CONTROLE",X."COD_EMPRESA",X."NOME_EMPRESA",X."SIGLA_EMPRESA",X."COD_FILIAL",X."DESCRICAO_FILIAL",X."SEQ_PLA_TIPO_CULT",X."DESC_CULTURA",X."COD_SAFRA",X."DESCRICAO_SAFRA",X."SEQ_PLA_AGLOMERADO",X."SIGLA_AGLOMERADO",X."DESC_AGLOMERADO",X."SEQ_PLA_FAZENDA",X."SIGLA_FAZENDA",X."DESC_FAZENDA",X."SEQ_PLA_TALHAO",X."NUMERO_TALHAO",X."DESC_TALHAO",X."SEQ_PLA_VARIEDADE",X."DESC_VARIEDADE",X."CICLO",X."QTD_HA_EFETIVO",X."DATA_PLANTIO",
+TRUNC(X.DATA_PLANTIO + CICLO) AS PREVISAO_COLHEITA
+  FROM (SELECT DISTINCT
+               OSS.NR_CONTROLE,
+               EM.COD_EMPRESA,
+               EM.NOME_EMPRESA,
+               EM.SIGLA_EMPRESA,
+               FI.COD_FILIAL,
+               FI.DESCRICAO_FILIAL,
+               TC.SEQ_PLA_TIPO_CULT,
+               TC.DESC_CULTURA,
+               OSS.COD_SAFRA,
+               SA.DESCRICAO_SAFRA,
+               AG.SEQ_PLA_AGLOMERADO,
+               AG.SIGLA_AGLOMERADO,
+               AG.DESC_AGLOMERADO,
+               FA.SEQ_PLA_FAZENDA,
+               FA.SIGLA_FAZENDA,
+               FA.DESC_FAZENDA,
+               TA.SEQ_PLA_TALHAO,
+               TA.NUMERO_TALHAO,
+               TA.DESC_TALHAO,
+               V.SEQ_PLA_VARIEDADE,
+               V.DESC_VARIEDADE,
+               (SELECT MAX(PVR.CICLO)
+                  FROM AGNEW.PAR_VARIEDADE_REGIAO PVR
+                 WHERE PVR.COD_SAFRA = SA.COD_SAFRA
+                   AND PVR.SEQ_PLA_REGIAO = RE.SEQ_PLA_REGIAO
+                   AND PVR.SEQ_PLA_VARIEDADE = V.SEQ_PLA_VARIEDADE) CICLO,
+               TS.QTDE_HA AS QTD_HA_EFETIVO,
+               NVL(OSS.DATA_FECHAMENTO, TS.DATA_PLANTIO) AS DATA_PLANTIO
+          FROM AGNEW.ORDEM_SERVICO        OSS,
+               AGNEW.ORDEM_SERV_TALHOES   OST,
+               AGNEW.TAREFAS              TAR,
+               AGNEW.GRUPO_TAREFAS        GTAR,
+               AGNEW.VINCULA_TAREFA_GRUPO VINTARGRU,
+               AGNEW.TALHOES_SAFRA        TS,
+               AGNEW.TALHOES              TA,
+               AGNEW.FAZENDAS             FA,
+               AGNEW.TIPO_CULTURA         TC,
+               AGNEW.SAFRAS               SA,
+               AGNEW.AGLOMERADOS          AG,
+               AGNEW.UBS_VARIEDADES       V,
+               AGNEW.REGIOES_GERENCIAIS   RE,
+               AGNEW.EMPRESAS             EM,
+               AGNEW.FILIAIS              FI
+         WHERE OSS.SEQ_PLA_ORDEM = OST.SEQ_PLA_ORDEM
+           AND OST.SEQ_PLA_ORDEM_TALHOES = TS.SEQ_PLA_ORDEM_PLANTIO
+           AND TS.SEQ_PLA_TALHAO = TA.SEQ_PLA_TALHAO
+           AND TA.SEQ_PLA_FAZENDA = FA.SEQ_PLA_FAZENDA
+           AND TS.SEQ_PLA_TIPO_CULT = TC.SEQ_PLA_TIPO_CULT
+           AND OSS.SEQ_PLA_VINC_TAREFA = VINTARGRU.SEQ_PLA_VINC_TAREFA
+           AND VINTARGRU.SEQ_PLA_TAREFA = TAR.SEQ_PLA_TAREFA
+           AND VINTARGRU.SEQ_PLA_GRUPO_TAREFA = GTAR.SEQ_PLA_GRUPO_TAREFA
+           AND OSS.SEQ_PLA_ORDEM = OST.SEQ_PLA_ORDEM
+           AND OST.SEQ_PLA_ORDEM_TALHOES = TS.SEQ_PLA_ORDEM_PLANTIO
+           AND TS.SEQ_PLA_VARIEDADE = V.SEQ_PLA_VARIEDADE
+           AND OSS.COD_SAFRA = SA.COD_SAFRA
+           AND FA.SEQ_PLA_AGLOMERADO = AG.SEQ_PLA_AGLOMERADO
+           AND AG.SEQ_PLA_REGIAO = RE.SEQ_PLA_REGIAO
+           AND AG.COD_EMPRESA = EM.COD_EMPRESA
+           AND AG.COD_EMPRESA = FI.COD_EMPRESA
+           AND AG.COD_FILIAL  = FI.COD_FILIAL
+           AND NOT EXISTS
+         (SELECT *
+                  FROM AGNEW.APONT_AREA_TAL_OS A
+                 WHERE A.SEQ_PLA_ORDEM = OSS.SEQ_PLA_ORDEM
+                   AND A.SEQ_PLA_TALHAO = TA.SEQ_PLA_TALHAO)
+           AND TAR.PLANTIO = 'S'
+           AND OST.EFETIVO = 'S'
+
+        UNION ALL
+
+        SELECT DISTINCT
+               NR_CONTROLE,
+               COD_EMPRESA,
+               NOME_EMPRESA,
+               SIGLA_EMPRESA,
+               COD_FILIAL,
+               DESCRICAO_FILIAL,
+               SEQ_PLA_TIPO_CULT,
+               DESC_CULTURA,
+               COD_SAFRA,
+               DESCRICAO_SAFRA,
+               SEQ_PLA_AGLOMERADO,
+               SIGLA_AGLOMERADO,
+               DESC_AGLOMERADO,
+               SEQ_PLA_FAZENDA,
+               SIGLA_FAZENDA,
+               DESC_FAZENDA,
+               SEQ_PLA_TALHAO,
+               NUMERO_TALHAO,
+               DESC_TALHAO,
+               SEQ_PLA_VARIEDADE,
+               DESC_VARIEDADE,
+               (SELECT MAX(PVR.CICLO)
+                  FROM AGNEW.PAR_VARIEDADE_REGIAO PVR
+                 WHERE PVR.COD_SAFRA = COD_SAFRA
+                   AND PVR.SEQ_PLA_REGIAO = SEQ_PLA_REGIAO
+                   AND PVR.SEQ_PLA_VARIEDADE = SEQ_PLA_VARIEDADE) CICLO,
+               QTD_HA_EFETIVO,
+               DATA_PLANTIO
+        FROM (
+
+        SELECT DISTINCT
+               OSS.NR_CONTROLE,
+               EM.COD_EMPRESA,
+               EM.NOME_EMPRESA,
+               EM.SIGLA_EMPRESA,
+               FI.COD_FILIAL,
+               FI.DESCRICAO_FILIAL,
+               TC.SEQ_PLA_TIPO_CULT,
+               TC.DESC_CULTURA,
+               OSS.COD_SAFRA,
+               RE.SEQ_PLA_REGIAO,
+               SA.DESCRICAO_SAFRA,
+               AG.SEQ_PLA_AGLOMERADO,
+               AG.SIGLA_AGLOMERADO,
+               AG.DESC_AGLOMERADO,
+               FA.SEQ_PLA_FAZENDA,
+               FA.SIGLA_FAZENDA,
+               FA.DESC_FAZENDA,
+               TA.SEQ_PLA_TALHAO,
+               TA.NUMERO_TALHAO,
+               TA.DESC_TALHAO,
+               CASE
+                  WHEN TS.SEQ_PLA_VARIEDADE IS NULL THEN
+                    (SELECT AGNEW.WM_CONCAT(DISTINCT V.SEQ_PLA_VARIEDADE)
+                       FROM AGNEW.RECEITUARIO_SEMENTE S, AGNEW.UBS_VARIEDADES V
+                      WHERE S.SEQ_PLA_ORDEM = OSS.SEQ_PLA_ORDEM
+                        AND S.SEQ_PLA_VARIEDADE = V.SEQ_PLA_VARIEDADE)
+                  ELSE
+                    V.SEQ_PLA_VARIEDADE
+                END AS SEQ_PLA_VARIEDADE,
+               CASE
+                  WHEN TS.SEQ_PLA_VARIEDADE IS NULL THEN
+                    (SELECT AGNEW.WM_CONCAT(DISTINCT V.DESC_VARIEDADE)
+                       FROM AGNEW.RECEITUARIO_SEMENTE S, AGNEW.UBS_VARIEDADES V
+                      WHERE S.SEQ_PLA_ORDEM = OSS.SEQ_PLA_ORDEM
+                        AND S.SEQ_PLA_VARIEDADE = V.SEQ_PLA_VARIEDADE)
+                  ELSE
+                    V.DESC_VARIEDADE
+                END AS DESC_VARIEDADE,
+               AA.AREA_APONTADA AS QTD_HA_EFETIVO,
+               AA.DATA_APONTAMENTO AS DATA_PLANTIO
+          FROM AGNEW.APONT_AREA_TAL_OS    AA,
+               AGNEW.ORDEM_SERVICO        OSS,
+               AGNEW.ORDEM_SERV_TALHOES   OST,
+               AGNEW.TALHOES              TA,
+               AGNEW.TALHOES_SAFRA        TS,
+               AGNEW.FAZENDAS             FA,
+               AGNEW.UBS_VARIEDADES       V,
+               AGNEW.TIPO_CULTURA         TC,
+               AGNEW.SAFRAS               SA,
+               AGNEW.AGLOMERADOS          AG,
+               AGNEW.TAREFAS              TAR,
+               AGNEW.GRUPO_TAREFAS        GTAR,
+               AGNEW.VINCULA_TAREFA_GRUPO VINTARGRU,
+               AGNEW.REGIOES_GERENCIAIS   RE,
+               AGNEW.EMPRESAS           EM,
+               AGNEW.FILIAIS            FI
+         WHERE AA.SEQ_PLA_ORDEM = OSS.SEQ_PLA_ORDEM
+           AND AA.SEQ_PLA_TALHAO = TA.SEQ_PLA_TALHAO
+           AND TA.SEQ_PLA_FAZENDA = FA.SEQ_PLA_FAZENDA
+           AND AA.SEQ_PLA_TIPO_CULT = TC.SEQ_PLA_TIPO_CULT
+           AND AA.COD_SAFRA = SA.COD_SAFRA
+           AND FA.SEQ_PLA_AGLOMERADO = AG.SEQ_PLA_AGLOMERADO
+           AND AG.SEQ_PLA_REGIAO = RE.SEQ_PLA_REGIAO
+           AND OSS.SEQ_PLA_VINC_TAREFA = VINTARGRU.SEQ_PLA_VINC_TAREFA
+           AND VINTARGRU.SEQ_PLA_TAREFA = TAR.SEQ_PLA_TAREFA
+           AND VINTARGRU.SEQ_PLA_GRUPO_TAREFA = GTAR.SEQ_PLA_GRUPO_TAREFA
+           AND OSS.SEQ_PLA_ORDEM = OST.SEQ_PLA_ORDEM
+           AND OST.SEQ_PLA_ORDEM_TALHOES = TS.SEQ_PLA_ORDEM_PLANTIO(+)
+           AND TS.SEQ_PLA_VARIEDADE = V.SEQ_PLA_VARIEDADE(+)
+           AND AG.COD_EMPRESA = EM.COD_EMPRESA
+           AND AG.COD_EMPRESA = FI.COD_EMPRESA
+           AND AG.COD_FILIAL = FI.COD_FILIAL
+           AND TAR.PLANTIO = 'S' ) ) X;

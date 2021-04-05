@@ -1,0 +1,20 @@
+UniSystemBI.exe: 00001778: 10:38:35 []:>--------------------------------------------------------------<
+UniSystemBI.exe: 00001778: 10:38:35 [TUniServerModule]:Server First Init.
+UniSystemBI.exe: 00001778: 10:38:35 [TUniServerModule]:Global Cache Folder Erased. <1> Files deleted.
+UniSystemBI.exe: 00001778: 10:38:37 [TUniServerModule]:Starting HTTP Server on Port: 8070...
+UniSystemBI.exe: 00001778: 10:38:37 [TUniServerModule]:HTTP Server Started on Port: 8070
+UniSystemBI.exe: 00001F9C: 10:39:15 [10.1.1.14]:EUniSessionException : Invalid session or session Timeout. (Session not found: 9GxcQ3wTdx107CD04B1 ) : Addr: $007D255A
+UniSystemBI.exe: 00001F9C: 10:39:15 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI.exe: 00001908: 10:39:17 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI.exe: 00001778: 10:40:17 [TUniServerModule]:Shutting Down Server.
+UniSystemBI.exe: 00001778: 10:40:17 [TUniServerModule]:Stopping HTTP Server.
+UniSystemBI.exe: 00001778: 10:40:17 [TUniServerModule]:HTTP Server Stopped.
+UniSystemBI.exe: 00001778: 10:40:17 [TUniGUISessionManager]:Terminating Session manager.
+UniSystemBI.exe: 00001778: 10:40:17 [TUniGUISessionManager]:Stopping Cache Eraser...
+UniSystemBI.exe: 00001778: 10:40:17 [TUniGUISessionManager]:Cache Eraser Stopped.
+UniSystemBI.exe: 00001778: 10:40:17 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 00001778: 10:40:17 [TUniGUISessionManager]:Destroying Worker Threads.
+UniSystemBI.exe: 00001778: 10:40:17 [TUniGUISessionManager]:Session manager terminated.
+UniSystemBI.exe: 00001778: 10:40:17 [TUniServerModule]:Server Shutdown Completed.
+UniSystemBI.exe: 00001778: 10:40:17 []:<-------------------------------------------------------------->
+UniSystemBI.exe: 00001778: 10:40:17 [Terminated]:Exit Code: 0

@@ -1,0 +1,7 @@
+drop view VW_ACORDO_P_REALIZADO_RECEBIDO;
+drop view VW_ACORDO_POTENCIAL;
+
+Caso seja view materalizada
+
+drop view materialized VW_ACORDO_P_REALIZADO_RECEBIDO;
+drop view materialized VW_ACORDO_POTENCIAL;

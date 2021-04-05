@@ -1,0 +1,31 @@
+UniSystemBI.exe: 00002568: 08:40:12 []:>--------------------------------------------------------------<
+UniSystemBI.exe: 00002568: 08:40:12 [TUniServerModule]:Server First Init.
+UniSystemBI.exe: 00002568: 08:40:13 [TUniServerModule]:Global Cache Folder Erased. <20> Files deleted.
+UniSystemBI.exe: 00002568: 08:40:18 [TUniServerModule]:Starting HTTP Server on Port: 8070...
+UniSystemBI.exe: 00002568: 08:40:18 [TUniServerModule]:HTTP Server Started on Port: 8070
+UniSystemBI.exe: 00001F68: 08:42:28 [HandleFileRequest[10.1.1.133]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI.exe: 00001B74: 08:42:28 [HandleFileRequest[10.1.1.133]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI.exe: 00000928: 08:42:40 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI.exe: 00002698: 08:42:44 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI.exe: 00002018: 08:57:36 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI.exe: 00002360: 08:57:38 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI.exe: 00002578: 09:34:38 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 0000182C: 10:01:07 [10.1.1.14]:EUniSessionException : Invalid session or session Timeout. (Session not found: 29tPS4OQXY10775F173 ) : Addr: $007D255A
+UniSystemBI.exe: 000013A0: 10:01:07 [10.1.1.14]:EUniSessionException : Invalid session or session Timeout. (Session not found: 29tPS4OQXY10775F173 ) : Addr: $007D255A
+UniSystemBI.exe: 000013A0: 10:01:07 [10.1.1.14]:EUniSessionException : Invalid session or session Timeout. (Session not found: 29tPS4OQXY10775F173 ) : Addr: $007D255A
+UniSystemBI.exe: 0000182C: 10:01:08 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI.exe: 00002048: 10:01:10 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI.exe: 00002004: 10:29:00 [HandleFileRequest[10.1.1.133]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI.exe: 00002760: 10:29:00 [HandleFileRequest[10.1.1.133]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI.exe: 00002578: 10:29:04 [List index out of bounds (0)-10.1.1.133]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 000006E8: 10:57:43 [HandleFileRequest[10.1.1.133]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI.exe: 000016D8: 10:57:44 [HandleFileRequest[10.1.1.133]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI.exe: 00002578: 10:57:45 [List index out of bounds (0)-10.1.1.133]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 00002578: 11:31:40 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 000021B0: 13:11:49 [10.1.1.14]:EUniSessionException : Invalid session or session Timeout. (Session not found: fpgoNpxtPH1077602B1 ) : Addr: $007D255A
+UniSystemBI.exe: 000021B0: 13:11:50 [10.1.1.14]:EUniSessionException : Invalid session or session Timeout. (Session not found: fpgoNpxtPH1077602B1 ) : Addr: $007D255A
+UniSystemBI.exe: 000021B0: 13:11:50 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI.exe: 00002200: 13:11:55 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI.exe: 00002578: 17:31:23 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 000024E0: 17:31:26 [10.1.1.14]:EUniSessionException : Invalid session or session Timeout. (Session not found: byFOlzYZmB10776366C ) : Addr: $007D255A
+UniSystemBI.exe: 00002568: 17:32:08 [Exit]:Unexpected attempt to terminate server application with Exit Code: 0

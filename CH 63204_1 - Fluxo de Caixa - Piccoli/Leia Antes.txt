@@ -1,0 +1,14 @@
+Conforme o Chamado 63204_1, segue em anexo os arquivos:
+SQL das Consultas: Possui todas as consultas do BI
+Views: Possui os arquivos das Views utilizadas e também uma function
+Views Materializadas: Possui os arquivos das Views Materializadas
+CH 63204_1: Chamado e Documentação
+Guia de Apresentação BI - Fluxo de Caixa - Piccoli: Guia que mostra a Categoria, Consulta, Indicador e dashboard do BI
+
+
+Para Executar o BI:
+1º Passo: É necessário alterar em TODOS os SQL a base, apontando para a base a ser usada, ex: AGRICOLA.
+2º Passo: Deve ser criado as Views materializadas na base
+3º Passo: Importar o dashboard 
+4º Passo: Atualizar a base de todas as consultas do BI
+5º Passo: Abrir o Guia de Apresentação para entender cada gráfico

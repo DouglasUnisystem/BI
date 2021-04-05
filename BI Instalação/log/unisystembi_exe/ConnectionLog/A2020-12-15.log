@@ -1,0 +1,11 @@
+UniSystemBI.exe: 00001A28: 13:44:35 [10.1.1.14]:Failed Sequence Recovery: SeqId: 551, Event: click
+UniSystemBI.exe: 00001DA0: 13:44:40 [10.1.1.14]:Failed Sequence Recovery: SeqId: 552, Event: click
+UniSystemBI.exe: 00001964: 13:45:00 [10.1.1.14]:Failed Sequence Recovery: SeqId: 553, Event: click
+UniSystemBI.exe: 00001A28: 13:45:29 [10.1.1.14]:Sequence sent from cache:  SeqId: 551
+UniSystemBI.exe: 00001A28: 13:45:29 [10.1.1.14]:Processed: Id: 551, Evt: click, [J3rJKPDoYs107562848]
+UniSystemBI.exe: 00001DA0: 13:45:29 [10.1.1.14]:Sequence sent from cache:  SeqId: 552
+UniSystemBI.exe: 00001DA0: 13:45:29 [10.1.1.14]:Processed: Id: 552, Evt: click, [J3rJKPDoYs107562848]
+UniSystemBI.exe: 00001964: 13:45:59 [10.1.1.14]:Sequence sent from cache:  SeqId: 553
+UniSystemBI.exe: 00001964: 13:45:59 [10.1.1.14]:Processed: Id: 553, Evt: click, [J3rJKPDoYs107562848]
+UniSystemBI.exe: 00001A28: 13:45:59 [10.1.1.14]:Processing: Id: -1, Evt: data
+UniSystemBI.exe: 00001A28: 13:45:59 [10.1.1.14]:Processed: Id: -1, Evt: data, [J3rJKPDoYs107562848]

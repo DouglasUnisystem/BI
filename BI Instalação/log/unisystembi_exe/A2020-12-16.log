@@ -1,0 +1,32 @@
+UniSystemBI.exe: 000019D8: 07:47:08 []:>--------------------------------------------------------------<
+UniSystemBI.exe: 000019D8: 07:47:09 [TUniServerModule]:Server First Init.
+UniSystemBI.exe: 000019D8: 07:47:09 [TUniServerModule]:Global Cache Folder Erased. <20> Files deleted.
+UniSystemBI.exe: 000019D8: 07:47:16 [TUniServerModule]:Starting HTTP Server on Port: 8070...
+UniSystemBI.exe: 000019D8: 07:47:17 [TUniServerModule]:HTTP Server Started on Port: 8070
+UniSystemBI.exe: 00001EA0: 08:34:34 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 00001524: 09:11:55 [10.1.1.14]:EUniSessionException : Invalid session or session Timeout. (Session not found: XDWeRWolnB107575C81 ) : Addr: $007D255A
+UniSystemBI.exe: 00001524: 09:11:55 [10.1.1.14]:EUniSessionException : Invalid session or session Timeout. (Session not found: XDWeRWolnB107575C81 ) : Addr: $007D255A
+UniSystemBI.exe: 00001EA0: 11:31:21 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 00001C94: 13:05:37 [10.1.1.14]:EUniSessionException : Invalid session or session Timeout. (Session not found: uCqTcuQdpk1075770D8 ) : Addr: $007D255A
+UniSystemBI.exe: 00001C94: 13:05:40 [10.1.1.14]:EUniSessionException : Invalid session or session Timeout. (Session not found: uCqTcuQdpk1075770D8 ) : Addr: $007D255A
+UniSystemBI.exe: 00001B30: 13:06:13 [Erro ao abrir query do filtro: '[FireDAC][Phys][Ora] ORA-00942: a tabela ou view não existe'-10.1.1.14]:Exception : Erro ao abrir query do filtro: '[FireDAC][Phys][Ora] ORA-00942: a tabela ou view não existe' : Addr: $00A8D685
+UniSystemBI.exe: 00001C08: 14:52:09 [10.1.1.14]:EDatabaseError : Field 'ID' must have a value : Addr: $0069F2B3
+UniSystemBI.exe: 00001C08: 14:52:09 [10.1.1.14]:EDatabaseError : Field 'ID' must have a value : Addr: $0069F2B3
+UniSystemBI.exe: 00001EA0: 14:52:23 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 00000EB8: 17:24:04 []:>--------------------------------------------------------------<
+UniSystemBI.exe: 00000EB8: 17:24:04 [TUniServerModule]:Server First Init.
+UniSystemBI.exe: 00000EB8: 17:24:04 [TUniServerModule]:Global Cache Folder Erased. <63> Files deleted.
+UniSystemBI.exe: 00000EB8: 17:24:05 [TUniServerModule]:Starting HTTP Server on Port: 8070...
+UniSystemBI.exe: 00000EB8: 17:24:06 [TUniServerModule]:HTTP Server Started on Port: 8070
+UniSystemBI.exe: 000016FC: 17:35:19 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI.exe: 00000EB8: 17:35:39 [TUniServerModule]:Shutting Down Server.
+UniSystemBI.exe: 00000EB8: 17:35:39 [TUniServerModule]:Stopping HTTP Server.
+UniSystemBI.exe: 00000EB8: 17:35:39 [TUniServerModule]:HTTP Server Stopped.
+UniSystemBI.exe: 00000EB8: 17:35:39 [TUniGUISessionManager]:Terminating Session manager.
+UniSystemBI.exe: 00000EB8: 17:35:39 [TUniGUISessionManager]:Stopping Cache Eraser...
+UniSystemBI.exe: 00000EB8: 17:35:39 [TUniGUISessionManager]:Cache Eraser Stopped.
+UniSystemBI.exe: 00000EB8: 17:35:39 [TUniGUISessionManager]:Destroying Worker Threads.
+UniSystemBI.exe: 00000EB8: 17:35:40 [TUniGUISessionManager]:Session manager terminated.
+UniSystemBI.exe: 00000EB8: 17:35:40 [TUniServerModule]:Server Shutdown Completed.
+UniSystemBI.exe: 00000EB8: 17:35:40 []:<-------------------------------------------------------------->
+UniSystemBI.exe: 00000EB8: 17:35:40 [Terminated]:Exit Code: 0

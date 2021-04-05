@@ -1,0 +1,4 @@
+UniSystemBI.exe: 00001C98: 17:12:19 []:>--------------------------------------------------------------<
+UniSystemBI.exe: 00001C98: 17:12:19 [TUniServerModule]:Server First Init.
+UniSystemBI.exe: 00001C98: 17:12:21 [TUniServerModule]:Starting HTTP Server on Port: 8070...
+UniSystemBI.exe: 00001C98: 17:12:21 [InitWebServer]:EIdCouldNotBindSocket : Could not bind socket. : Addr: $007031C1

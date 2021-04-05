@@ -1,0 +1,29 @@
+SELECT 'Area de plantio '|| DESC_CULTURA AS Descrição,
+       QTD_HA                            AS Quantidade,
+       0                                 AS Valor,
+       1 ORDEM       
+  FROM VW_DADOS_COLHEITA DC
+ WHERE 1 = 1
+   AND TO_CHAR(DC.COD_SAFRA)               LIKE TO_CHAR(DECODE( NVL(:COD_SAFRA_STRING  ,'0') ,'0','%', :COD_SAFRA_STRING   )) --PARAM
+   &CULTURA --AND TRIM(SEQ_PLA_TIPO_CULT) IN ({CULTURA}) --MACRO  
+UNION
+SELECT
+       'Produtividade esperada em saca de '|| DESC_CULTURA||' (sc/há)' AS Descrição,
+       SC_HA                                                           AS Quantidade,
+       ROUND(SC_HA * QTD_HA,2)                                         AS Valor,
+       2 ORDEM       
+  FROM VW_DADOS_COLHEITA DC
+ WHERE 1 = 1
+   AND TO_CHAR(DC.COD_SAFRA)               LIKE TO_CHAR(DECODE( NVL(:COD_SAFRA_STRING  ,'0') ,'0','%', :COD_SAFRA_STRING   )) --PARAM
+   &CULTURA --AND TRIM(SEQ_PLA_TIPO_CULT) IN ({CULTURA}) --MACRO  
+UNION
+SELECT 'Preço saca '|| DESC_CULTURA AS Descrição,
+       0                            AS Quantidade,
+       PRECO                        AS Valor,
+       3 ORDEM       
+  FROM VW_DADOS_COLHEITA DC
+ WHERE 1 = 1
+   AND TO_CHAR(DC.COD_SAFRA)               LIKE TO_CHAR(DECODE( NVL(:COD_SAFRA_STRING  ,'0') ,'0','%', :COD_SAFRA_STRING   )) --PARAM
+   &CULTURA --AND TRIM(SEQ_PLA_TIPO_CULT) IN ({CULTURA}) --MACRO  
+    
+ORDER BY 4   

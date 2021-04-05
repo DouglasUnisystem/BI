@@ -1,0 +1,16 @@
+UniSystemBI (2).exe: 00001C68: 13:16:50 []:>--------------------------------------------------------------<
+UniSystemBI (2).exe: 00001C68: 13:16:50 [TUniServerModule]:Server First Init.
+UniSystemBI (2).exe: 00001C68: 13:16:58 [TUniServerModule]:Starting HTTP Server on Port: 8070...
+UniSystemBI (2).exe: 00001C68: 13:16:58 [InitWebServer]:EIdCouldNotBindSocket : Could not bind socket. : Addr: $007031C1
+UniSystemBI (2).exe: 00001C68: 13:17:09 [TUniServerModule]:Shutting Down Server.
+UniSystemBI (2).exe: 00001C68: 13:17:09 [TUniServerModule]:Erro ao deletar sessão: '[FireDAC][Phys][Ora] ORA-12154: TNS:não foi possível resolver o identificador de conexão especificado'
+UniSystemBI (2).exe: 00001C68: 13:17:09 [TUniServerModule]:Stopping HTTP Server.
+UniSystemBI (2).exe: 00001C68: 13:17:10 [TUniServerModule]:HTTP Server Stopped.
+UniSystemBI (2).exe: 00001C68: 13:17:10 [TUniGUISessionManager]:Terminating Session manager.
+UniSystemBI (2).exe: 00001C68: 13:17:10 [TUniGUISessionManager]:Stopping Cache Eraser...
+UniSystemBI (2).exe: 00001C68: 13:17:10 [TUniGUISessionManager]:Cache Eraser Stopped.
+UniSystemBI (2).exe: 00001C68: 13:17:10 [TUniGUISessionManager]:Destroying Worker Threads.
+UniSystemBI (2).exe: 00001C68: 13:17:10 [TUniGUISessionManager]:Session manager terminated.
+UniSystemBI (2).exe: 00001C68: 13:17:10 [TUniServerModule]:Server Shutdown Completed.
+UniSystemBI (2).exe: 00001C68: 13:17:10 []:<-------------------------------------------------------------->
+UniSystemBI (2).exe: 00001C68: 13:17:10 [Terminated]:Exit Code: 0

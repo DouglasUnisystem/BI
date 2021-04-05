@@ -1,0 +1,12 @@
+UniSystemBI21.exe: 00001F50: 07:42:36 []:>--------------------------------------------------------------<
+UniSystemBI21.exe: 00001F50: 07:42:36 [TUniServerModule]:Server First Init.
+UniSystemBI21.exe: 00001F50: 07:42:36 [TUniServerModule]:Global Cache Folder Erased. <12> Files deleted.
+UniSystemBI21.exe: 00001F50: 07:42:41 [TUniServerModule]:Starting HTTP Server on Port: 8070...
+UniSystemBI21.exe: 00001F50: 07:42:41 [TUniServerModule]:HTTP Server Started on Port: 8070
+UniSystemBI21.exe: 0000125C: 07:54:47 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI21.exe: 00001F14: 07:54:50 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI21.exe: 00001BCC: 07:56:33 [TUniThreadTimer.OnTimer]:EFDException : [FireDAC][Comp][Clnt]-512. Connection is not defined for [qNotificaUser]. Possible reason: Connection and ConnectionName property values are both empty : Addr: $00819B3C
+UniSystemBI21.exe: 000012A4: 11:31:44 [OnBrowserClose-10.1.1.14]:Exception : Erro ao deletar sessão: '[FireDAC][Phys][Ora] ORA-01013: o usuário solicitou o cancelamento da operação atual' : Addr: $00A99CD5
+UniSystemBI21.exe: 00001F78: 11:31:47 [Argument out of range-10.1.1.14]:EArgumentOutOfRangeException : Argument out of range : Addr: $004C28C6
+UniSystemBI21.exe: 00001F78: 11:31:48 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI21.exe: 00001F50: 11:32:53 [Exit]:Unexpected attempt to terminate server application with Exit Code: 0

@@ -1,0 +1,26 @@
+UniSystemBI2021.2.5.exe: 00000670: 09:44:21 []:>--------------------------------------------------------------<
+UniSystemBI2021.2.5.exe: 00000670: 09:44:21 [TUniServerModule]:Server First Init.
+UniSystemBI2021.2.5.exe: 00000670: 09:45:05 [TUniServerModule]:Starting HTTP Server on Port: 8070...
+UniSystemBI2021.2.5.exe: 00000670: 09:45:05 [TUniServerModule]:HTTP Server Started on Port: 8070
+UniSystemBI2021.2.5.exe: 00001C24: 09:45:18 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI2021.2.5.exe: 00001F3C: 09:45:20 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI2021.2.5.exe: 00001A84: 09:45:24 [TUniThreadTimer.OnTimer]:EFDException : [FireDAC][Comp][Clnt]-512. Connection is not defined for [qNotificaUser]. Possible reason: Connection and ConnectionName property values are both empty : Addr: $00819B3C
+UniSystemBI2021.2.5.exe: 00001CF8: 13:10:57 []:>--------------------------------------------------------------<
+UniSystemBI2021.2.5.exe: 00001CF8: 13:10:57 [TUniServerModule]:Server First Init.
+UniSystemBI2021.2.5.exe: 00001CF8: 13:10:57 [TUniServerModule]:Global Cache Folder Erased. <37> Files deleted.
+UniSystemBI2021.2.5.exe: 00001CF8: 13:10:59 [TUniServerModule]:Starting HTTP Server on Port: 8070...
+UniSystemBI2021.2.5.exe: 00001CF8: 13:11:00 [TUniServerModule]:HTTP Server Started on Port: 8070
+UniSystemBI2021.2.5.exe: 00001EDC: 13:11:59 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI2021.2.5.exe: 00001EE0: 13:12:02 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI2021.2.5.exe: 00001940: 13:12:13 [TUniThreadTimer.OnTimer]:EFDException : [FireDAC][Comp][Clnt]-512. Connection is not defined for [qNotificaUser]. Possible reason: Connection and ConnectionName property values are both empty : Addr: $00819B3C
+UniSystemBI2021.2.5.exe: 00001D10: 13:45:37 [Argument out of range-10.1.1.14]:EArgumentOutOfRangeException : Argument out of range : Addr: $004C28C6
+UniSystemBI2021.2.5.exe: 00001D10: 13:45:37 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI2021.2.5.exe: 00001958: 13:59:55 [10.1.1.14]:EUniSessionException : Invalid session or session Timeout. (Session not found: BFqZISCZoL107CA22D4 ) : Addr: $007D255A
+UniSystemBI2021.2.5.exe: 00001958: 13:59:55 [10.1.1.14]:EUniSessionException : Invalid session or session Timeout. (Session not found: BFqZISCZoL107CA22D4 ) : Addr: $007D255A
+UniSystemBI2021.2.5.exe: 00001958: 13:59:55 [10.1.1.14]:EUniSessionException : Invalid session or session Timeout. (Session not found: BFqZISCZoL107CA22D4 ) : Addr: $007D255A
+UniSystemBI2021.2.5.exe: 00001958: 13:59:55 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI2021.2.5.exe: 0000064C: 13:59:58 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI2021.2.5.exe: 0000188C: 14:00:06 [TUniThreadTimer.OnTimer]:EFDException : [FireDAC][Comp][Clnt]-512. Connection is not defined for [qNotificaUser]. Possible reason: Connection and ConnectionName property values are both empty : Addr: $00819B3C
+UniSystemBI2021.2.5.exe: 00001D10: 17:14:06 [Argument out of range-10.1.1.14]:EArgumentOutOfRangeException : Argument out of range : Addr: $004C28C6
+UniSystemBI2021.2.5.exe: 00001D10: 17:14:14 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI2021.2.5.exe: 00001CF8: 17:31:25 [Exit]:Unexpected attempt to terminate server application with Exit Code: 0

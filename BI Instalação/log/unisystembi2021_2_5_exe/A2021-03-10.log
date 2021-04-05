@@ -1,0 +1,12 @@
+UniSystemBI2021.2.5.exe: 00001964: 08:04:23 []:>--------------------------------------------------------------<
+UniSystemBI2021.2.5.exe: 00001964: 08:04:23 [TUniServerModule]:Server First Init.
+UniSystemBI2021.2.5.exe: 00001964: 08:04:23 [TUniServerModule]:Global Cache Folder Erased. <13> Files deleted.
+UniSystemBI2021.2.5.exe: 00001964: 08:04:30 [TUniServerModule]:Starting HTTP Server on Port: 8070...
+UniSystemBI2021.2.5.exe: 00001964: 08:04:30 [TUniServerModule]:HTTP Server Started on Port: 8070
+UniSystemBI2021.2.5.exe: 000017D8: 08:54:14 [10.1.1.235]:EUniSessionException : Invalid session or session Timeout. (Session not found: uchYJEEFxZ107D65AB8 ) : Addr: $007D255A
+UniSystemBI2021.2.5.exe: 00001464: 10:11:38 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI2021.2.5.exe: 00001BC0: 10:11:40 [HandleFileRequest[10.1.1.14]]:File not found: C:\Users\desesv\Desktop\Paineis\BI\files\js\BadgeText.js
+UniSystemBI2021.2.5.exe: 000009CC: 10:11:50 [TUniThreadTimer.OnTimer]:EFDException : [FireDAC][Comp][Clnt]-512. Connection is not defined for [qNotificaUser]. Possible reason: Connection and ConnectionName property values are both empty : Addr: $00819B3C
+UniSystemBI2021.2.5.exe: 00000938: 17:32:28 [Argument out of range-10.1.1.14]:EArgumentOutOfRangeException : Argument out of range : Addr: $004C28C6
+UniSystemBI2021.2.5.exe: 00000938: 17:32:34 [List index out of bounds (0)-10.1.1.14]:EListError : List index out of bounds (0) : Addr: $004C0598
+UniSystemBI2021.2.5.exe: 00001964: 17:33:42 [Exit]:Unexpected attempt to terminate server application with Exit Code: 0

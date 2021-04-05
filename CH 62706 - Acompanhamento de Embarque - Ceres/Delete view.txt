@@ -1,0 +1,11 @@
+drop view VW_ACOMPANHAMENTO_EMBARQUE;
+drop view VW_FRETE_ORCADO_REALIZADO;
+drop view VW_FRETE_ORCADO_REALIZADO_DETALHE;
+drop view VW_RESUMO_ORCADO_REALIZADO;
+
+Caso seja view materalizada
+
+drop view materialized VW_ACOMPANHAMENTO_EMBARQUE;
+drop view materialized VW_FRETE_ORCADO_REALIZADO;
+drop view materialized VW_FRETE_ORCADO_REALIZADO_DETALHE;
+drop view materialized VW_RESUMO_ORCADO_REALIZADO;

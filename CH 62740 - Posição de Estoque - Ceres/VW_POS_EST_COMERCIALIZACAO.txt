@@ -1,0 +1,167 @@
+CREATE MATERIALIZED VIEW VW_POS_EST_COMERCIALIZACAO REFRESH FORCE ON DEMAND START WITH SYSDATE NEXT SYSDATE + 5/24/60 AS
+SELECT A.NOME_EMPRESA,
+       A.APELIDO_SAFRA,
+       A.DESCRICAO_PRODUTO,
+       A.SIGLA_ARMAZEM,
+       A.DESC_ARMAZEM,
+       A.COD_EMPRESA,
+       A.COD_SAFRA,
+       A.COD_FILIAL,
+       A.SEQ_PLA_PRODUTO,
+       A.SEQ_PLA_ARMAZEM,
+       ROUND(DECODE(SUM(A.QTDE_COMPRA),0,1,SUM(A.QTDE_COMPRA)/SUM(A.VALOR_COMPRA)),2) AS MEDIA_COMPRA,
+       ROUND(DECODE(SUM(A.QTDE_VENDA),0,1,SUM(A.QTDE_VENDA)/SUM(A.VALOR_VENDA)),2) AS MEDIA_VENDA,
+       SUM(A.QTDE_COMPRA) AS TOT_QTDE_COMPRA,
+       SUM(A.QTDE_VENDA)  AS TOT_QTDE_VENDA,
+       SUM(A.QTDE_COMPRA - A.QTDE_VENDA)  AS SALDO_DISPONIVEL,
+       A.DESCRICAO_FILIAL AS FILIAL,
+       A.DATA
+  FROM (SELECT EC.SEQ_PLA_COMPRA    AS SEQ_PLANILHA,
+               ''                   AS SEQ_PLA_CONT_DES,
+               EP.NOME_EMPRESA      AS NOME_EMPRESA,
+               SF.APELIDO_SAFRA     AS APELIDO_SAFRA,
+               PD.DESCRICAO_PRODUTO AS DESCRICAO_PRODUTO,
+               AR.SIGLA_ARMAZEM     AS SIGLA_ARMAZEM,
+               AR.DESC_ARMAZEM      AS DESC_ARMAZEM,
+               NVL(EC.QUANTIDADE,0) AS QTDE_COMPRA,
+               NVL(EC.VALOR_TOTAL,0)AS VALOR_COMPRA,
+               0                    AS VALOR_VENDA,
+               0                    AS QTDE_VENDA,
+               EC.COD_EMPRESA,
+               EC.COD_SAFRA,
+               EC.COD_FILIAL,
+               EC.SEQ_PLA_PRODUTO,
+               EC.SEQ_PLA_ARMAZEM,
+               FL.DESCRICAO_FILIAL,
+               EC.DATA_COMPRA AS DATA
+          FROM AGRICOLA.EST_COMPRA_ANTECIPADA EC,
+               AGRICOLA.EMPRESAS              EP,
+               AGRICOLA.SAFRAS                SF,
+               AGRICOLA.PRODUTOS              PD,
+               AGRICOLA.ARMAZENS              AR,
+               AGRICOLA.FILIAIS               FL,
+               AGRICOLA.ARMAZEM_TIPO          TA
+         WHERE EC.COD_EMPRESA          = EP.COD_EMPRESA
+           AND EC.COD_SAFRA            = SF.COD_SAFRA
+           AND EC.SEQ_PLA_PRODUTO      = PD.SEQ_PLA_PRODUTO
+           AND EC.SEQ_PLA_ARMAZEM      = AR.SEQ_PLA_ARMAZEM
+           AND EC.COD_FILIAL           = FL.COD_FILIAL           (+)
+           AND EC.COD_EMPRESA          = FL.COD_EMPRESA          (+)
+           AND AR.SEQ_PLA_TIPO_ARMAZEM = TA.SEQ_PLA_TIPO_ARMAZEM (+)
+           AND NVL(EC.CANCELADO,'N')   = 'N'
+        UNION
+        SELECT CC.SEQ_PLA_CTR_COMPRA AS SEQ_PLANILHA,
+               CD.SEQ_PLA_CONT_DES   AS SEQ_PLA_CONT_DES,
+               EP.NOME_EMPRESA       AS NOME_EMPRESA,
+               SF.APELIDO_SAFRA      AS APELIDO_SAFRA,
+               PD.DESCRICAO_PRODUTO  AS DESCRICAO_PRODUTO,
+               AR.SIGLA_ARMAZEM      AS SIGLA_ARMAZEM,
+               AR.DESC_ARMAZEM       AS DESC_ARMAZEM,
+               NVL(CD.QUANTIDADE,0)  AS QTDE_COMPRA,
+               NVL(CC.VALOR_TOTAL,0) AS VALOR_COMPRA,
+               0                     AS VALOR_VENDA,
+               0                     AS QTDE_VENDA,
+               CC.COD_EMPRESA,
+               CC.COD_SAFRA,
+               CC.COD_FILIAL,
+               CC.SEQ_PLA_PRODUTO,
+               CD.SEQ_PLA_ARMAZEM,
+               FL.DESCRICAO_FILIAL,
+               CC.DATA_CONTRATO AS DATA
+          FROM AGRICOLA.COMPRA_CONTRATO         CC,
+               AGRICOLA.COMPRA_DESMEMBRAMENTO   CD,
+               AGRICOLA.EMPRESAS                EP,
+               AGRICOLA.SAFRAS                  SF,
+               AGRICOLA.PRODUTOS                PD,
+               AGRICOLA.ARMAZENS                AR,
+               AGRICOLA.FILIAIS                 FL,
+               AGRICOLA.PAR_GERAL               PG,
+               AGRICOLA.ARMAZEM_TIPO            TA,
+               (SELECT MI.*
+                  FROM AGRICOLA.MOEDAS_INDICES MI,
+                       (SELECT TRUNC(SYSDATE) AS DATA_IMPRESSAO
+                          FROM DUAL)  DT
+                WHERE MI.DATA_INDICE = DT.DATA_IMPRESSAO) MI,
+
+               (SELECT MA.SEQ_PLA_ORIGEM,
+                       PP.DATA_PGTO,
+                       MI.SEQ_PLA_MOEDA,
+                       MI.VALOR
+                  FROM AGRICOLA.PAGAR_PAGTOS   PP,
+                       AGRICOLA.MOEDAS_INDICES MI,
+                       (SELECT CP.SEQ_PLA_ORIGEM,
+                               MAX(PP.SEQ_PLA_PAGAR_LCTOS) AS SEQ_PLA_PAGAR_LCTOS
+                          FROM AGRICOLA.CONTAS_PAGAR CP,
+                               AGRICOLA.PAGAR_PAGTOS PP
+                         WHERE CP.SEQ_PLA_PAGAR      = PP.SEQ_PLA_PAGAR
+                           AND CP.FORM_LANCAMENTO    = 'dfmCtrCompra'
+                           AND NVL(CP.VALOR_PAGO,0) <> 0
+                           AND CP.SEQ_PLA_ORIGEM IS NOT NULL
+                         GROUP BY CP.SEQ_PLA_ORIGEM) MA
+                 WHERE PP.SEQ_PLA_PAGAR_LCTOS = MA.SEQ_PLA_PAGAR_LCTOS
+                   AND MI.DATA_INDICE         = PP.DATA_PGTO) DP
+         WHERE CC.SEQ_PLA_CTR_COMPRA   = CD.SEQ_PLA_CTR_COMPRA
+           AND CC.COD_EMPRESA          = EP.COD_EMPRESA
+           AND CC.COD_SAFRA            = SF.COD_SAFRA
+           AND CC.SEQ_PLA_PRODUTO      = PD.SEQ_PLA_PRODUTO
+           AND CD.SEQ_PLA_ARMAZEM      = AR.SEQ_PLA_ARMAZEM
+           AND CC.COD_FILIAL           = FL.COD_FILIAL           (+)
+           AND CC.COD_EMPRESA          = FL.COD_EMPRESA          (+)
+           AND CC.SEQ_PLA_MOEDA        = MI.SEQ_PLA_MOEDA        (+)
+           AND CC.SEQ_PLA_CTR_COMPRA   = DP.SEQ_PLA_ORIGEM       (+)
+           AND CC.SEQ_PLA_MOEDA        = DP.SEQ_PLA_MOEDA        (+)
+           AND AR.SEQ_PLA_TIPO_ARMAZEM = TA.SEQ_PLA_TIPO_ARMAZEM (+)
+           AND NVL(CC.CANCELADO,'N')   = 'N'
+        UNION
+        SELECT CS.SEQ_PLA_PED_VENDA AS SEQ_PLANILHA,
+               CD.SEQ_PLA_CONT_DES  AS SEQ_PLA_CONT_DES,
+               EP.NOME_EMPRESA      AS NOME_EMPRESA,
+               SF.APELIDO_SAFRA     AS APELIDO_SAFRA,
+               PD.DESCRICAO_PRODUTO AS DESCRICAO_PRODUTO,
+               AR.SIGLA_ARMAZEM     AS SIGLA_ARMAZEM,
+               AR.DESC_ARMAZEM      AS DESC_ARMAZEM,
+               0                    AS QTDE_COMPRA,
+               0                    AS VALOR_COMPRA,
+               NVL(CS.VALOR_TOTAL,0)AS VALOR_VENDA,
+               NVL(CD.QUANTIDADE,0) AS QTDE_VENDA,
+               CS.COD_EMPRESA,
+               CS.COD_SAFRA,
+               CS.COD_FILIAL,
+               CS.SEQ_PLA_PRODUTO,
+               CD.SEQ_PLA_ARMAZEM,
+               FL.DESCRICAO_FILIAL,
+               CS.DATA_CONTRATO AS DATA
+          FROM AGRICOLA.CONTRATO_SAIDA          CS,
+               AGRICOLA.CONTRATO_DESMEMBRAMENTO CD,
+               AGRICOLA.EMPRESAS                EP,
+               AGRICOLA.SAFRAS                  SF,
+               AGRICOLA.PRODUTOS                PD,
+               AGRICOLA.ARMAZENS                AR,
+               AGRICOLA.FILIAIS                 FL,
+               AGRICOLA.ARMAZEM_TIPO            TA
+         WHERE CS.SEQ_PLA_PED_VENDA    = CD.SEQ_PLA_PED_VENDA
+           AND CS.COD_EMPRESA          = EP.COD_EMPRESA
+           AND CS.COD_SAFRA            = SF.COD_SAFRA
+           AND CS.SEQ_PLA_PRODUTO      = PD.SEQ_PLA_PRODUTO
+           AND CD.SEQ_PLA_ARMAZEM      = AR.SEQ_PLA_ARMAZEM
+           AND CS.COD_FILIAL           = FL.COD_FILIAL           (+)
+           AND CS.COD_EMPRESA          = FL.COD_EMPRESA          (+)
+           AND AR.SEQ_PLA_TIPO_ARMAZEM = TA.SEQ_PLA_TIPO_ARMAZEM (+)
+           AND NVL(CS.CANCELADO,'N')   = 'N'
+       ) A
+ GROUP BY A.NOME_EMPRESA,
+          A.APELIDO_SAFRA,
+          A.DESCRICAO_PRODUTO,
+          A.SIGLA_ARMAZEM,
+          A.COD_EMPRESA,
+          A.COD_SAFRA,
+          A.COD_FILIAL,
+          A.SEQ_PLA_PRODUTO,
+          A.SEQ_PLA_ARMAZEM,
+          A.DESCRICAO_FILIAL,
+          A.DESC_ARMAZEM,
+          A.DATA
+ ORDER BY A.APELIDO_SAFRA,
+          A.NOME_EMPRESA,
+          A.DESCRICAO_PRODUTO,
+          A.SIGLA_ARMAZEM;

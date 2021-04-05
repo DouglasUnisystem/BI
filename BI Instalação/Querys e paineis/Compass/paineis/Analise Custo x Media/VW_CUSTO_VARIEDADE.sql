@@ -1,0 +1,393 @@
+CREATE MATERIALIZED VIEW VW_CUSTO_VARIEDADE
+REFRESH FORCE ON DEMAND
+START WITH SYSDATE  NEXT SYSDATE + 5/24/60 
+AS
+SELECT
+  Y.COD_SAFRA,
+  Y.DESCRICAO_SAFRA,
+  Y.COD_EMPRESA,
+  Y.NOME_EMPRESA,
+  Y.SIGLA_EMPRESA,
+  Y.SEQ_PLA_AGLOMERADO,
+  Y.DESC_AGLOMERADO,
+  Y.SEQ_PLA_FAZENDA,
+  Y.DESC_FAZENDA,
+  Y.SIGLA_FAZENDA,
+  Y.SEQ_PLA_TALHAO,
+  Y.NUMERO_TALHAO,
+  Y.DESC_TALHAO,
+  Y.SEQ_PLA_TIPO_CULT,
+  Y.DESC_CULTURA,
+  Y.SEQ_PLA_VARIEDADE,
+  Y.DESC_VARIEDADE,
+  --VALOR_TOTAL,
+  --VALOR_TOTAL_SEM_VARIEDADE,
+  --MAX(QHT.QTDE_HA_TALHAO) AS QTDE_HA_TALHAO,
+  --MAX(QHV.QTDE_HA_VARIEDADE) AS QTDE_HA_VARIEDADE,
+
+  --CASE WHEN MAX(QHV.QTDE_HA_VARIEDADE)= 0 OR MAX(QHT.QTDE_HA_TALHAO) = 0 THEN 0 ELSE
+  --ROUND((( MAX(QHV.QTDE_HA_VARIEDADE) / MAX(QHT.QTDE_HA_TALHAO)) * 100) ,2) END AS PERC_HA,
+  SUM(Y.CUSTO_HA) AS CUSTO_HA,
+  SUM(Y.VALOR_COM_VARIEDADE) AS VALOR_COM_VARIEDADE,
+  SUM(Y.VALOR_SEM_VARIEDADE) AS VALOR_SEM_VARIEDADE,
+  SUM(Y.VALOR_TOTAL_GES_CALC) AS VALOR_TOTAL_GES_CALC,
+  SUM(Y.VALOR_COM_VARIEDADE)+SUM(Y.VALOR_SEM_VARIEDADE)+SUM(Y.VALOR_TOTAL_GES_CALC) AS CUSTO_TOTAL
+  --CASE WHEN MAX(QHV.QTDE_HA_VARIEDADE) = 0 OR MAX(QHT.QTDE_HA_TALHAO) = 0 OR (VALOR_TOTAL_SEM_VARIEDADE) = 0 THEN 0 ELSE
+  --ROUND((VALOR_TOTAL_SEM_VARIEDADE/100) * (( MAX(QHV.QTDE_HA_VARIEDADE) / MAX(QHT.QTDE_HA_TALHAO) ) * 100),2) END AS RATEIO_VLR_SEM_VARIED,
+
+  --CASE WHEN MAX(QHV.QTDE_HA_VARIEDADE) = 0 OR MAX(QHT.QTDE_HA_TALHAO) = 0 OR SUM(VALOR_TOTAL) = 0 THEN 0 ELSE
+  --ROUND(VALOR_TOTAL + (VALOR_TOTAL_SEM_VARIEDADE/100) * (( MAX(QHV.QTDE_HA_VARIEDADE) / MAX(QHT.QTDE_HA_TALHAO) ) * 100),2) END AS CUSTO_TOTAL,
+
+  --CASE WHEN MAX(QHV.QTDE_HA_VARIEDADE) = 0 OR MAX(QHT.QTDE_HA_TALHAO) = 0 OR SUM(VALOR_TOTAL) = 0 THEN 0 ELSE
+  --ROUND( (VALOR_TOTAL + (VALOR_TOTAL_SEM_VARIEDADE/100) * (( MAX(QHV.QTDE_HA_VARIEDADE) / MAX(QHT.QTDE_HA_TALHAO) ) * 100)) / MAX(QHV.QTDE_HA_VARIEDADE) ,2) END AS CUSTO_HA
+
+FROM (SELECT SF.COD_SAFRA,
+             SF.DESCRICAO_SAFRA,
+             EM.COD_EMPRESA,
+             EM.NOME_EMPRESA,
+             EM.SIGLA_EMPRESA,
+             AG.SEQ_PLA_AGLOMERADO,
+             AG.DESC_AGLOMERADO,
+             FA.SEQ_PLA_FAZENDA,
+             FA.SIGLA_FAZENDA,
+             FA.DESC_FAZENDA,
+             TA.SEQ_PLA_TALHAO,
+             ta.numero_talhao,
+             TA.DESC_TALHAO,
+             TC.SEQ_PLA_TIPO_CULT,
+             TC.DESC_CULTURA,
+             VAA.SEQ_PLA_VARIEDADE,
+             VAA.DESC_VARIEDADE,
+             SUM((ROUND(case when esi.quantidade <> 0
+              then (NVL(ESI.CUSTO_TOTAL,0)/NVL(ESI.QUANTIDADE,0) * NVL(LTA.QUANTIDADE,0))
+              else 0 end /6 * (QTH.QTDE_HA_TALHAO_VAR/QTDE_TOTAL_SAFRA) * decode(SG.DESC_SUB_GRUPO,'GESSO',DECODE(QTH.DESC_CULTURA,'SOJA',0.3334,0.6666),1),2))/QTH.QTDE_HA_TALHAO_VAR) AS CUSTO_HA,
+             0 AS VALOR_COM_VARIEDADE,
+             0 AS VALOR_SEM_VARIEDADE,
+             SUM((ROUND(case when esi.quantidade <> 0
+              then (NVL(ESI.CUSTO_TOTAL,0)/NVL(ESI.QUANTIDADE,0) * NVL(LTA.QUANTIDADE,0))
+              else 0 end /6 * (QTH.QTDE_HA_TALHAO_VAR/QTDE_TOTAL_SAFRA) * decode(SG.DESC_SUB_GRUPO,'GESSO',DECODE(QTH.DESC_CULTURA,'SOJA',0.3334,0.6666),1),2)))  AS VALOR_TOTAL_GES_CALC
+      FROM AGNEW.ORDEM_SERVICO         OS,
+           AGNEW.ORDEM_SERV_TALHOES    OST,
+           AGNEW.VINCULA_TAREFA_GRUPO  VTG,
+           AGNEW.TAREFAS               TAR,
+           AGNEW.TALHOES_SAFRA         TS,
+           AGNEW.GRUPO_TAREFAS         GT,
+           AGNEW.FUNCIONARIOS_FAZENDA  FF,
+           AGNEW.FUNCIONARIOS_FAZENDA FF1,
+           AGNEW.TALHOES_SAFRA        TSA,
+           AGNEW.UBS_VARIEDADES       VAA,
+           AGNEW.LIGA_TALHAO_APLICACAO LTA,
+           AGNEW.EST_SAIDAS_ITENS      ESI,
+           AGNEW.EST_SAIDAS            ES,
+           AGNEW.SAFRAS               SA,
+           AGNEW.EMPRESAS             EM,
+           AGNEW.FILIAIS              FI,
+           AGNEW.AGLOMERADOS          AG,
+           AGNEW.REGIOES_GERENCIAIS   RE,
+           AGNEW.FAZENDAS             FA,
+           AGNEW.TALHOES              TA,
+           AGNEW.TIPO_CULTURA         TC,
+           AGNEW.PRODUTOS             PR,
+           AGNEW.SUB_GRUPO            SG,
+           AGNEW.GRUPO                GR,
+           AGNEW.FAMILIAS             FAM,
+           AGNEW.UNIDADE_PRODUTO      UN,
+           AGNEW.PRODUTOS_INSUMOS     PRI,
+           AGNEW.VAZAO                VA,
+           AGNEW.FINALIDADE_ORDEM_SERVICO FN,
+           (SELECT (SUM(T.QTDE_HA_TALHAO_VAR) OVER (PARTITION BY T.COD_SAFRA, T.SEQ_PLA_TIPO_CULT, T.SEQ_PLA_TALHAO ORDER BY T.COD_SAFRA, T.SEQ_PLA_TIPO_CULT, T.SEQ_PLA_TALHAO)) AS QTDE_TOTAL_SAFRA,
+                    T.COD_SAFRA,
+                    T.SEQ_PLA_TIPO_CULT,
+                    T.SEQ_PLA_FAZENDA,
+                    T.SEQ_PLA_TALHAO,
+                    T.DESC_CULTURA,
+                    T.SEQ_PLA_VARIEDADE,
+                    T.QTDE_HA_TALHAO_VAR
+              FROM (SELECT TSX.COD_SAFRA,
+                          TSX.SEQ_PLA_TIPO_CULT,
+                          TAX.SEQ_PLA_FAZENDA,
+                          TSX.SEQ_PLA_TALHAO,
+                          TSX.SEQ_PLA_VARIEDADE,
+                          TC.DESC_CULTURA,
+                          SUM(TSX.QTDE_HA) AS QTDE_HA_TALHAO_VAR
+                     FROM AGNEW.TALHOES_SAFRA TSX,
+                          AGNEW.TALHOES TAX,
+                          AGNEW.TIPO_CULTURA TC
+                    WHERE TSX.SEQ_PLA_TALHAO = TAX.SEQ_PLA_TALHAO
+                      AND TSX.SEQ_PLA_TIPO_CULT = TC.SEQ_PLA_TIPO_CULT
+                    GROUP BY TSX.COD_SAFRA,
+                          TSX.SEQ_PLA_TIPO_CULT,
+                          TAX.SEQ_PLA_FAZENDA,
+                          TSX.SEQ_PLA_TALHAO,
+                          TC.DESC_CULTURA,
+                          TSX.SEQ_PLA_VARIEDADE) T
+             WHERE T.QTDE_HA_TALHAO_VAR > 0)  QTH,
+           (SELECT esl.seq_pla_sai_item,
+                     AGNEW.WM_CONCAT(UL.NR_LOTE) as lote
+                FROM AGNEW.EST_SAIDAS_LOTES ESL, AGNEW.UBS_LOTES UL
+               WHERE ESL.SEQ_PLA_LOTES = UL.SEQ_PLA_LOTES
+               GROUP BY ESL.SEQ_PLA_SAI_ITEM
+               union
+              SELECT esl.seq_pla_sai_item,
+                     AGNEW.WM_CONCAT(pl.lote) as lote
+                FROM AGNEW.EST_SAIDAS_LOTES ESL, AGNEW.produto_lotes pl
+               WHERE ESL.SEQ_PLA_LOTE_PRODUTO = pl.seq_pla_lote_produto
+               GROUP BY ESL.SEQ_PLA_SAI_ITEM) lt,
+            (SELECT ROWNUM AS ORDEM, TT.*
+               FROM (SELECT SA.*
+                       FROM AGNEW.SAFRAS SA
+                      ORDER BY SA.APELIDO_SAFRA) TT) S,
+            (SELECT ROWNUM AS ORDEM, TT.*
+               FROM (SELECT SA.*
+                       FROM AGNEW.SAFRAS SA
+                      ORDER BY SA.APELIDO_SAFRA) TT) SF
+      WHERE OS.SEQ_PLA_ORDEM          = OST.SEQ_PLA_ORDEM
+        AND OST.SEQ_PLA_ORDEM_TALHOES = TS.SEQ_PLA_ORDEM_PLANTIO(+)
+        --AND OS.COD_SAFRA              = SA.COD_SAFRA
+        AND OS.SEQ_PLA_FAZENDA        = FA.SEQ_PLA_FAZENDA
+        AND OS.SEQ_PLA_VINC_TAREFA    = VTG.SEQ_PLA_VINC_TAREFA
+        AND OS.SEQ_PLA_FUNCIONARIO    = FF.SEQ_PLA_FUNCIONARIO(+)
+        AND OST.SEQ_PLA_TALHAO_SAFRA = TSA.SEQ_PLA_TALHAO_SAFRA(+)
+        --AND TSA.SEQ_PLA_VARIEDADE  = VAA.SEQ_PLA_VARIEDADE(+)
+        AND OS.SEQ_PLA_FINALIDADE = FN.SEQ_PLA_FINALIDADE(+)
+        AND VTG.SEQ_PLA_TAREFA        = TAR.SEQ_PLA_TAREFA
+        AND VTG.SEQ_PLA_GRUPO_TAREFA  = GT.SEQ_PLA_GRUPO_TAREFA
+        AND OST.SEQ_PLA_TALHAO        = TA.SEQ_PLA_TALHAO
+        AND FA.SEQ_PLA_AGLOMERADO     = AG.SEQ_PLA_AGLOMERADO
+        AND AG.COD_EMPRESA            = EM.COD_EMPRESA
+        AND AG.COD_EMPRESA            = FI.COD_EMPRESA
+        AND AG.COD_FILIAL             = FI.COD_FILIAL
+        AND AG.SEQ_PLA_REGIAO         = RE.SEQ_PLA_REGIAO(+)
+        --AND OS.SEQ_PLA_TIPO_CULT      = TC.SEQ_PLA_TIPO_CULT
+        AND OST.SEQ_PLA_ORDEM_TALHOES = LTA.SEQ_PLA_ORDEM_TALHAO
+        AND LTA.SEQ_PLA_SAI_ITEM      = ESI.SEQ_PLA_SAI_ITEM
+        AND ESI.SEQ_PLA_SAIDA         = ES.SEQ_PLA_SAIDA
+        AND ESI.SEQ_PLA_PRODUTO       = PR.SEQ_PLA_PRODUTO
+        AND PR.SEQ_PLA_SUB_GRUPO      = SG.SEQ_PLA_SUB_GRUPO
+        AND SG.SEQ_PLA_GRUPO          = GR.SEQ_PLA_GRUPO
+        AND GR.SEQ_PLA_FAMILIA        = FAM.SEQ_PLA_FAMILIA
+        AND PR.SEQ_PLA_UNIDADE        = UN.SEQ_PLA_UNIDADE
+        and OS.Seq_Pla_Executor       = ff1.seq_pla_funcionario(+)
+        AND PR.SEQ_PLA_PRODUTO        = PRI.SEQ_PLA_PRODUTO(+)
+        AND OS.SEQ_PLA_VAZAO = VA.SEQ_PLA_VAZAO(+)
+        AND ESI.SEQ_PLA_SAI_ITEM = LT.SEQ_PLA_SAI_ITEM(+)
+        AND SF.COD_SAFRA      = QTH.COD_SAFRA
+        AND TA.SEQ_PLA_TALHAO = QTH.SEQ_PLA_TALHAO
+        AND QTH.SEQ_PLA_VARIEDADE = VAA.SEQ_PLA_VARIEDADE
+        AND QTH.SEQ_PLA_TIPO_CULT = TC.SEQ_PLA_TIPO_CULT
+        AND QTH.COD_SAFRA = SF.COD_SAFRA
+        AND OS.COD_SAFRA = SA.COD_SAFRA
+        AND SA.COD_SAFRA = S.COD_SAFRA
+        AND SF.ORDEM BETWEEN S.ORDEM AND S.ORDEM+5
+        AND OST.EFETIVO = 'S'
+        AND OS.DATA_ENCERRAMENTO IS NOT NULL
+        AND SG.DESC_SUB_GRUPO IN ('GESSO','CALCARIO')
+       GROUP BY SF.COD_SAFRA,
+             SF.DESCRICAO_SAFRA,
+             EM.COD_EMPRESA,
+             EM.NOME_EMPRESA,
+             EM.SIGLA_EMPRESA,
+             AG.SEQ_PLA_AGLOMERADO,
+             AG.DESC_AGLOMERADO,
+             FA.SEQ_PLA_FAZENDA,
+             FA.DESC_FAZENDA,
+             TA.SEQ_PLA_TALHAO,
+             ta.numero_talhao,
+             TA.DESC_TALHAO,
+             TC.SEQ_PLA_TIPO_CULT,
+             TC.DESC_CULTURA,
+             VAA.SEQ_PLA_VARIEDADE,
+             VAA.DESC_VARIEDADE,
+             FA.SIGLA_FAZENDA
+      UNION ALL
+      SELECT SA.COD_SAFRA,
+             SA.DESCRICAO_SAFRA,
+             EM.COD_EMPRESA,
+             EM.NOME_EMPRESA,
+             EM.SIGLA_EMPRESA,
+             AG.SEQ_PLA_AGLOMERADO,
+             AG.DESC_AGLOMERADO,
+             FA.SEQ_PLA_FAZENDA,
+             FA.SIGLA_FAZENDA,
+             FA.DESC_FAZENDA,
+             TA.SEQ_PLA_TALHAO,
+             ta.numero_talhao,
+             TA.DESC_TALHAO,
+             TC.SEQ_PLA_TIPO_CULT,
+             TC.DESC_CULTURA,
+             VAA.SEQ_PLA_VARIEDADE,
+             VAA.DESC_VARIEDADE,
+             ROUND(SUM(DECODE(NVL(ESI.QUANTIDADE,0),0,0,NVL(CASE WHEN (CASE WHEN TSA.SEQ_PLA_VARIEDADE IS NULL THEN
+                                                         (SELECT AGNEW.WM_CONCAT(DISTINCT V.SEQ_PLA_VARIEDADE)
+                                                            FROM AGNEW.RECEITUARIO_SEMENTE S, AGNEW.UBS_VARIEDADES V
+                                                           WHERE S.SEQ_PLA_ORDEM = OS.SEQ_PLA_ORDEM
+                                                             AND S.SEQ_PLA_VARIEDADE = V.SEQ_PLA_VARIEDADE)
+                                                    ELSE VAA.SEQ_PLA_VARIEDADE END) IS NULL THEN (ESI.CUSTO_TOTAL/NVL(ESI.QUANTIDADE,0)* NVL(LTA.QUANTIDADE,0))*(TSS.QTDE_HA_TALHAO_VAR/TSS.QTDE_TOTAL_SAFRA) END,0) +
+             NVL(CASE WHEN (CASE WHEN TSA.SEQ_PLA_VARIEDADE IS NULL THEN
+                       (SELECT AGNEW.WM_CONCAT(DISTINCT V.SEQ_PLA_VARIEDADE)
+                          FROM AGNEW.RECEITUARIO_SEMENTE S, AGNEW.UBS_VARIEDADES V
+                         WHERE S.SEQ_PLA_ORDEM = OS.SEQ_PLA_ORDEM
+                           AND S.SEQ_PLA_VARIEDADE = V.SEQ_PLA_VARIEDADE)
+                  ELSE VAA.SEQ_PLA_VARIEDADE END) IS not  NULL THEN (ESI.CUSTO_TOTAL/NVL(ESI.QUANTIDADE,0)* NVL(LTA.QUANTIDADE,0)) END,0))/TSS.QTDE_HA_TALHAO_VAR),2)  AS CUSTO_HA,
+
+             ROUND(SUM(DECODE(NVL(ESI.QUANTIDADE,0),0,0,NVL(CASE WHEN (CASE WHEN TSA.SEQ_PLA_VARIEDADE IS NULL THEN
+                       (SELECT AGNEW.WM_CONCAT(DISTINCT V.SEQ_PLA_VARIEDADE)
+                          FROM AGNEW.RECEITUARIO_SEMENTE S, AGNEW.UBS_VARIEDADES V
+                         WHERE S.SEQ_PLA_ORDEM = OS.SEQ_PLA_ORDEM
+                           AND S.SEQ_PLA_VARIEDADE = V.SEQ_PLA_VARIEDADE)
+                  ELSE VAA.SEQ_PLA_VARIEDADE END) IS not NULL THEN (ESI.CUSTO_TOTAL/NVL(ESI.QUANTIDADE,0)* NVL(LTA.QUANTIDADE,0)) END,0))),2) AS VALOR_COM_VARIEDADE,
+
+             ROUND(SUM(DECODE(NVL(ESI.QUANTIDADE,0),0,0,NVL(CASE WHEN (CASE WHEN TSA.SEQ_PLA_VARIEDADE IS NULL THEN
+                       (SELECT AGNEW.WM_CONCAT(DISTINCT V.SEQ_PLA_VARIEDADE)
+                          FROM AGNEW.RECEITUARIO_SEMENTE S, AGNEW.UBS_VARIEDADES V
+                         WHERE S.SEQ_PLA_ORDEM = OS.SEQ_PLA_ORDEM
+                           AND S.SEQ_PLA_VARIEDADE = V.SEQ_PLA_VARIEDADE)
+                  ELSE VAA.SEQ_PLA_VARIEDADE END) IS NULL THEN (ESI.CUSTO_TOTAL/NVL(ESI.QUANTIDADE,0)* NVL(LTA.QUANTIDADE,0))*(TSS.QTDE_HA_TALHAO_VAR/TSS.QTDE_TOTAL_SAFRA) END,0))),2) AS VALOR_SEM_VARIEDADE,
+             0 AS VALOR_TOTAL_GES_CALC
+      FROM AGNEW.ORDEM_SERVICO         OS,
+           AGNEW.ORDEM_SERV_TALHOES    OST,
+           AGNEW.VINCULA_TAREFA_GRUPO  VTG,
+           AGNEW.TAREFAS               TAR,
+           AGNEW.TALHOES_SAFRA         TS,
+           AGNEW.GRUPO_TAREFAS         GT,
+           AGNEW.FUNCIONARIOS_FAZENDA  FF,
+           AGNEW.FUNCIONARIOS_FAZENDA FF1,
+           AGNEW.TALHOES_SAFRA        TSA,
+           AGNEW.UBS_VARIEDADES       VAA,
+           AGNEW.LIGA_TALHAO_APLICACAO LTA,
+           AGNEW.EST_SAIDAS_ITENS      ESI,
+           AGNEW.EST_SAIDAS            ES,
+           AGNEW.SAFRAS               SA,
+           AGNEW.EMPRESAS             EM,
+           AGNEW.FILIAIS              FI,
+           AGNEW.AGLOMERADOS          AG,
+           AGNEW.REGIOES_GERENCIAIS   RE,
+           AGNEW.FAZENDAS             FA,
+           AGNEW.TALHOES              TA,
+           AGNEW.TIPO_CULTURA         TC,
+           AGNEW.PRODUTOS             PR,
+           AGNEW.SUB_GRUPO            SG,
+           AGNEW.GRUPO                GR,
+           AGNEW.FAMILIAS             FAM,
+           AGNEW.UNIDADE_PRODUTO      UN,
+           AGNEW.PRODUTOS_INSUMOS     PRI,
+           AGNEW.VAZAO                VA,
+           AGNEW.FINALIDADE_ORDEM_SERVICO FN,
+           (SELECT AGNEW.WM_CONCAT(DISTINCT V.SEQ_PLA_VARIEDADE) AS SEQ_PLA_VARIEDADE, S.SEQ_PLA_ORDEM
+                   FROM AGNEW.RECEITUARIO_SEMENTE S, AGNEW.UBS_VARIEDADES V
+                  WHERE S.SEQ_PLA_VARIEDADE = V.SEQ_PLA_VARIEDADE
+                   GROUP BY S.SEQ_PLA_ORDEM) VARP,
+           (SELECT esl.seq_pla_sai_item,
+                     AGNEW.WM_CONCAT(UL.NR_LOTE) as lote
+                FROM AGNEW.EST_SAIDAS_LOTES ESL, AGNEW.UBS_LOTES UL
+               WHERE ESL.SEQ_PLA_LOTES = UL.SEQ_PLA_LOTES
+               GROUP BY ESL.SEQ_PLA_SAI_ITEM
+               union
+              SELECT esl.seq_pla_sai_item,
+                     AGNEW.WM_CONCAT(pl.lote) as lote
+                FROM AGNEW.EST_SAIDAS_LOTES ESL, AGNEW.produto_lotes pl
+               WHERE ESL.SEQ_PLA_LOTE_PRODUTO = pl.seq_pla_lote_produto
+               GROUP BY ESL.SEQ_PLA_SAI_ITEM) lt,
+            (SELECT (SUM(T.QTDE_HA_TALHAO_VAR) OVER (PARTITION BY T.COD_SAFRA, T.SEQ_PLA_TIPO_CULT, T.SEQ_PLA_TALHAO ORDER BY T.COD_SAFRA, T.SEQ_PLA_TIPO_CULT, T.SEQ_PLA_TALHAO)) AS QTDE_TOTAL_SAFRA,
+                    T.COD_SAFRA,
+                            T.SEQ_PLA_TIPO_CULT,
+                            T.SEQ_PLA_FAZENDA,
+                            T.SEQ_PLA_TALHAO,
+                            T.SEQ_PLA_VARIEDADE,
+                            T.QTDE_HA_TALHAO_VAR
+               FROM (SELECT TSX.COD_SAFRA,
+                            TSX.SEQ_PLA_TIPO_CULT,
+                            TAX.SEQ_PLA_FAZENDA,
+                            TSX.SEQ_PLA_TALHAO,
+                            TSX.SEQ_PLA_VARIEDADE,
+                            SUM(TSX.QTDE_HA) AS QTDE_HA_TALHAO_VAR
+                       FROM AGNEW.TALHOES_SAFRA TSX,
+                            AGNEW.TALHOES TAX
+                      WHERE TSX.SEQ_PLA_TALHAO = TAX.SEQ_PLA_TALHAO
+                      GROUP BY TSX.COD_SAFRA,
+                            TSX.SEQ_PLA_TIPO_CULT,
+                            TAX.SEQ_PLA_FAZENDA,
+                            TSX.SEQ_PLA_TALHAO,
+                            TSX.SEQ_PLA_VARIEDADE) T
+              WHERE T.QTDE_HA_TALHAO_VAR > 0) TSS
+      WHERE OS.SEQ_PLA_ORDEM          = OST.SEQ_PLA_ORDEM
+        AND OST.SEQ_PLA_ORDEM_TALHOES = TS.SEQ_PLA_ORDEM_PLANTIO(+)
+        AND OS.SEQ_PLA_ORDEM          = VARP.SEQ_PLA_ORDEM(+)
+        AND OS.COD_SAFRA              = SA.COD_SAFRA
+        AND OS.SEQ_PLA_FAZENDA        = FA.SEQ_PLA_FAZENDA
+        AND OS.SEQ_PLA_VINC_TAREFA    = VTG.SEQ_PLA_VINC_TAREFA
+        AND OS.SEQ_PLA_FUNCIONARIO    = FF.SEQ_PLA_FUNCIONARIO(+)
+        AND OST.SEQ_PLA_TALHAO_SAFRA  = TSA.SEQ_PLA_TALHAO_SAFRA(+)
+        AND OS.SEQ_PLA_FINALIDADE     = FN.SEQ_PLA_FINALIDADE(+)
+        AND VTG.SEQ_PLA_TAREFA        = TAR.SEQ_PLA_TAREFA
+        AND VTG.SEQ_PLA_GRUPO_TAREFA  = GT.SEQ_PLA_GRUPO_TAREFA
+        AND OST.SEQ_PLA_TALHAO        = TA.SEQ_PLA_TALHAO
+        AND FA.SEQ_PLA_AGLOMERADO     = AG.SEQ_PLA_AGLOMERADO
+        AND AG.COD_EMPRESA            = EM.COD_EMPRESA
+        AND AG.COD_EMPRESA            = FI.COD_EMPRESA
+        AND AG.COD_FILIAL             = FI.COD_FILIAL
+        AND AG.SEQ_PLA_REGIAO         = RE.SEQ_PLA_REGIAO(+)
+        AND OS.SEQ_PLA_TIPO_CULT      = TC.SEQ_PLA_TIPO_CULT
+        AND OST.SEQ_PLA_ORDEM_TALHOES = LTA.SEQ_PLA_ORDEM_TALHAO
+        AND LTA.SEQ_PLA_SAI_ITEM      = ESI.SEQ_PLA_SAI_ITEM
+        AND ESI.SEQ_PLA_SAIDA         = ES.SEQ_PLA_SAIDA
+        AND ESI.SEQ_PLA_PRODUTO       = PR.SEQ_PLA_PRODUTO
+        AND PR.SEQ_PLA_SUB_GRUPO      = SG.SEQ_PLA_SUB_GRUPO
+        AND SG.SEQ_PLA_GRUPO          = GR.SEQ_PLA_GRUPO
+        AND GR.SEQ_PLA_FAMILIA        = FAM.SEQ_PLA_FAMILIA
+        AND PR.SEQ_PLA_UNIDADE        = UN.SEQ_PLA_UNIDADE
+        and OS.Seq_Pla_Executor       = ff1.seq_pla_funcionario (+)
+        AND PR.SEQ_PLA_PRODUTO        = PRI.SEQ_PLA_PRODUTO(+)
+        AND OS.SEQ_PLA_VAZAO = VA.SEQ_PLA_VAZAO(+)
+        AND ESI.SEQ_PLA_SAI_ITEM = LT.SEQ_PLA_SAI_ITEM(+)
+        and tss.cod_safra        = os.cod_safra
+        and tss.seq_pla_talhao   = ost.seq_pla_talhao
+        AND TSS.SEQ_PLA_TIPO_CULT=OS.SEQ_PLA_TIPO_CULT
+        AND TSS.SEQ_PLA_VARIEDADE = NVL(CASE WHEN TSA.SEQ_PLA_VARIEDADE IS NULL THEN
+                                             (SELECT AGNEW.WM_CONCAT(DISTINCT V.SEQ_PLA_VARIEDADE)
+                                                   FROM AGNEW.RECEITUARIO_SEMENTE S, AGNEW.UBS_VARIEDADES V
+                                                  WHERE S.SEQ_PLA_ORDEM = OS.SEQ_PLA_ORDEM
+                                                    AND S.SEQ_PLA_VARIEDADE = V.SEQ_PLA_VARIEDADE)
+                                              ELSE
+                                                TSA.SEQ_PLA_VARIEDADE
+                                            END,TSS.SEQ_PLA_VARIEDADE)
+        and TSS.SEQ_PLA_VARIEDADE = vaa.seq_pla_varIedade
+        AND OST.EFETIVO = 'S'
+        AND OS.DATA_ENCERRAMENTO IS NOT NULL
+        AND SG.DESC_SUB_GRUPO NOT IN ('GESSO','CALCARIO')
+      GROUP BY SA.COD_SAFRA,
+             SA.DESCRICAO_SAFRA,
+             EM.COD_EMPRESA,
+             EM.NOME_EMPRESA,
+             EM.SIGLA_EMPRESA,
+             AG.SEQ_PLA_AGLOMERADO,
+             AG.DESC_AGLOMERADO,
+             FA.SEQ_PLA_FAZENDA,
+             FA.DESC_FAZENDA,
+             TA.SEQ_PLA_TALHAO,
+             ta.numero_talhao,
+             TA.DESC_TALHAO,
+             TC.SEQ_PLA_TIPO_CULT,
+             TC.DESC_CULTURA,
+             VAA.SEQ_PLA_VARIEDADE,
+             VAA.DESC_VARIEDADE,
+             FA.SIGLA_FAZENDA) Y
+     --    WHERE Y.SEQ_PLA_TALHAO = '   1778901'
+
+GROUP BY Y.COD_SAFRA,
+  Y.DESCRICAO_SAFRA,
+  Y.COD_EMPRESA,
+  Y.NOME_EMPRESA,
+  Y.SIGLA_EMPRESA,
+  Y.SEQ_PLA_AGLOMERADO,
+  Y.DESC_AGLOMERADO,
+  Y.SEQ_PLA_FAZENDA,
+  Y.DESC_FAZENDA,
+  Y.SIGLA_FAZENDA,
+  Y.SEQ_PLA_TALHAO,
+  Y.NUMERO_TALHAO,
+  Y.DESC_TALHAO,
+  Y.SEQ_PLA_TIPO_CULT,
+  Y.DESC_CULTURA,
+  Y.SEQ_PLA_VARIEDADE,
+  Y.DESC_VARIEDADE;

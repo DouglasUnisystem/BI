@@ -1,0 +1,11 @@
+drop view VW_POTENCIALIZACAO_AGENTE;
+drop view VW_POTENCIALIZACAO_AGENTE_FAT;
+drop view VW_POTENCIALIZACAO_CLIENTE;
+drop view VW_POTENCIALIZACAO_CLIENTE_FAT;
+
+Caso seja view materalizada
+
+drop view materialized VW_POTENCIALIZACAO_AGENTE;
+drop view materialized VW_POTENCIALIZACAO_AGENTE_FAT;
+drop view materialized VW_POTENCIALIZACAO_CLIENTE;
+drop view materialized VW_POTENCIALIZACAO_CLIENTE_FAT;

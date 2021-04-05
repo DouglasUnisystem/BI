@@ -1,0 +1,347 @@
+.x-panel-bi .x-panel-header-default {
+    background-color: #fff !important;	
+	border-style: solid;
+    border-width: 0px 0px 1px 0px !important; /* 25px top, 10px right, 4px bottom and 35px left */
+	border-color: #d4d4d4;
+}
+
+.x-panel-bi-vertical .x-tool-tool-el {
+	opacity: 0 !important;
+}
+
+.x-panel-bi-title .x-panel-header-title-default {
+	Color: #73879C !important;
+	font: 14px "Helvetica Neue",Roboto,Arial,"Droid Sans",sans-serif !important;
+}
+
+.x-panel-bi .x-panel-header-default {
+    background-color: #fff !important;	
+}
+
+.menu_selected {
+  border:  1px solid #4a4a4a !important; 
+}
+
+.red_borders {
+  border:  1px solid #ff8282 !important; 
+  outline: 1px solid #ff2121;
+}
+
+.blue_borders {
+  border:  1px solid #90d2f4 !important; 
+  outline: 1px solid #39afea;
+}
+
+.orange_borders {
+  border:  1px solid #facc70 !important; 
+  outline: 1px solid #f9aa0b;
+}
+
+.green_borders {
+  border:  1px solid #9dd478 !important; 
+  outline: 1px solid #61a434;
+}
+
+.gray_borders {
+  border:  1px solid #fdfdfd !important; 
+  outline: 1px solid #d4d4d4;
+}
+
+.round_borders {
+	border: 1px solid #fdfdfd !important;
+    border-radius: 5px;
+    box-shadow: 0 0 1px rgba(0,0,0,.125), 0 1px 3px rgba(0,0,0,.2);
+}
+
+.title {
+  font-size:1.7vw !important;
+  margin-top:0.5vw !important;
+}
+
+.subtitle {
+  font-size:1.0vw !important;
+  margin-top:1.1vw !important;
+}
+
+.titulosTelas { 
+ Color: #73879C !important;
+  font: 24px "Helvetica Neue",Roboto,Arial,"Droid Sans",sans-serif !important;
+  /*font-weight: 600 !important;*/
+}
+
+.txtFiltroAtivo { 
+ //*Color: #73879C !important;*/
+  font: 16px "Helvetica Neue",Roboto,Arial,"Droid Sans",sans-serif !important;
+  font-weight: 600 !important;
+}
+
+.subtitulosTelas {  
+  Color: #73879C !important;
+  font: 14px "Helvetica Neue",Roboto,Arial,"Droid Sans",sans-serif !important;
+}
+
+.subtitulosTelasMobile {  
+  Color: #73879C !important;
+  font: 12px "Helvetica Neue",Roboto,Arial,"Droid Sans",sans-serif !important;
+}
+
+.titleCard {
+  /*font: bold 22px Bowlby One SC !important;*/
+  Color: #73879C;
+  font: 20px "Helvetica Neue",Roboto,Arial,"Droid Sans",sans-serif !important;
+  /*margin-top:0.5vw !important;*/
+}
+
+.subtitleCard {  
+  Color: #73879C;
+  font: Bold 24px "Helvetica Neue",Roboto,Arial,"Droid Sans",sans-serif !important;
+  /*margin-top:1.1vw !important;*/
+  /*font:  26px Bowlby One SC  !important;*/
+}
+
+.titleCard2 {
+  /*font: bold 16px Bowlby One SC !important;*/
+  Color: #73879C;
+  font: 16px "Helvetica Neue",Roboto,Arial,"Droid Sans",sans-serif !important;
+  /*margin-top:0.5vw !important;*/
+}
+
+.subtitleCard2 {  
+  Color: #73879C;
+  font: Bold 18px "Helvetica Neue",Roboto,Arial,"Droid Sans",sans-serif !important;
+  font-weight: 400;
+  /*margin-top:1.1vw !important;*/
+  /*font:  18px Bowlby One SC  !important;*/
+}
+
+.info {
+  font-size:0.75vw !important;
+  margin-top:1.0vw !important;  
+}
+
+.subtitlegray {
+  font-size: 0.8vw !important; 
+}
+
+.graphtitle {
+ font-size:0.80vw !important;
+ line-height: 180%;
+}
+
+.chrome {
+ font: 1.70vw Arial, Helvetica, sans-serif;
+ font-weight:bold;
+}
+
+.chrome35 {
+ font: 1.20vw Arial, Helvetica, sans-serif;
+ font-weight:normal;
+}
+
+#ext-sprite-1325 {
+ stroke:#d8d8d8;
+}
+
+#ext-sprite-1339 {
+ stroke:#d8d8d8;
+}
+
+.degree {  
+  font: 1.50vw Arial, Helvetica, sans-serif !important;
+  font-weight:normal;
+}
+
+.subtitleweather {  
+  font: 0.90vw Arial, Helvetica, sans-serif !important;
+  font-weight:normal;
+}
+
+.infoweather {
+  font: 0.70vw Arial, Helvetica, sans-serif !important;
+}
+
+.social {
+  font: bold 1.00vw Arial, Helvetica, sans-serif !important;
+}
+
+.social_img {
+  width:   100% !important;
+  text-align:center;  
+  vertical-align: middle;
+}
+
+.mainbackground {
+	background: url(.\Images\bg-01.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.PanelShadow {                                                                  
+	-webkit-filter: drop-shadow(0px 1px 6px rgba(0,0,0,.5))!important;
+	-moz-filter: drop-shadow(0px 1px 6px rgba(0,0,0,.5))!important; 
+	-ms-filter: drop-shadow(0px 1px 6px rgba(0,0,0,.5))!important;  
+	-o-filter: drop-shadow(0px 1px 6px rgba(0,0,0,.5))!important;   
+	filter: drop-shadow(0px 1px 6px rgba(0,0,0,.5))!important;      
+}
+
+.PanelFilterShadow {                                                                  
+	-webkit-filter: drop-shadow(-10px 1px 6px rgba(0,0,0,.5))!important;
+	-moz-filter: drop-shadow(-10px 1px 6px rgba(0,0,0,.5))!important; 
+	-ms-filter: drop-shadow(-10px 1px 6px rgba(0,0,0,.5))!important;  
+	-o-filter: drop-shadow(-10px 1px 6px rgba(0,0,0,.5))!important;   
+	filter: drop-shadow(-10px 1px 6px rgba(0,0,0,.5))!important;      
+}
+                             
+/*PAGE CONTROL OK */
+.x-panel-body-default {
+	border-style:  none; 
+}
+
+.textoMenu {
+	 color: #adb3b8;
+	 font: normal 16px tahoma, arial, helvetica, sans-serif;
+}
+
+/*TAB BAR CORES */ 
+.x-tab.x-tab-active.x-tab-default {
+   /* border-color: #077a41; VERDE LOGO*/
+	border-color: #FCD002 !important; /*AMARELO LOGO*/
+    background-color: #077a41 !important;
+}
+
+.x-keyboard-mode.x-tab-focus.x-tab.x-tab-active.x-tab-default {
+   /* border-color: #077a41; VERDE LOGO*/
+	border-color: #FCD002 !important; /*AMARELO LOGO*/
+    background-color: #077a41 !important;
+}
+
+.x-tab-bar-strip-default {
+    border-style: solid;
+    /*border-color: #d1d1d1;*/
+	border-color: #FCD002 !important; /*AMARELO LOGO*/
+    background-color: #077a41 !important;;
+}
+
+/* TREELIST */
+.x-treelist-nav .x-treelist-item-selected > .x-treelist-row:before {
+    background-color: #FCD002 !important; /*AMARELO LOGO*/
+}
+
+.x-treelist-nav .x-treelist-row-over:before {
+    background-color: #FCD002 !important; /*AMARELO LOGO*/
+}
+
+.x-treelist-nav .x-treelist-item-selected.x-treelist-item-tool { /*side menu cor*/
+    color: #f0f0f0;
+    background-color: #077a41 !important; /*VERDE LOGO*/
+}
+
+.x-treelist-nav .x-treelist-item-tool {
+    width: 48px;
+}
+
+.x-treelist-nav .x-treelist-item-text {
+    font-size: 12px;
+}
+
+.titulosTelas {
+	font-size: 19px;
+    font-family: Arial;
+    color: #8F8F8F;
+	font-weight: bold;
+}
+
+.logo_img {
+  width: 100% !important;
+  height: 100%;
+  text-align:center;  
+  vertical-align: middle;
+}
+
+.textCard {	
+	font-family: 'Bowlby One SC', cursive;	
+}
+
+.panel-header-bi .x-panel-header-default {
+	background-color: #32404e;
+	border:  1px solid #fdfdfd !important;
+}
+.x-panel-title-bi .x-panel-header-title-default {
+	Color: #f0f0f0 !important;
+	font: 14px "Helvetica Neue",Roboto,Arial,"Droid Sans",sans-serif !important;
+}
+
+.x-tab-bar-default {
+    background-color: #32404e;
+}
+
+.x-window-header-default {
+    /* font-size: 16px; */
+    border-color: #32404e !important;    
+}
+
+.x-window-header-default-top {
+	background-color: #32404e !important;
+}
+
+.panelLogin {    
+    background: transparent !important;
+    border-radius: 10px;      
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
+    -moz-box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
+    -webkit-box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
+    -o-box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
+    -ms-box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
+}
+
+.logintitle {
+    display: block;
+    font-family: Poppins-Bold;
+    font-size: 30px;
+    color: #333;
+    line-height: 1.2;
+    text-align: center;
+}
+	
+.loginbtn {	
+    background-color: #077a41 !important;	
+}
+
+.loginbtn .x-btn-inner-default-large  {
+    font: 500 18px/24px Open Sans, sans-serif; 
+	color: #fff !important;
+    padding: 0 10px;
+    max-width: 100%;
+}
+
+.EDT_login .x-form-trigger-wrap-default  {
+  border-style: none none solid none !important;
+  border-width: 2px;
+  border-color: #adadad;    
+  color: #a0a0a0;
+}
+
+.labelNotifica{
+color: #404040 !important;
+font: 600 13px/18px Open Sans, sans-serif !important;
+}
+
+.CodeMirror-wrapping {
+    position: relative !important;
+}
+
+.comboInicio .x-form-trigger-wrap-default  {
+    border-radius: 25px;
+}
+
+.comboInicio .x-form-text-wrap  {
+    border-radius: 25px;
+}
+
+.bottonBorders {
+    border-style: solid;
+    border-width: 0px 0px 1px 0px; /* 25px top, 10px right, 4px bottom and 35px left */
+	border-color: #077a41;
+}

@@ -1,0 +1,117 @@
+CREATE MATERIALIZED VIEW PLANTIO_PREVISAO
+REFRESH FORCE ON DEMAND
+START WITH SYSDATE NEXT SYSDATE + 5/24/60 
+AS
+SELECT *
+  FROM (SELECT
+               TC.SEQ_PLA_TIPO_CULT,
+               TC.DESC_CULTURA,
+               PS.COD_SAFRA,
+               SA.DESCRICAO_SAFRA,
+               FA.SEQ_PLA_FAZENDA,
+               FA.SIGLA_FAZENDA,
+               FA.DESC_FAZENDA,
+               TA.SEQ_PLA_TALHAO,
+               TA.NUMERO_TALHAO,
+               TA.DESC_TALHAO,
+               PO.HECTARES AS QTDE_HA_PREVISAO,
+               0 AS QTDE_HA_REALIZADO,
+               PSE.DATA_PLANTIO AS DATA_PREVISAO_PLANTIO,
+               NULL AS DATA_PLANTIO
+          FROM MVR.PLANO_OPERACIONAL PO,
+               MVR.PLANO_OPER_CENARIOS POC,
+               MVR.PLANTIO_CENARIO_CULTURAS C,
+               MVR.PLANTIO_CENARIO_REGIOES R,
+               MVR.PLANTIO_CENARIO_SAFRAS PS,
+               MVR.PLANO_OPER_SEMENTE PSE,
+               MVR.TALHOES TA,
+               MVR.FAZENDAS FA,
+               MVR.SAFRAS SA,
+               MVR.TIPO_CULTURA TC
+         WHERE PO.SEQ_PLA_OPER_CENARIO = POC.SEQ_PLA_OPER_CENARIO
+           AND PO.SEQ_PLA_PLANT_CULT = C.SEQ_PLA_PLANT_CULT
+           AND C.SEQ_PLA_PLANT_REGIAO = R.SEQ_PLA_PLANT_REGIAO
+           AND R.SEQ_PLA_CENARIO_SAFRA = PS.SEQ_PLA_CENARIO_SAFRA
+           AND PO.SEQ_PLA_TALHAO = TA.SEQ_PLA_TALHAO
+           AND TA.SEQ_PLA_FAZENDA = FA.SEQ_PLA_FAZENDA
+           AND PO.SEQ_PLA_PLANO_OPER = PSE.SEQ_PLA_PLANO_OPER
+           AND PS.COD_SAFRA = SA.COD_SAFRA
+           AND TC.SEQ_PLA_TIPO_CULT = C.SEQ_PLA_TIPO_CULT
+           AND POC.DATA_CENARIO = (SELECT MAX(POC1.DATA_CENARIO)
+                                     FROM MVR.PLANO_OPER_CENARIOS POC1,
+                                          MVR.PLANO_OPERACIONAL PO1,
+                                          MVR.PLANTIO_CENARIO_CULTURAS PC1,
+                                          MVR.PLANTIO_CENARIO_REGIOES PR1,
+                                          MVR.PLANTIO_CENARIO_SAFRAS PSS1
+                                    WHERE POC1.SEQ_PLA_OPER_CENARIO = PO1.SEQ_PLA_OPER_CENARIO
+                                      AND PO1.SEQ_PLA_PLANT_CULT = PC1.SEQ_PLA_PLANT_CULT
+                                      AND PC1.SEQ_PLA_PLANT_REGIAO = PR1.SEQ_PLA_PLANT_REGIAO
+                                      AND PR1.SEQ_PLA_CENARIO_SAFRA = PSS1.SEQ_PLA_CENARIO_SAFRA
+                                      AND PO1.SEQ_PLA_TALHAO = PO.SEQ_PLA_TALHAO
+                                      AND PSS1.COD_SAFRA = PS.COD_SAFRA
+                                      AND PC1.SEQ_PLA_TIPO_CULT = C.SEQ_PLA_TIPO_CULT)
+           --AND PS.COD_SAFRA = 13
+           AND PSE.DATA_PLANTIO IS NOT NULL
+        UNION ALL
+        SELECT
+               TC.SEQ_PLA_TIPO_CULT,
+               TC.DESC_CULTURA,
+               OSS.COD_SAFRA,
+               SA.DESCRICAO_SAFRA,
+               FA.SEQ_PLA_FAZENDA,
+               FA.SIGLA_FAZENDA,
+               FA.DESC_FAZENDA,
+               TA.SEQ_PLA_TALHAO,
+               TA.NUMERO_TALHAO,
+               TA.DESC_TALHAO,
+               0 AS QTDE_HA_PREVISAO,
+               TS.QTDE_HA AS QTDE_HA_REALIZADO,
+               NULL AS DATA_PREVISAO_PLANTIO,
+               TS.DATA_PLANTIO AS DATA_PLANTIO
+          FROM MVR.ORDEM_SERVICO OSS,
+               MVR.ORDEM_SERV_TALHOES OST,
+               MVR.TALHOES_SAFRA TS,
+               MVR.TALHOES TA,
+               MVR.FAZENDAS FA,
+               MVR.TIPO_CULTURA TC,
+               MVR.SAFRAS SA
+         WHERE OSS.SEQ_PLA_ORDEM = OST.SEQ_PLA_ORDEM
+           AND OST.SEQ_PLA_ORDEM_TALHOES = TS.SEQ_PLA_ORDEM_PLANTIO
+           AND TS.SEQ_PLA_TALHAO = TA.SEQ_PLA_TALHAO
+           AND TA.SEQ_PLA_FAZENDA = FA.SEQ_PLA_FAZENDA
+           AND TS.SEQ_PLA_TIPO_CULT = TC.SEQ_PLA_TIPO_CULT
+           AND NOT EXISTS (SELECT * FROM MVR.APONT_AREA_TAL_OS A WHERE A.SEQ_PLA_ORDEM = OSS.SEQ_PLA_ORDEM AND A.SEQ_PLA_TALHAO = TA.SEQ_PLA_TALHAO)
+           AND OSS.COD_SAFRA = SA.COD_SAFRA
+           --AND TS.COD_SAFRA = 13
+        UNION ALL
+        SELECT
+               TC.SEQ_PLA_TIPO_CULT,
+               TC.DESC_CULTURA,
+               OSS.COD_SAFRA,
+               SA.DESCRICAO_SAFRA,
+               FA.SEQ_PLA_FAZENDA,
+               FA.SIGLA_FAZENDA,
+               FA.DESC_FAZENDA,
+               TA.SEQ_PLA_TALHAO,
+               TA.NUMERO_TALHAO,
+               TA.DESC_TALHAO,
+               0 AS QTDE_HA_PREVISAO,
+               AA.AREA_APONTADA AS QTDE_HA_REALIZADO,
+               NULL AS DATA_PREVISAO_PLANTIO,
+               AA.DATA_APONTAMENTO AS DATA_PLANTIO
+          FROM MVR.ORDEM_SERVICO OSS,
+               MVR.ORDEM_SERV_TALHOES OST,
+               MVR.TALHOES TA,
+               MVR.FAZENDAS FA,
+               MVR.TIPO_CULTURA TC,
+               MVR.APONT_AREA_TAL_OS AA,
+               MVR.SAFRAS SA
+         WHERE OSS.SEQ_PLA_ORDEM = OST.SEQ_PLA_ORDEM
+           AND OST.SEQ_PLA_TALHAO = TA.SEQ_PLA_TALHAO
+           AND TA.SEQ_PLA_FAZENDA = FA.SEQ_PLA_FAZENDA
+           AND OSS.SEQ_PLA_ORDEM = AA.SEQ_PLA_ORDEM
+           AND OST.SEQ_PLA_TALHAO = AA.SEQ_PLA_TALHAO
+           AND OSS.SEQ_PLA_TIPO_CULT = TC.SEQ_PLA_TIPO_CULT
+           AND EXISTS (SELECT * FROM MVR.TALHOES_SAFRA TSS WHERE TSS.SEQ_PLA_ORDEM_PLANTIO = OST.SEQ_PLA_ORDEM_TALHOES)
+           AND OSS.COD_SAFRA = SA.COD_SAFRA
+           /*AND OSS.COD_SAFRA = 13*/) TT;

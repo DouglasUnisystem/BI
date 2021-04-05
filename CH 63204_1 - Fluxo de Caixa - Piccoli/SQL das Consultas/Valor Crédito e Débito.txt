@@ -1,0 +1,73 @@
+
+SELECT MES_ANO,
+       ANO_MES,
+       VALOR_CREDITO_REAL,
+       VALOR_DEBITO_REAL,
+       SALDO_DIA,
+       (SUM(SALDO_GERAL) OVER(ORDER BY ANO_MES)) AS SALDO_GERAL,
+       CASE WHEN :VALOR# <> 0 THEN
+                  (A_RECEBER_DOLAR) * :VALOR#
+            ELSE  (A_RECEBER_DOLAR)
+       END AS A_RECEBER_DOLAR,
+       CASE WHEN :VALOR# <> 0 THEN
+                  (A_PAGAR_DOLAR) * :VALOR#
+            ELSE  (A_PAGAR_DOLAR)
+       END AS A_PAGAR_DOLAR
+  
+       --A_RECEBER_DOLAR,
+       --A_PAGAR_DOLAR--,
+       --SALDO_INICIAL --COMENTADO
+ FROM(SELECT MES_ANO,
+             ANO_MES,
+             SUM(VALOR_CREDITO_REAL) AS VALOR_CREDITO_REAL,
+             SUM(VALOR_DEBITO_REAL) AS VALOR_DEBITO_REAL,   
+             CASE MES
+               WHEN 'Jan' THEN (SUM(VALOR_CREDITO_REAL) - SUM(VALOR_DEBITO_REAL) + FRETORNA_SALDO_INICIAL_FLUXO(:COD_EMPRESA_STRING,:COD_FILIAL_STRING,TO_DATE(:DATA_BASE_DATA,'DD/MM/YYYY')))
+                          ELSE (SUM(VALOR_CREDITO_REAL) - SUM(VALOR_DEBITO_REAL)) END AS SALDO_GERAL,       
+             (SUM(VALOR_CREDITO_REAL) - SUM(VALOR_DEBITO_REAL)) AS SALDO_DIA,
+             --CASE MES
+               --WHEN 'Jan' THEN FRETORNA_SALDO_INICIAL_FLUXO(:COD_EMPRESA_STRING,:COD_FILIAL_STRING,TO_DATE(:DATA_BASE_DATA,'DD/MM/YYYY'))   
+               --ELSE 0     
+             --END AS SALDO_INICIAL, --COMENTADO
+             SUM(A_RECEBER_DOLAR) AS A_RECEBER_DOLAR,
+             SUM(A_PAGAR_DOLAR) AS A_PAGAR_DOLAR
+       FROM (SELECT (CR.MES || '/' || CR.ANO) AS MES_ANO,
+                    NVL(CR.VALOR_CREDITO_REAL,0) AS VALOR_CREDITO_REAL,
+                    0 AS VALOR_DEBITO_REAL,                  
+                    NVL(CR.VALOR_CREDITO_DOLAR,0) AS A_RECEBER_DOLAR,
+                    0 AS A_PAGAR_DOLAR,
+                    CR.ANO_MES,
+                    CR.MES,
+                    CR.ANO
+               FROM VW_CONTAS_RECEBER_MES_PI CR
+              WHERE 1 = 1
+                AND CR.COD_EMPRESA = :COD_EMPRESA_STRING --PARAM
+                AND CR.COD_FILIAL  = :COD_FILIAL_STRING  --PARAM
+                --&EMPRESA --MACRO
+                --&FILIAL  --MACRO
+                &SAFRA
+                &DATA_INI
+                &DATA_FIM
+              UNION   
+             SELECT (CP.MES || '/' || CP.ANO) AS MES_ANO,
+                    0 VALOR_CREDITO_REAL,
+                    NVL(CP.VALOR_DEBITO_REAL,0) AS VALOR_DEBITO_REAL,
+                    0 AS A_RECEBER_DOLAR,
+                    NVL(CP.VALOR_DEBITO_DOLAR,0) AS A_PAGAR_DOLAR,
+                    CP.ANO_MES,
+                    CP.MES,
+                    CP.ANO
+               FROM VW_CONTAS_PAGAR_MES_PI CP
+              WHERE 1 = 1
+               AND CP.COD_EMPRESA = :COD_EMPRESA_STRING --PARAM
+               AND CP.COD_FILIAL  = :COD_FILIAL_STRING  --PARAM
+               --&EMPRESA --MACRO
+               --&FILIAL  --MACRO
+               &SAFRA
+               &DATA_INI
+               &DATA_FIM                              
+            )
+       WHERE 1 = 1       
+       GROUP BY ANO_MES,MES_ANO, ANO, MES
+       ORDER BY ANO_MES
+ )

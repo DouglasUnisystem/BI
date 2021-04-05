@@ -1,0 +1,14 @@
+[FireDAC][Phys][Ora]
+ORA-02443:
+Cannot
+drop
+constraint
+-
+nonexistent
+constraint
+[FireDAC][Phys][Ora]
+ORA-00904:
+ID_CONSULTA
+:
+invalid
+identifier

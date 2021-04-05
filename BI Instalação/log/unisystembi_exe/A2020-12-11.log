@@ -1,0 +1,182 @@
+UniSystemBI.exe: 000003E4: 08:27:12 []:>--------------------------------------------------------------<
+UniSystemBI.exe: 000003E4: 08:27:12 [TUniServerModule]:Server First Init.
+UniSystemBI.exe: 000003E4: 08:27:12 [TUniServerModule]:Global Cache Folder Erased. <6> Files deleted.
+UniSystemBI.exe: 000003E4: 08:27:13 [TUniServerModule]:Starting HTTP Server on Port: 8070...
+UniSystemBI.exe: 000003E4: 08:27:13 [TUniServerModule]:HTTP Server Started on Port: 8070
+UniSystemBI.exe: 00000E20: 08:27:49 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\fenix\fenix.css
+UniSystemBI.exe: 000000B0: 08:27:49 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\SweetAlert2\sweetalert2.min.css
+UniSystemBI.exe: 0000168C: 08:27:49 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HoldOn\HoldOn.min.css
+UniSystemBI.exe: 00000DB4: 08:27:49 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HoldOn\HoldOn.min.css
+UniSystemBI.exe: 00001A94: 08:27:49 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\select2\css\select2.min.css
+UniSystemBI.exe: 00000408: 08:27:49 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\font-awesome\css\all.min.css
+UniSystemBI.exe: 000012A8: 08:27:49 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\iGrowl\css\igrowl.min.css
+UniSystemBI.exe: 00000154: 08:27:49 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\Animate\animate.min.css
+UniSystemBI.exe: 00001F18: 08:27:49 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\font-awesome\css\all.min.css
+UniSystemBI.exe: 00001D9C: 08:27:49 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HighCharts\highcharts-3d.js
+UniSystemBI.exe: 00001C98: 08:27:49 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HighCharts\highcharts.js
+UniSystemBI.exe: 0000169C: 08:27:49 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HighCharts\highcharts-more.js
+UniSystemBI.exe: 00000EA0: 08:27:50 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HighCharts\modules\exporting.js
+UniSystemBI.exe: 00001A14: 08:27:50 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\SweetAlert2\promise.min.js
+UniSystemBI.exe: 00001A58: 08:27:50 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\select2\js\select2.full.min.js
+UniSystemBI.exe: 00001ED4: 08:27:50 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\SweetAlert2\sweetalert2.min.js
+UniSystemBI.exe: 000019B4: 08:27:50 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HoldOn\HoldOn.min.js
+UniSystemBI.exe: 000002B0: 08:27:50 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HoldOn\HoldOn.min.js
+UniSystemBI.exe: 000016FC: 08:27:50 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\iGrowl\js\igrowl.min.js
+UniSystemBI.exe: 000013C4: 08:27:51 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HighCharts\highcharts-3d.js
+UniSystemBI.exe: 000004A0: 08:27:51 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HighCharts\highcharts-more.js
+UniSystemBI.exe: 00001D30: 08:27:51 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HighCharts\modules\exporting.js
+UniSystemBI.exe: 00001774: 08:27:51 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HoldOn\HoldOn.min.css
+UniSystemBI.exe: 00001F4C: 08:27:51 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HoldOn\HoldOn.min.js
+UniSystemBI.exe: 000018D0: 08:27:51 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\fenix\fenix.css
+UniSystemBI.exe: 00001B9C: 08:27:52 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\SweetAlert2\promise.min.js
+UniSystemBI.exe: 00001A38: 08:27:52 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\SweetAlert2\sweetalert2.min.css
+UniSystemBI.exe: 00001884: 08:27:52 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\SweetAlert2\sweetalert2.min.js
+UniSystemBI.exe: 00000258: 08:27:52 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HoldOn\HoldOn.min.css
+UniSystemBI.exe: 000006E4: 08:27:52 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HoldOn\HoldOn.min.js
+UniSystemBI.exe: 000013D8: 08:27:52 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\select2\css\select2.min.css
+UniSystemBI.exe: 000011CC: 08:27:53 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\select2\js\select2.full.min.js
+UniSystemBI.exe: 0000052C: 08:27:53 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\font-awesome\css\all.min.css
+UniSystemBI.exe: 00000E34: 08:27:53 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\iGrowl\js\igrowl.min.js
+UniSystemBI.exe: 00001E44: 08:27:53 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\iGrowl\css\igrowl.min.css
+UniSystemBI.exe: 00000CC8: 08:27:53 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\Animate\animate.min.css
+UniSystemBI.exe: 000012C4: 08:27:54 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\font-awesome\css\all.min.css
+UniSystemBI.exe: 00001E9C: 08:29:10 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HighCharts\highcharts-3d.js
+UniSystemBI.exe: 00001F64: 08:29:10 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\SweetAlert2\sweetalert2.min.css
+UniSystemBI.exe: 00000544: 08:29:10 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\SweetAlert2\sweetalert2.min.js
+UniSystemBI.exe: 00000CAC: 08:29:11 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\Animate\animate.min.css
+UniSystemBI.exe: 000015EC: 08:29:11 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\fenix\fenix.css
+UniSystemBI.exe: 0000140C: 08:29:11 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HoldOn\HoldOn.min.css
+UniSystemBI.exe: 0000105C: 08:29:11 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HoldOn\HoldOn.min.css
+UniSystemBI.exe: 000015E0: 08:29:11 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\select2\css\select2.min.css
+UniSystemBI.exe: 00001BF0: 08:29:11 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\font-awesome\css\all.min.css
+UniSystemBI.exe: 00000F90: 08:29:11 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\iGrowl\css\igrowl.min.css
+UniSystemBI.exe: 00001E30: 08:29:11 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HighCharts\highcharts.js
+UniSystemBI.exe: 00000A88: 08:29:11 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\font-awesome\css\all.min.css
+UniSystemBI.exe: 00001B98: 08:29:11 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HighCharts\highcharts-more.js
+UniSystemBI.exe: 00001948: 08:29:11 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HighCharts\modules\exporting.js
+UniSystemBI.exe: 00000484: 08:29:11 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HoldOn\HoldOn.min.js
+UniSystemBI.exe: 00000C68: 08:29:11 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\SweetAlert2\promise.min.js
+UniSystemBI.exe: 00001440: 08:29:11 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\select2\js\select2.full.min.js
+UniSystemBI.exe: 000006D8: 08:29:11 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HoldOn\HoldOn.min.js
+UniSystemBI.exe: 000018BC: 08:29:11 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\iGrowl\js\igrowl.min.js
+UniSystemBI.exe: 00000A60: 08:29:12 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HighCharts\highcharts-3d.js
+UniSystemBI.exe: 00001258: 08:29:12 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HighCharts\highcharts-more.js
+UniSystemBI.exe: 00001B00: 08:29:12 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HighCharts\modules\exporting.js
+UniSystemBI.exe: 000003E0: 08:29:13 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HoldOn\HoldOn.min.css
+UniSystemBI.exe: 00001418: 08:29:13 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HoldOn\HoldOn.min.js
+UniSystemBI.exe: 000006E0: 08:29:13 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\fenix\fenix.css
+UniSystemBI.exe: 0000180C: 08:29:13 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\SweetAlert2\promise.min.js
+UniSystemBI.exe: 000001D0: 08:29:13 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\SweetAlert2\sweetalert2.min.css
+UniSystemBI.exe: 00001AB8: 08:29:13 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\SweetAlert2\sweetalert2.min.js
+UniSystemBI.exe: 0000178C: 08:29:14 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HoldOn\HoldOn.min.css
+UniSystemBI.exe: 00001840: 08:29:14 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HoldOn\HoldOn.min.js
+UniSystemBI.exe: 00001348: 08:29:14 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\select2\css\select2.min.css
+UniSystemBI.exe: 00000D64: 08:29:14 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\select2\js\select2.full.min.js
+UniSystemBI.exe: 00001978: 08:29:15 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\font-awesome\css\all.min.css
+UniSystemBI.exe: 00001E64: 08:29:15 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\iGrowl\css\igrowl.min.css
+UniSystemBI.exe: 000015CC: 08:29:15 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\iGrowl\js\igrowl.min.js
+UniSystemBI.exe: 00001588: 08:29:15 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\Animate\animate.min.css
+UniSystemBI.exe: 0000177C: 08:29:15 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\font-awesome\css\all.min.css
+UniSystemBI.exe: 0000029C: 08:29:25 [OnBrowserClose-127.0.0.1]:EDatabaseError : qSessionControl: Cannot perform this operation on a closed dataset : Addr: $0069F1FA
+UniSystemBI.exe: 00000FA4: 08:29:27 [TUniGUIServerModule.AppHandleException-]:EAccessViolation : Access violation at address 008067D4 in module 'UniSystemBI.exe'. Read of address 00000064 : Addr: $008067D4
+UniSystemBI.exe: 000003E4: 08:36:33 [TUniServerModule]:Shutting Down Server.
+UniSystemBI.exe: 000003E4: 08:36:33 [TUniServerModule]:Stopping HTTP Server.
+UniSystemBI.exe: 000003E4: 08:36:33 [TUniServerModule]:HTTP Server Stopped.
+UniSystemBI.exe: 000003E4: 08:36:33 [TUniGUISessionManager]:Terminating Session manager.
+UniSystemBI.exe: 000003E4: 08:36:33 [TUniGUISessionManager]:Stopping Cache Eraser...
+UniSystemBI.exe: 000003E4: 08:36:33 [TUniGUISessionManager]:Cache Eraser Stopped.
+UniSystemBI.exe: 000003E4: 08:36:33 [TUniGUIServerModule.AppHandleException-]:EAccessViolation : Access violation at address 008067D4 in module 'UniSystemBI.exe'. Read of address 00000064 : Addr: $008067D4
+UniSystemBI.exe: 000003E4: 08:36:33 [TUniGUISessionManager]:Destroying Worker Threads.
+UniSystemBI.exe: 000003E4: 08:36:33 [TUniGUISessionManager]:Session manager terminated.
+UniSystemBI.exe: 000003E4: 08:36:34 [TUniServerModule]:Server Shutdown Completed.
+UniSystemBI.exe: 000003E4: 08:36:34 []:<-------------------------------------------------------------->
+UniSystemBI.exe: 000003E4: 08:36:34 [Terminated]:Exit Code: 0
+UniSystemBI.exe: 00000CC4: 08:37:01 []:>--------------------------------------------------------------<
+UniSystemBI.exe: 00000CC4: 08:37:01 [TUniServerModule]:Server First Init.
+UniSystemBI.exe: 00000CC4: 08:37:01 [TUniServerModule]:Starting HTTP Server on Port: 8070...
+UniSystemBI.exe: 00000CC4: 08:37:01 [TUniServerModule]:HTTP Server Started on Port: 8070
+UniSystemBI.exe: 00001718: 08:37:13 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\fenix\fenix.css
+UniSystemBI.exe: 00001B98: 08:37:14 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\select2\css\select2.min.css
+UniSystemBI.exe: 00000DB8: 08:37:14 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HoldOn\HoldOn.min.css
+UniSystemBI.exe: 000015E8: 08:37:14 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\SweetAlert2\sweetalert2.min.css
+UniSystemBI.exe: 00000CAC: 08:37:14 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\font-awesome\css\all.min.css
+UniSystemBI.exe: 00001A94: 08:37:14 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HoldOn\HoldOn.min.css
+UniSystemBI.exe: 00001E7C: 08:37:16 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\iGrowl\css\igrowl.min.css
+UniSystemBI.exe: 000002E4: 08:37:16 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\font-awesome\css\all.min.css
+UniSystemBI.exe: 000008E4: 08:37:16 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HighCharts\highcharts-3d.js
+UniSystemBI.exe: 00001440: 08:37:16 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\Animate\animate.min.css
+UniSystemBI.exe: 0000140C: 08:37:16 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HighCharts\highcharts.js
+UniSystemBI.exe: 00000888: 08:37:16 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HighCharts\highcharts-more.js
+UniSystemBI.exe: 00000A60: 08:37:16 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HighCharts\modules\exporting.js
+UniSystemBI.exe: 0000177C: 08:37:16 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\SweetAlert2\promise.min.js
+UniSystemBI.exe: 00001F34: 08:37:16 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HoldOn\HoldOn.min.js
+UniSystemBI.exe: 00000F3C: 08:37:16 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\iGrowl\js\igrowl.min.js
+UniSystemBI.exe: 00001588: 08:37:16 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HoldOn\HoldOn.min.js
+UniSystemBI.exe: 00000834: 08:37:16 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\SweetAlert2\sweetalert2.min.js
+UniSystemBI.exe: 00001DD0: 08:37:16 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\select2\js\select2.full.min.js
+UniSystemBI.exe: 00000E90: 08:37:17 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HighCharts\highcharts.js
+UniSystemBI.exe: 000001F0: 08:37:17 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HighCharts\highcharts-3d.js
+UniSystemBI.exe: 00001CE8: 08:37:17 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HighCharts\highcharts-more.js
+UniSystemBI.exe: 000017E0: 08:37:17 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HighCharts\modules\exporting.js
+UniSystemBI.exe: 00001BC8: 08:37:17 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HoldOn\HoldOn.min.css
+UniSystemBI.exe: 0000052C: 08:37:17 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HoldOn\HoldOn.min.js
+UniSystemBI.exe: 00001010: 08:37:17 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\fenix\fenix.css
+UniSystemBI.exe: 00001154: 08:37:17 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\SweetAlert2\promise.min.js
+UniSystemBI.exe: 0000029C: 08:37:17 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\SweetAlert2\sweetalert2.min.css
+UniSystemBI.exe: 000000B0: 08:37:17 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\SweetAlert2\sweetalert2.min.js
+UniSystemBI.exe: 00001A00: 08:37:17 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HoldOn\HoldOn.min.css
+UniSystemBI.exe: 000015A8: 08:37:17 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HoldOn\HoldOn.min.js
+UniSystemBI.exe: 00000F7C: 08:37:17 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\select2\css\select2.min.css
+UniSystemBI.exe: 000019BC: 08:37:17 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\select2\js\select2.full.min.js
+UniSystemBI.exe: 0000135C: 08:37:18 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\font-awesome\css\all.min.css
+UniSystemBI.exe: 00001B30: 08:37:18 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\iGrowl\js\igrowl.min.js
+UniSystemBI.exe: 0000138C: 08:37:18 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\iGrowl\css\igrowl.min.css
+UniSystemBI.exe: 00000B00: 08:37:18 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\Animate\animate.min.css
+UniSystemBI.exe: 00001880: 08:37:18 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\font-awesome\css\all.min.css
+UniSystemBI.exe: 00001774: 08:37:56 [TUniGUIServerModule.AppHandleException-]:EAccessViolation : Access violation at address 008067D4 in module 'UniSystemBI.exe'. Read of address 00000064 : Addr: $008067D4
+UniSystemBI.exe: 00001190: 08:38:00 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HoldOn\HoldOn.min.css
+UniSystemBI.exe: 00001F78: 08:38:00 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HighCharts\highcharts.js
+UniSystemBI.exe: 00001AA0: 08:38:00 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\fenix\fenix.css
+UniSystemBI.exe: 000018B4: 08:38:00 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HoldOn\HoldOn.min.css
+UniSystemBI.exe: 000012A8: 08:38:00 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\font-awesome\css\all.min.css
+UniSystemBI.exe: 00000A34: 08:38:00 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\SweetAlert2\sweetalert2.min.css
+UniSystemBI.exe: 00001810: 08:38:00 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\select2\css\select2.min.css
+UniSystemBI.exe: 00001BB8: 08:38:00 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\iGrowl\css\igrowl.min.css
+UniSystemBI.exe: 00001E64: 08:38:00 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\Animate\animate.min.css
+UniSystemBI.exe: 00001160: 08:38:00 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\font-awesome\css\all.min.css
+UniSystemBI.exe: 00001BD0: 08:38:00 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HighCharts\highcharts-3d.js
+UniSystemBI.exe: 00000310: 08:38:00 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HighCharts\highcharts-more.js
+UniSystemBI.exe: 00001F18: 08:38:00 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HoldOn\HoldOn.min.js
+UniSystemBI.exe: 00001EB8: 08:38:00 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\SweetAlert2\sweetalert2.min.js
+UniSystemBI.exe: 00001A0C: 08:38:00 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HighCharts\modules\exporting.js
+UniSystemBI.exe: 00001220: 08:38:00 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\SweetAlert2\promise.min.js
+UniSystemBI.exe: 00001ACC: 08:38:00 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\iGrowl\js\igrowl.min.js
+UniSystemBI.exe: 000005EC: 08:38:00 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HoldOn\HoldOn.min.js
+UniSystemBI.exe: 00001A68: 08:38:00 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\select2\js\select2.full.min.js
+UniSystemBI.exe: 000018CC: 08:38:01 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HoldOn\HoldOn.min.css
+UniSystemBI.exe: 00001674: 08:38:01 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HoldOn\HoldOn.min.js
+UniSystemBI.exe: 000018D0: 08:38:01 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\fenix\fenix.css
+UniSystemBI.exe: 00000F8C: 08:38:01 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\SweetAlert2\promise.min.js
+UniSystemBI.exe: 00001FA0: 08:38:01 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\SweetAlert2\sweetalert2.min.js
+UniSystemBI.exe: 00001B00: 08:38:01 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\SweetAlert2\sweetalert2.min.css
+UniSystemBI.exe: 00000234: 08:38:01 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HoldOn\HoldOn.min.css
+UniSystemBI.exe: 000013D8: 08:38:01 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\HoldOn\HoldOn.min.js
+UniSystemBI.exe: 00000A48: 08:38:01 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\select2\css\select2.min.css
+UniSystemBI.exe: 00000DB4: 08:38:01 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\select2\js\select2.full.min.js
+UniSystemBI.exe: 00001ECC: 08:38:01 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\font-awesome\css\all.min.css
+UniSystemBI.exe: 00001C38: 08:38:01 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\iGrowl\css\igrowl.min.css
+UniSystemBI.exe: 000012A4: 08:38:01 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\iGrowl\js\igrowl.min.js
+UniSystemBI.exe: 00000FA4: 08:38:01 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\Animate\animate.min.css
+UniSystemBI.exe: 00000D7C: 08:38:02 [HandleFileRequest[10.1.1.14]]:File not found: C:\Program Files\FMSoft\Framework\unigui\uni-1.90.0.1536\uniSFJS\font-awesome\css\all.min.css
+UniSystemBI.exe: 00001774: 08:38:26 [TUniGUIServerModule.AppHandleException-]:EAccessViolation : Access violation at address 008067D4 in module 'UniSystemBI.exe'. Read of address 00000064 : Addr: $008067D4
+UniSystemBI.exe: 00000CC4: 08:50:01 [TUniServerModule]:Shutting Down Server.
+UniSystemBI.exe: 00000CC4: 08:50:01 [TUniServerModule]:Stopping HTTP Server.
+UniSystemBI.exe: 00000CC4: 08:50:02 [TUniServerModule]:HTTP Server Stopped.
+UniSystemBI.exe: 00000CC4: 08:50:02 [TUniGUISessionManager]:Terminating Session manager.
+UniSystemBI.exe: 00000CC4: 08:50:02 [TUniGUISessionManager]:Stopping Cache Eraser...
+UniSystemBI.exe: 00000CC4: 08:50:02 [TUniGUISessionManager]:Cache Eraser Stopped.
+UniSystemBI.exe: 00000CC4: 08:50:02 [TUniGUISessionManager]:Destroying Worker Threads.
+UniSystemBI.exe: 00000CC4: 08:50:02 [TUniGUISessionManager]:Session manager terminated.
+UniSystemBI.exe: 00000CC4: 08:50:02 [TUniServerModule]:Server Shutdown Completed.
+UniSystemBI.exe: 00000CC4: 08:50:02 []:<-------------------------------------------------------------->
+UniSystemBI.exe: 00000CC4: 08:50:02 [Terminated]:Exit Code: 0

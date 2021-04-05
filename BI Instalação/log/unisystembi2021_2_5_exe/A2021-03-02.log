@@ -1,0 +1,6 @@
+UniSystemBI2021.2.5.exe: 00001D54: 09:47:11 []:>--------------------------------------------------------------<
+UniSystemBI2021.2.5.exe: 00001D54: 09:47:11 [TUniServerModule]:Server First Init.
+UniSystemBI2021.2.5.exe: 00001D54: 09:47:11 [TUniServerModule]:Global Cache Folder Erased. <13> Files deleted.
+UniSystemBI2021.2.5.exe: 00001D54: 09:47:12 [TUniServerModule]:Starting HTTP Server on Port: 8070...
+UniSystemBI2021.2.5.exe: 00001D54: 09:47:12 [TUniServerModule]:HTTP Server Started on Port: 8070
+UniSystemBI2021.2.5.exe: 00001D54: 17:37:52 [Exit]:Unexpected attempt to terminate server application with Exit Code: 0

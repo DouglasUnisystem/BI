@@ -1,0 +1,1 @@
+[FireDAC][Phys][Ora] ORA-01400: não é possível inserir NULL em ("UNI_BI"."PARAMETROS_BI"."VALOR")
